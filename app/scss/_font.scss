@@ -1,0 +1,145 @@
+
+.main-title {
+	font-family: var(--title-font);
+	font-weight: 900;
+	line-height: 119.354839%;
+	text-transform: uppercase;
+
+	font-size: 2rem;
+
+	@include _550 {
+		font-size: 3.125rem;
+	}
+
+	@include _768 {
+		font-size: 4.5rem;
+	}
+
+	@include _992 {
+		font-size: 3.25rem;
+	}
+
+	@media (min-width: 1440px) {
+		font-size: 3.875rem;
+	}
+}
+
+.title {
+	
+	font-family: var(--title-font);
+	font-weight: 900;
+	font-size: 2rem;
+	&._large {
+		font-size: 2.5rem;
+	}
+	&._min {
+		font-size: 1.25rem;
+	}
+	&._super-min {
+		font-size: 1rem;
+	}
+	line-height: 120.833333%;
+	text-transform: uppercase;
+
+	@include _550 {
+		font-size: 2.75rem;
+		&._large {
+			font-size: 4rem;
+		}
+		&._min {
+			font-size: 2rem;
+		}
+		&._super-min {
+			font-size: 1.75rem;
+		}
+	}
+	
+	@include _992 {
+		font-size: 2rem;
+		&._large {
+			font-size: 3rem;
+		}
+		&._min {
+			font-size: 1.375rem;
+		}
+		&._super-min {
+			font-size: 1.125rem;
+		}
+	}
+
+}
+
+.big-text {
+	font-size: 1.25rem;
+	line-height: 118.75%;
+	font-weight: 400;
+
+	@include _550 {
+		font-size: 2rem;
+	}
+	
+	@include _992 {
+		font-size: 1.375rem;
+	}
+}
+
+.text {
+	font-size: 1rem;
+	line-height: 118.75%;
+	font-weight: 400;
+	@include _550 {
+		font-size: 1.75rem;
+	}
+	
+	@include _992 {
+		font-size: 1.125rem;
+	}
+}
+
+.small-text {
+	font-size: 0.875rem;
+	line-height: 118.75%;
+	font-weight: 400;
+	@include _550 {
+		font-size: 1.5rem;
+	}
+	
+	@include _992 {
+		font-size: 0.875rem;
+	}
+}
+
+.system-text {
+	font-size: 0.75rem;
+	line-height: 116.666667%;
+	font-weight: 400;
+
+	@include _550 {
+		font-size: 1.25rem;
+	}
+	
+	@include _992 {
+		font-size: 0.75rem;
+	}
+}
+
+.section-title {
+
+	font-weight: 900;
+	font-size: 1.375rem;
+	line-height: 26px;
+	text-transform: uppercase;
+	color: var(--primary-color-1);
+
+	@include _550 {
+		font-size: 1.375rem;
+	}
+	
+	@include _992 {
+		font-size: 1.375rem;
+	}
+}
+
+.txt-center {
+	text-align: center;
+}

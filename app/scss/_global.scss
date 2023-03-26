@@ -1,0 +1,398 @@
+@use 'sass:math';
+
+html, body {
+	font-size: 16px;
+	min-height: 100%;
+	//min-width: 995px;
+}
+
+body {
+	font-family: var(--main-font);
+	
+	font-weight: 400;
+	line-height: 150%;
+
+	display: flex;
+	flex-direction: column;
+
+	//padding-right: var(--popup-padding);
+
+	&._mob-menu-active {
+		overflow: hidden;
+	}
+
+	&._popup-active {
+		overflow: hidden;
+	}
+	
+}
+
+section {
+	position: relative;
+	z-index: 2;
+}
+
+.wrapper {
+	min-height: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	overflow: hidden;
+
+	flex: 1 0 auto;
+	position: relative;
+
+	padding-bottom: 75px;
+}
+
+.container {
+	padding-left: var(--container-padding);
+	padding-right: var(--container-padding);
+	
+	@media (min-width: #{$containerMin}px) {
+		padding-left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+		padding-right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+
+		&._large {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerLarge, 2)}px));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerLarge, 2)}px));
+		}
+
+		&._min {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+		}
+
+		&._alt {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($container2, 2)}px));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($container2, 2)}px));
+		}
+	}
+}
+
+.section-padding {
+	padding-top: 75px;
+	padding-bottom: 75px;
+
+	@include _768 {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	@include _992 {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+
+}
+
+.btn {
+	display: inline-block;
+	text-align: center;
+	
+	padding: 16px 15px;
+	@include _550 {
+		padding: 26px 46.5px;
+	}
+
+	text-transform: uppercase;
+	color: var(--primary-color-1);
+	font-weight: 900;
+	font-size: 1.125rem;
+	line-height: 122.222222%;
+
+	background: var(--accent);
+	&:hover {
+		background: var(--accent-hover);
+	}
+	
+	&:active {
+		background: var(--accent-active);
+	}
+
+	&._mode-1 {
+		background: var(--primary-color-1);
+		color: var(--primary-color-2);
+
+		&:hover {
+			background: var(--primary-color-1-hover);
+		}
+		
+		&:active {
+			background: var(--primary-color-1-active);
+		}
+	}
+	&._mode-2 {
+		background: var(--primary-color-1);
+		color: var(--white);
+
+		&:hover {
+			background: var(--primary-color-1-hover);
+		}
+		
+		&:active {
+			background: var(--primary-color-1-active);
+		}
+	}
+	&._mode-3 {
+		background: var(--primary-color-2);
+		color: var(--primary-color-1);
+
+		&:hover {
+			background: var(--primary-color-2-hover);
+		}
+		
+		&:active {
+			background: var(--primary-color-2-active);
+		}
+	}
+	&._min {
+		padding: 15px;
+		@include _550 {
+			padding: 20px;
+		}
+	}
+	/* &._min-2 {
+		padding: 15px;
+		@include _550 {
+			padding: 20px;
+		}
+	} */
+
+	transition: color .2s ease-in-out, background .2s ease-in-out;
+}
+
+.price {
+	background: var(--accent);
+	font-weight: 900;
+	color: var(--primary-color-1);
+	border-radius: 50px;
+	line-height: 100%;
+	display: inline-block;
+
+	font-size: 1rem;
+	padding: 10px 20px;
+
+	@include _768 {
+		font-size: 1.375rem;
+		padding: 15px 30px;
+	}
+	
+	@include _992 {
+		font-size: 1.375rem;
+		padding: 7px 17px;
+	}
+
+	&._large {
+
+		font-size: 1.5rem;
+		padding: 10px 20px;
+
+		@include _768 {
+			font-size: 3.25rem;
+			padding: 15px 30px;
+		}
+		
+		@include _992 {
+			font-size: 2.5rem;
+			padding: 15px 30px;
+		}
+		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+
+		@media (min-width: 1300px) {
+			font-size: 3.25rem;
+			padding: 20px 60px;
+		}
+	}
+}
+
+.product-card {
+
+	border: 3px solid var(--white);
+	background: var(--white);
+	padding: 30px 15px;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	&._wide {
+		
+		@include _992 {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 0 20px;
+			padding: 30px 15px 35px 20px;
+		}
+		
+		
+		@media (min-width: 1200px) {
+			padding: 50px 15px 35px 50px;
+		}
+	}
+
+	&._wide &__category {
+		@include _992 {
+			grid-column: 1;
+		}
+	}
+
+	&._wide &__title {
+		@include _992 {
+			grid-column: 1;
+			max-width: 219px;
+		}
+	}
+
+	&._wide &__image {
+		@include _992 {
+			grid-column: 2; grid-row: 1/6;
+			margin-top: 0;
+
+			&--body {
+				padding-top: 100%; min-height: 100%;
+			}
+		}
+	}
+
+	&._wide &__price {
+		@include _992 {
+			grid-column: 1; grid-row: 4;
+			margin-top: 30px;
+			position: static;
+			align-self: self-end;
+			justify-self: self-start;
+		}
+	}
+
+	&._wide &__btn {
+		@include _992 {
+			grid-column: 1; grid-row: 5;
+			align-self: self-end;
+			margin-top: 50px;
+			max-width: 270px;
+		}
+	}
+
+	// .product-card__category
+
+	&__category {
+		font-size: 0.875rem;
+	}
+
+	// .product-card__title
+
+	&__title {
+		padding-top: 15px;
+	}
+
+	// .product-card__image
+
+	&__image {
+
+		margin-top: 40px;
+		flex: 1 1 auto;
+
+		display: flex;
+		align-items: center;
+
+		// .product-card__image--body
+
+		&--body {
+			width: 100%; padding-top: 125%;
+			position: relative;
+
+			& img {
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				object-fit: contain;
+			}
+		}
+	}
+
+	// .product-card__price
+
+	&__price {
+		z-index: 2;
+		position: absolute;
+		right: 20px; bottom: 170px;
+	}
+
+	// .product-card__btn
+
+	&__btn {
+		width: 100%;
+	}
+}
+
+.cart-btn {
+	padding: 10px 15px 10px 15px;
+	@media (min-width: 1440px) {
+		padding: 15px 25.5px 18px 25.5px;
+	}
+	background: var(--accent);
+	transition: background .3s ease;
+	&:hover {
+		background: var(--accent-hover);
+	}
+	
+	&:active {
+		background: var(--accent-active);
+	}
+	border-radius: 30px;
+
+	display: flex;
+	align-items: center;
+
+	fill: var(--primary-color-1);
+}
+
+.chat-btn {
+	display: flex;
+	align-items: center;
+	
+	position: relative;
+	margin: 15px 20px 10px 20px;
+
+	fill: var(--primary-color-2);
+	@include _992 {
+		fill: var(--primary-color-1);
+		&._alt {
+			fill: var(--primary-color-2);
+		}
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%; top: 50%;
+		transform: translate(-50%,-50%);
+		width: calc(100% + 30px); height: calc(100% + 40px);
+
+	}
+
+	&._notification::after {
+		content: '';
+		position: absolute;
+		right: 0; top: 0;
+		transform: translate(50%,-50%);
+		width: 15px; height: 15px;
+		border-radius: 50%;
+		border: 2px solid var(--primary-color-1);
+		@include _992 {
+			border: 2px solid var(--primary-color-2);
+		}
+		background: var(--accent);
+	}
+
+	&._alt._notification::after {
+		border: 2px solid var(--primary-color-1);
+		@include _992 {
+			border: 2px solid var(--primary-color-1);
+		}
+	}
+}

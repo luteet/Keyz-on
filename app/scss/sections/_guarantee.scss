@@ -1,0 +1,146 @@
+.guarantee {
+
+	padding-top: 55px; padding-bottom: 40px;
+
+	@include _768 {
+		padding-top: 75px; padding-bottom: 80px;
+	}
+
+	// .guarantee__intro
+
+	&__intro {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		@include _992 {
+			flex-direction: row;
+		}
+
+		@media (min-width: #{$container}px) {
+			padding: 0 100px;
+		}
+	}
+
+	// .guarantee__image
+
+	&__image {
+		max-width: 150px;
+		@include _992 {
+			flex: 0 1 30%;
+			max-width: none;
+		}
+		& img {
+			max-width: 100%;
+		}
+	}
+
+	// .guarantee__content
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		color: var(--primary-color-1);
+		text-align: center;
+		@include _992 {
+			flex: 0 1 70%;
+			display: block;
+			text-align: left;
+		}
+	}
+
+	// .guarantee__title
+
+	&__title {
+		max-width: 643px;
+		padding-top: 20px;
+		@include _992 {
+			padding-top: 0;
+		}
+	}
+
+	// .guarantee__text
+
+	&__text {
+		max-width: 780px;
+
+		font-size: 1.175rem;
+		line-height: 122%;
+		padding-top: 30px;
+
+		@include _768 {
+			font-size: 2rem;
+		}
+		
+		@include _992 {
+			font-size: 1.375rem;
+		}
+
+		& p {
+			padding: 10px 0;
+		}
+	}
+
+	// .guarantee__line
+
+	&__line {
+		margin-top: 75px;
+		@include _768 {
+			margin-top: 125px;
+		}
+		height: 3px;
+		background: var(--primary-color-2);
+	}
+
+	// .guarantee__list
+
+	&__list {
+		display: grid;
+		grid-template-columns: 100%;
+		padding-top: 75px;
+		@include _768 {
+			padding-top: 143px;
+		}
+		@include _992 {
+			grid-template-columns: 1fr 1fr;
+		}
+		gap: 85px 33px;
+		
+
+		& li {
+			display: block;
+			
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0; top: 0;
+				display: block;
+				flex: 0 0 30px; width: 30px; height: 30px;
+				@include _768 {
+					flex: 0 0 35px; width: 35px; height: 35px;
+				}
+				border-radius: 50%;
+				background: var(--primary-color-2);
+			}
+		}
+
+		& h3 {
+			padding-bottom: 15px; padding-left: 50px;
+			@include _768 {
+				padding-bottom: 30px; padding-left: 60px;
+			}
+		}
+
+		& p {
+			@include _550 {
+				padding-left: 60px;
+			}
+			padding-top: 15px;
+			font-size: 1.125rem;
+			line-height: 122.222222%;
+		}
+	}
+}

@@ -1,0 +1,87 @@
+.sale-week {
+
+	padding-top: 45px; padding-bottom: 45px;
+	@include _768 {
+		padding-top: 85px; padding-bottom: 85px;
+	}
+	
+
+	&__wrapper {
+		padding-top: 50px; padding-bottom: 50px;
+		@include _768 {
+			padding-top: 80px; padding-bottom: 80px;
+		}
+		display: grid;
+		grid-template-columns: 100%;
+		@include _992 {
+			grid-template-columns: 300px auto;	
+		}
+		gap: 20px;
+
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%; top: 0;
+			transform: translate(-50%,0);
+			width: calc(100% + 185px); height: 100%;
+			background: var(--light);
+			z-index: -1;
+		}
+	}
+
+	// .sale-week__intro
+
+	&__intro {
+		background: var(--accent);
+		color: var(--primary-color-1);
+		padding: 37px 18px 40px 18px;
+		@include _992 {
+			padding: 67px 18px 40px 18px;
+		}
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	// .sale-week__title
+
+	&__title {
+	}
+
+	// .sale-week__link
+
+	&__link {
+		display: block;
+		margin-top: 20px;
+		@include _992 {
+			margin-top: 0;
+		}
+	}
+
+	// .sale-week__list
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+		gap: 20px;
+
+		
+	}
+
+	// .sale-week__item
+
+	&__item {
+	}
+
+	// .sale-week__card
+
+	&__card {
+	}
+
+	&__item:first-child > * {
+		border-color: var(--accent);
+	}
+}

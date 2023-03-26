@@ -1,0 +1,39 @@
+
+
+$container: 1394;
+$container2: 1420;
+$containerMin: 1260;
+$containerLarge: 1580;
+
+:root {
+	--title-font: 'Gotham', sans-serif;
+	--main-font: 'Gotham', sans-serif;
+	
+	--primary-color-1: #008179;
+	--primary-color-1-hover: #04978d;
+	--primary-color-1-active: #026b64;
+	--primary-color-2: #00D198;
+	--primary-color-2-hover: #09e4a9;
+	--primary-color-2-active: #02be8c;
+	--accent: #D7FF26;
+	--accent-hover: #e8ff82;
+	--accent-active: #c5ee0f;
+	--light: #FBFFEA;
+
+	--white: #FFF;
+	--black: #000;
+
+	--container-padding: 15px;
+}
+
+@font-face {
+	@include font-include('Gotham', 400, swap, normal, 'Gotham-Book');
+}
+
+@font-face {
+	@include font-include('Gotham', 900, swap, normal, 'Gotham-Black');
+}
+
+@font-face {
+	@include font-include('Gotham', 700, swap, normal, 'Gotham-Bold');
+}

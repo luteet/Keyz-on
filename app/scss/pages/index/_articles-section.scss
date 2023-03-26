@@ -1,0 +1,168 @@
+.articles-section {
+
+	padding-top: 55px; padding-bottom: 40px;
+
+	@include _768 {
+		padding-top: 75px; padding-bottom: 80px;
+	}
+
+	// .articles-section__title
+
+	&__title {
+	}
+
+	// .articles-section__main
+
+	&__main {
+		padding-top: 30px;
+		@include _768 {
+			padding-top: 90px;
+		}
+
+		/* & .article {
+			&__content {
+				
+			}
+		} */
+	}
+}
+
+.article {
+
+	display: flex;
+	flex-direction: column;
+
+	// .article__link
+
+	&__link {
+		color: var(--primary-color-2);
+	}
+
+	// .article__title
+
+	&__title {
+	}
+
+	// .article__time
+
+	&__time {
+		margin-top: 15px;
+
+		display: inline-block;
+		align-self: self-start;
+		border-radius: 50px;
+		padding: 5px 10px;
+		background: var(--accent);
+
+		font-size: 0.875rem;
+		line-height: 121.428571%;
+		color: var(--primary-color-1);
+	}
+
+	// .article__image
+
+	&__image {
+		margin-top: 30px; margin-bottom: 15px;
+		@include _768 {
+			margin-top: 60px;
+		}
+		width: 100%; padding-top: 35.280189%;
+		min-height: 300px;
+		position: relative;
+		& img {
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&._main &__image {
+		margin-bottom: 15px;
+		@include _768 {
+			margin-bottom: 50px;
+		}
+	}
+
+	// .article__content
+
+	&__content {
+		margin-top: 10px;
+
+		font-size: 1rem;
+		@include _768 {
+			font-size: 1.75rem;
+		}
+		
+		@include _992 {
+			font-size: 1.125rem;
+		}
+		line-height: 118.181818%;
+
+		& p {
+			padding: 10px 0;
+		}
+	}
+
+	&._main &__content {
+		font-size: 1.125rem;
+
+		@include _768 {
+			font-size: 2rem;
+		}
+		
+		@include _992 {
+			font-size: 1.375rem;
+		}
+	}
+
+	// .article__footer
+
+	&__footer {
+		padding-top: 20px;
+
+		display: flex;
+		@include _992 {
+			&._end {
+				justify-content: flex-end;
+			}
+		}
+	}
+
+	// .article__btn
+
+	&__btn {
+		min-width: 300px; width: 100%;
+		@include _550 {
+			width: auto;
+		}
+	}
+}
+
+.articles-row {
+
+	padding-top: 75px;
+	@include _768 {
+		padding-top: 146px;
+	}
+
+	@include _992 {
+		display: grid;
+		grid-template-columns: 50% auto;
+		gap: 78px;
+	}
+
+	// .articles-row__col
+
+	&__col {
+		&:not(:first-child) {
+			margin-top: 55px;
+			@include _992 {
+				margin-top: 0px;
+			}
+		}
+		& > *:not(:first-child) {
+			margin-top: 55px;
+		}
+	}
+}

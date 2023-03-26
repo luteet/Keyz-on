@@ -3227,7 +3227,8 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     }
 
     .hero__content {
-        flex: 0 1 60%
+        flex: 0 1 60%;
+        align-self: self-start
     }
 
     .hero__product {

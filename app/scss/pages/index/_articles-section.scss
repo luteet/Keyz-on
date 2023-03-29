@@ -106,7 +106,11 @@
 	}
 
 	&._main &__content {
-		font-size: 1.125rem;
+		font-size: 1rem;
+
+		@include _550 {
+			font-size: 1.125rem;
+		}
 
 		@include _768 {
 			font-size: 2rem;

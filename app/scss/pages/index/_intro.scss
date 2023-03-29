@@ -1,7 +1,7 @@
 .hero {
 
 	padding-top: 25px; padding-bottom: 25px;
-	margin-bottom: 25px;
+	margin-bottom: 25px; margin-top: -1px;
 
 	@include _768 {
 		padding-top: 50px; padding-bottom: 50px;

@@ -14,16 +14,10 @@
 	// .articles-section__main
 
 	&__main {
-		padding-top: 30px;
+		padding-top: 30px; padding-bottom: 45px;
 		@include _768 {
-			padding-top: 90px;
+			padding-top: 90px; padding-bottom: 76px;
 		}
-
-		/* & .article {
-			&__content {
-				
-			}
-		} */
 	}
 }
 
@@ -100,7 +94,14 @@
 		line-height: 118.181818%;
 
 		& p {
-			padding: 10px 0;
+			margin: 10px 0;
+			display: -webkit-box;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			-webkit-line-clamp: 6;
+			-webkit-box-orient: vertical;
+			line-clamp: 6;
+			box-orient: vertical;
 		}
 	}
 
@@ -141,9 +142,9 @@
 
 .articles-row {
 
-	padding-top: 75px;
+	padding-top: 45px;
 	@include _768 {
-		padding-top: 146px;
+		padding-top: 76px;
 	}
 
 	@include _992 {

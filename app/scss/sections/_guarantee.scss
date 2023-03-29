@@ -6,6 +6,22 @@
 		padding-top: 75px; padding-bottom: 80px;
 	}
 
+	&._primary-color-bg {
+		background: var(--primary-color-1);
+		color: var(--white);
+		margin-top: 55px; margin-bottom: 40px;
+		padding-top: 50px; padding-bottom: 50px;
+
+		@include _768 {
+			margin-top: 75px; margin-bottom: 80px;
+			padding-top: 145px; padding-bottom: 145px;
+		}
+	}
+
+	&._primary-color-bg &__title, &._primary-color-bg &__content, &._primary-color-bg &__list h3 {
+		color: var(--white);
+	}
+
 	// .guarantee__intro
 
 	&__intro {
@@ -66,9 +82,13 @@
 	&__text {
 		max-width: 780px;
 
-		font-size: 1.175rem;
+		font-size: 1rem;
 		line-height: 122%;
 		padding-top: 30px;
+
+		@include _550 {
+			font-size: 1.175rem;
+		}
 
 		@include _768 {
 			font-size: 2rem;
@@ -137,9 +157,10 @@
 		& p {
 			@include _550 {
 				padding-left: 60px;
+				font-size: 1.125rem;
 			}
 			padding-top: 15px;
-			font-size: 1.125rem;
+			font-size: 1rem;
 			line-height: 122.222222%;
 		}
 	}

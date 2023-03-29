@@ -1,4 +1,4 @@
-.sale-week {
+.sale-week-section {
 
 	padding-top: 45px; padding-bottom: 45px;
 	@include _768 {
@@ -31,7 +31,7 @@
 		}
 	}
 
-	// .sale-week__intro
+	// .sale-week-section__intro
 
 	&__intro {
 		background: var(--accent);
@@ -46,12 +46,12 @@
 		justify-content: space-between;
 	}
 
-	// .sale-week__title
+	// .sale-week-section__title
 
 	&__title {
 	}
 
-	// .sale-week__link
+	// .sale-week-section__link
 
 	&__link {
 		display: block;
@@ -61,7 +61,7 @@
 		}
 	}
 
-	// .sale-week__list
+	// .sale-week-section__list
 
 	&__list {
 		display: grid;
@@ -71,17 +71,17 @@
 		
 	}
 
-	// .sale-week__item
+	// .sale-week-section__item
 
 	&__item {
 	}
 
-	// .sale-week__card
+	// .sale-week-section__card
 
 	&__card {
 	}
 
-	&__item:first-child > * {
+	&__item > *:hover {
 		border-color: var(--accent);
 	}
 }

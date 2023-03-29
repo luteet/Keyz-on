@@ -1,0 +1,23 @@
+.text-section {
+	padding-top: 48px;
+	@include _768 {
+		padding-top: 118px;
+	}
+
+	& h2 {
+		color: var(--primary-color-1);
+		padding-bottom: 20px;
+		@include _768 {
+			padding-bottom: 80px;
+		}
+	}
+
+	& p {
+		font-size: 1rem;
+		@include _768 {
+			font-size: 1.125rem;
+		}
+		line-height: 150%;
+		padding-top: 20px;
+	}
+}

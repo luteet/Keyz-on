@@ -1,0 +1,29 @@
+<section class="all-for-collection-section container _alt">
+	<h2 class="visually-hidden">Collections</h2>
+	<div class="all-for-collection-section__wrapper">
+		<ul class="all-for-collection-section__list">
+			<li class="all-for-collection-section__item all-for__card">
+				<h3 class="all-for__card--title main-title">
+					all for windows collection
+				</h3>
+			</li>
+			@@loop("_product-card.html", [
+				{
+					"class": 'all-for-collection-section__item',
+					"image": '1',
+					"class_2": ' _wide',
+				},
+				{
+					"class": 'all-for-collection-section__item',
+					"image": '2',
+					"class_2": ' _wide',
+				},
+				{
+					"class": 'all-for-collection-section__item',
+					"image": '3',
+					"class_2": ' _wide',
+				}
+			])
+		</ul>
+	</div>
+</section>

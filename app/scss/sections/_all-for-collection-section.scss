@@ -1,4 +1,4 @@
-.all-for-collection {
+.all-for-collection-section {
 
     padding-top: 55px; padding-bottom: 40px;
 
@@ -6,7 +6,7 @@
 		padding-top: 75px; padding-bottom: 80px;
 	}
 
-    // .all-for-collection__list
+    // .all-for-collection-section__list
 
     &__wrapper {
         padding: 50px 0;
@@ -26,6 +26,8 @@
         }
     }
 
+    // .all-for-collection-section__list
+
     &__list {
         display: grid;
         gap: 20px;
@@ -35,7 +37,7 @@
         }
     }
 
-    // .all-for-collection__item
+    // .all-for-collection-section__item
 
     &__item > * {
         min-height: 100%;

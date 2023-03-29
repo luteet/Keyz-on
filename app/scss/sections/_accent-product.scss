@@ -1,9 +1,15 @@
 .accent-product {
 
+	
+
 	padding-top: 55px; padding-bottom: 40px;
 
 	@include _768 {
 		padding-top: 75px; padding-bottom: 80px;
+	}
+	
+	@include _992 {
+		grid-column: 2 span;
 	}
 
 	// .accent-product__wrapper
@@ -29,6 +35,16 @@
 			padding: 0 145px 0 0;
 		}
 		overflow: hidden;
+	}
+
+	&._in-section &__wrapper {
+		padding: 15px 30px 0 30px;
+		@include _550 {
+			padding: 30px 50px 0 50px;
+		}
+		@include _768 {
+			padding: 30px 50px 0 50px;
+		}
 	}
 
 	// .accent-product__bg

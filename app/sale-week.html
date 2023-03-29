@@ -1,0 +1,288 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-address container _large">
+			<ul>
+				<li>
+					<a href="index.html">
+						Main
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Sale
+					</a>
+				</li>
+			</ul>
+		</div>
+		<section class="sale-week container _large">
+			<div class="sale-week__header">
+				<h2 class="sale-week__title main-title">
+					Sale of the week
+				</h2>
+			</div>
+			<div class="sale-week__wrapper">
+				<aside class="sale-week__aside">
+					<form class="filter" data-append-to-on-tablet="header-filter">
+						<fieldset class="filter__fieldset">
+							<legend class="filter__title title _super-min">
+								all goods
+							</legend>
+							<ul class="filter__list">
+								<li class="filter__item filter__category filter-category _active">
+									<button type="button" class="filter-category__target">Network</button>
+									<ul class="filter-category__list">
+										<li>
+											<label>
+												<input type="radio" name="network" value="vmware">
+												<span>VmWare</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="network" value="parallels">
+												<span>Parallels</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="network" value="acronis">
+												<span>Acronis</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="network" value="cisco">
+												<span>Cisco</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="filter__item filter__category filter-category">
+									<button type="button" class="filter-category__target">Windows</button>
+									<ul class="filter-category__list">
+										<li>
+											<label>
+												<input type="radio" name="windows" value="vmware">
+												<span>VmWare</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="windows" value="parallels">
+												<span>Parallels</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="windows" value="acronis">
+												<span>Acronis</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="windows" value="cisco">
+												<span>Cisco</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="filter__item filter__category filter-category">
+									<button type="button" class="filter-category__target">Adobe</button>
+									<ul class="filter-category__list">
+										<li>
+											<label>
+												<input type="radio" name="adobe" value="vmware">
+												<span>VmWare</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="adobe" value="parallels">
+												<span>Parallels</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="adobe" value="acronis">
+												<span>Acronis</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="adobe" value="cisco">
+												<span>Cisco</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</fieldset>
+						<fieldset class="filter__fieldset">
+							<legend class="filter__title title _super-min">
+								price
+							</legend>
+							<div class="filter__price filter-price">
+								<label class="filter-price__label">
+									<input type="number" name="price-from" placeholder="From" class="filter-price__input">
+								</label>
+								<label class="filter-price__label">
+									<input type="number" name="price-to" placeholder="To" class="filter-price__input">
+								</label>
+							</div>
+						</fieldset>
+					</form>
+				</aside>
+				<main class="sale-week__main">
+					<ul class="sale-week__list">
+						@@loop("html/_product-card.html", [
+							{
+								"class": 'sale-week__item',
+								"image": '1',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '2',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '3',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '1',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '1',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '2',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '3',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '1',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '1',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '2',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '3',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '1',
+								"class_2": '',
+							},
+						])
+					</ul>
+				</main>
+				@@include("html/_accent-product.html", {
+					"class": ' _in-section',
+				})
+				<main class="sale-week__main">
+					<ul class="sale-week__list">
+						@@loop("html/_product-card.html", [
+							{
+								"class": 'sale-week__item',
+								"image": '1',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '2',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '3',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '1',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '1',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '2',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '3',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '1',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '1',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '2',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '3',
+								"class_2": '',
+							},
+							{
+								"class": 'sale-week__item',
+								"image": '1',
+								"class_2": '',
+							},
+						])
+					</ul>
+					<div class="sale-week__footer">
+						<button type="button" class="sale-week__loadmore loadmore">
+							Load more
+						</button>
+					</div>
+				</main>
+			</div>
+		</section>
+		@@include("html/_reviews.html")
+		@@include("html/_all-for.html")
+		<section class="articles-section container _min">
+			<h2 class="articles-section__title section-title">
+				Статьи
+			</h2>
+			@@include("html/_articles-section-row.html")
+		</section>
+	</main>
+
+@@include("html/_footer.html")

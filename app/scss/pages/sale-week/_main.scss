@@ -1,0 +1,281 @@
+.sale-week {
+
+	padding-top: 71px; margin-top: 60px;
+	padding-bottom: 30px; margin-bottom: 30px;
+	background: var(--light);
+	@include _992 {
+		background: transparent; 
+		margin-top: 0; padding-bottom: 35px;
+	}
+
+	// .sale-week__header
+
+	&__header {
+		position: relative;
+		padding: 60px 30px;
+		background: var(--accent);
+		
+		@include _992 {
+			padding: 60px 0;
+			background: transparent;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 50%; top: 0;
+				transform: translate(-50%,0);
+				width: calc(100% + 140px); height: 100%;
+				background: var(--accent);
+				z-index: -1;
+			}
+		}
+	}
+
+	// .sale-week__title
+
+	&__title {
+		color: var(--primary-color-1);
+	}
+
+	// .sale-week__wrapper
+
+	&__wrapper {
+		display: grid;
+
+		position: relative;
+		padding: 0px 0 50px 0;
+		@include _992 {
+			padding: 77px 0;
+			grid-template-columns: 320px auto;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 50%; top: 0;
+				transform: translate(-50%,0);
+				width: calc(100% + 140px); height: 100%;
+				background: var(--light);
+				z-index: -1;
+			}
+		}
+	}
+
+	// .sale-week__aside
+
+	&__aside {
+		padding-bottom: 20px;
+		@include _992 {
+			padding-right: 20px;
+		}
+	}
+
+	
+
+	// .sale-week__main
+
+	&__main {
+		@include _992 {
+			grid-column: 2;
+		}
+	}
+
+	// .sale-week__list
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+		gap: 20px;
+
+		&._accent-first > *:first-child .product-card {
+			border-color: var(--accent);
+		}
+	}
+
+	&__footer {
+		padding-top: 43px; padding-bottom: 15px;
+		@include _768 {
+			padding-top: 63px;
+		}
+		
+		@include _992 {
+			padding-top: 80px;
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+// .sale-week__filter
+
+.filter {
+
+	padding: 35px 0;
+	@include _992 {
+		padding: 35px 15px;
+		background: var(--white);
+	}
+
+	// .filter__fieldset
+
+	&__fieldset {
+		padding: 0;
+		&:not(:first-child) {
+			margin-top: 22px;
+		}
+	}
+
+	// .filter__title
+
+	&__title {
+		color: var(--white);
+		@include _992 {
+			color: var(--primary-color-1);
+		}
+		margin-bottom: 30px;
+	}
+
+	// .filter__list
+
+	&__list {
+		margin: -7px 0;
+		padding-left: 15px;
+		@include _992 {
+			padding-left: 0;
+		}
+	}
+
+	// .filter__item
+
+	&__item {
+		position: relative;
+		padding-left: 15px;
+		margin: 7px 0;
+
+		font-size: 1.125rem;
+		line-height: 155.555556%;
+		color: var(--white);
+		@include _992 {
+			color: var(--black);
+		}
+
+		&::before {
+			content: '•';
+			color: var(--primary-color-2);
+			font-size: 1.25rem;
+			position: absolute;
+			left: 0; top: 0px;
+		}
+	}
+
+	// .filter__category
+
+	&__category {
+	}
+
+	// .filter__price
+
+	&__price {
+	}
+}
+
+.filter-category {
+
+	&._active &__list {
+		display: block;
+	}
+
+	// .filter-category__target
+
+	&__target {
+		background: transparent;
+		color: var(--white);
+		@include _992 {
+			color: var(--black);
+		}
+	}
+
+	// .filter-category__list
+
+	&__list {
+
+		display: none;
+		padding-left: 15px;
+		
+		& label {
+			position: relative;
+			display: inline-block;
+
+			cursor: pointer;
+
+			& span {
+				padding: 2.5px 5px;
+				display: inline-block;
+				line-height: 100%;
+				color: var(--white);
+				@include _992 {
+					color: var(--black);
+				}
+
+				transition: background .3s ease;
+			}
+		}
+
+		& input {
+			position: absolute;
+			left: 50%; top: 50%;
+			transform: translate(-50%,-50%);
+			width: 1px; height: 1px;
+			margin: -1px;
+			border: 0;
+			padding: 0;
+			
+			white-space: nowrap;
+			clip-path: inset(100%);
+			clip: rect(0 0 0 0);
+			overflow: hidden;
+		}
+
+		& input:checked + span {
+			background: var(--primary-color-2);
+			color: var(--primary-color-1);
+			@include _992 {
+				color: var(--black);
+			}
+		}
+	}
+}
+
+.filter-price {
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 13px;
+
+	// .filter-price__label
+
+	&__label {
+		display: block;
+
+	}
+
+	// .filter-price__input
+
+	&__input {
+		width: 100%;
+		padding: 20px 10px;
+		background: var(--white);
+		&::placeholder {
+			color: var(--primary-color-1);
+			opacity: 1;
+			transition: opacity .3s ease;
+		}
+		&:focus::placeholder {
+			opacity: 0;
+		}
+
+		border: 3px solid var(--primary-color-2);
+		@include _992 {
+			border: 3px solid var(--primary-color-1);
+		}
+	}
+}

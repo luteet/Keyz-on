@@ -1,0 +1,82 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-address container _large">
+			<ul>
+				<li>
+					<a href="index.html">
+						Main
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						News
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Новый релиз Касперского
+					</a>
+				</li>
+			</ul>
+		</div>
+		<section class="news-page container _min">
+			<div class="news-page__wrapper">
+				<h2 class="news-main__title news-page__title main-title">
+					Новый релиз Касперского
+				</h2>
+				<time class="news-main__time news-article__time" datetime="12-05-2023">12 мая 2023</time>
+				<div class="news-main__image">
+					<picture>
+						<source srcset="img/news/image.webp" type="image/webp">
+						<img src="img/news/image.jpg" alt="" width="1260" height="447" loading="lazy">
+					</picture>
+				</div>
+				<div class="news-main__text">
+					<p>Микрохроматический интервал представляет собой деструктивный соноропериод. Векторно-зеркальная синхронность просветляет рефрен. Серпантинная волна выстраивает винил. Мнимотакт синхронно трансформирует деструктивный винил. Пентатоника сонорна. Показательный пример – крещендирующее хождение регрессийно вызывает мнимотакт, это и есть одномоментная вертикаль в сверхмногоголосной полифонической ткани.</p>
+					<p>Субтехника, и это особенно заметно у Чарли Паркера или Джона Колтрейна, трансформирует зеркальный громкостнoй прогрессийный период. Райдер, в первом приближении, заканчивает длительностный фьюжн. Алеаторика многопланово образует композиционный гармонический интервал. Векторно-зеркальная синхронность имитирует резкий райдер. Фьюжн иллюстрирует разнокомпонентный аккорд. Нонаккорд регрессийно заканчивает динамический эллипсис, хотя это довольно часто напоминает песни Джима Моррисона и Патти Смит.</p>
+				</div>
+				<div class="news-main__footer">
+					<a href="#" class="news-main__arrow">
+						<svg width="28" height="52" viewBox="0 0 28 52">
+							<use xlink:href="img/sprites.svg#arrow-prev"></use>
+						</svg>
+						предыдущая новость
+					</a>
+					<a href="#" class="news-main__arrow">
+						следующая новость
+						<svg width="29" height="52" viewBox="0 0 29 52">
+							<use xlink:href="img/sprites.svg#arrow-next"></use>
+						</svg>
+					</a>
+				</div>
+				<form class="newsletter">
+					<h3 class="newsletter__title title _min">
+						Хотите получать свежие новости? 
+						Подпишитесь на нашу рассылку
+					</h3>
+					<label class="newsletter__label">
+						<input type="text" name="name" placeholder="Name" required class="newsletter__input input">
+					</label>
+					<label class="newsletter__label">
+						<input type="email" name="email" placeholder="Email" required class="newsletter__input input">
+					</label>
+					<label class="newsletter__label checkbox">
+						<input type="checkbox" name="privacy" required class="checkbox__input">
+						<span class="checkbox__element"></span>
+						<span class="checkbox__text">Ознакомлен с политикой конфиденциальности и правилами обработки персональных данных</span>
+					</label>
+					<button class="newsletter__submit btn _min _mode-3" type="submit">
+						Отправить
+					</button>
+				</form>
+				@@include("html/_news-row.html")
+			</div>
+		</section>
+		@@include("html/_accent-product.html", {
+			"class": '',
+		})
+		@@include("html/_all-for-collection.html")
+	</main>
+
+@@include("html/_footer.html")

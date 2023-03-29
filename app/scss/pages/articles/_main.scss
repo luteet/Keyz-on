@@ -1,0 +1,19 @@
+.articles {
+
+	padding-top: 60px; padding-bottom: 60px;
+	@include _992 {
+		padding-top: 111px; padding-bottom: 111px;
+	}
+
+	// .articles__wrapper
+
+	&__wrapper {
+
+	}
+
+	// .articles__title
+
+	&__title {
+		color: var(--primary-color-1);
+	}
+}

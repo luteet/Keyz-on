@@ -12,7 +12,7 @@
 
 @import 'pages/index/intro';
 @import 'pages/index/about-us';
-@import 'pages/index/sale-week';
+@import 'pages/index/sale-week-section';
 @import 'pages/index/feedback';
 @import 'pages/index/articles-section';
 @import 'pages/index/news-section';
@@ -21,8 +21,27 @@
 @import 'sections/guarantee';
 @import 'sections/all-for';
 @import 'sections/reviews';
-@import 'sections/all-for-collection';
+@import 'sections/all-for-collection-section';
+@import 'sections/text-section';
+@import 'sections/privacy-nav';
 
+@import 'pages/sale-week/main';
+
+@import 'pages/all-for-collection/main';
+
+@import 'pages/catalog/main';
+
+@import 'pages/product/main';
+
+@import 'pages/news/main';
+
+@import 'pages/news-page/main';
+
+@import 'pages/articles/main';
+
+@import 'pages/article-page/main';
+
+@import 'pages/faq/main';
 
 
 @import 'main-sections/footer';

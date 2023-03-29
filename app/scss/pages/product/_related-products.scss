@@ -1,0 +1,33 @@
+.related-products {
+
+	padding-top: 55px; padding-bottom: 40px;
+
+	@include _768 {
+		padding-top: 75px; padding-bottom: 80px;
+	}
+
+	// .related-products__title
+
+	&__title {
+		
+		@media (min-width: #{$container}px) {
+			padding-left: 80px;
+		}
+	}
+
+	// .related-products__list
+
+	&__list {
+
+		padding-top: 30px;
+		
+		@include _992 {
+			padding-top: 61px;
+			gap: 20px;
+		}
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+		gap: 15px;
+	}
+}

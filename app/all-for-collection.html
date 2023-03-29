@@ -1,0 +1,138 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-address container _large">
+			<ul>
+				<li>
+					<a href="index.html">
+						Main
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						catalog
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						collections
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						all for windows
+					</a>
+				</li>
+			</ul>
+		</div>
+		<section class="all-for-collection container _super-large">
+			<div class="all-for-collection__wrapper">
+				<div class="all-for-collection__header">
+					<h2 class="all-for-collection__title main-title">
+						all for windows collection
+					</h2>
+				</div>
+				<ul class="all-for-collection__list">
+					@@loop("html/_product-card.html", [
+						{
+							"class": 'sale-week__item',
+							"image": '1',
+							"class_2": '',
+						},
+						{
+							"class": 'sale-week__item',
+							"image": '2',
+							"class_2": '',
+						},
+						{
+							"class": 'sale-week__item',
+							"image": '3',
+							"class_2": '',
+						},
+						{
+							"class": 'sale-week__item',
+							"image": '1',
+							"class_2": '',
+						},
+						{
+							"class": 'sale-week__item',
+							"image": '1',
+							"class_2": '',
+						},
+						{
+							"class": 'sale-week__item',
+							"image": '2',
+							"class_2": '',
+						},
+						{
+							"class": 'sale-week__item',
+							"image": '3',
+							"class_2": '',
+						},
+						{
+							"class": 'sale-week__item',
+							"image": '1',
+							"class_2": '',
+						},
+						{
+							"class": 'sale-week__item',
+							"image": '1',
+							"class_2": '',
+						},
+						{
+							"class": 'sale-week__item',
+							"image": '2',
+							"class_2": '',
+						},
+						{
+							"class": 'sale-week__item',
+							"image": '3',
+							"class_2": '',
+						},
+						{
+							"class": 'sale-week__item',
+							"image": '1',
+							"class_2": '',
+						},
+					])
+				</ul>
+			</div>
+		</section>
+		@@include("html/_feedback.html")
+		@@include("html/_sale-week.html")
+		@@include("html/_accent-product.html", {
+			"class": '',
+		})
+		<section class="articles-section container _min">
+			<h2 class="articles-section__title section-title">
+				Статьи
+			</h2>
+			<article class="articles-section__main article _main">
+				<a href="#" class="article__link" aria-label="Движение спутника вертикально характеризует центр подвеса">
+					<h3 class="article__title title _min">
+						Движение спутника вертикально характеризует центр подвеса 
+					</h3>
+				</a>
+				<time class="article__time" datetime="12-05-2023">12 мая 2023</time>
+				<a href="#" class="article__image" aria-label="Движение спутника вертикально характеризует центр подвеса">
+					<picture>
+						<source srcset="img/articles/image-large.webp" type="image/webp">
+						<img src="img/articles/image-large.jpg" alt="" width="1267" height="447" loading="lazy">
+					</picture>
+				</a>
+				<div class="article__content">
+					<p>Микрохроматический интервал представляет собой деструктивный соноропериод. Векторно-зеркальная синхронность просветляет рефрен. Серпантинная волна выстраивает винил. Мнимотакт синхронно трансформирует деструктивный винил. Пентатоника сонорна. Показательный пример – крещендирующее хождение регрессийно вызывает мнимотакт, это и есть одномоментная вертикаль в сверхмногоголосной полифонической ткани.</p>
+					<p>Субтехника, и это особенно заметно у Чарли Паркера или Джона Колтрейна, трансформирует зеркальный громкостнoй прогрессийный период. Райдер, в первом приближении, заканчивает длительностный фьюжн. Алеаторика многопланово образует композиционный гармонический интервал. Векторно-зеркальная синхронность имитирует резкий райдер. Фьюжн иллюстрирует разнокомпонентный аккорд. Нонаккорд регрессийно заканчивает динамический эллипсис, хотя это довольно часто напоминает песни Джима Моррисона и Патти Смит.</p>
+				</div>
+				<div class="article__footer _end">
+					<a href="#" class="article__btn btn _min _mode-3">
+						Читать дальше
+					</a>
+				</div>
+			</article>
+			@@include("html/_articles-section-row.html")
+		</section>
+		@@include("html/_all-for.html")
+	</main>
+
+@@include("html/_footer.html")

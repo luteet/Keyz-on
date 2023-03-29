@@ -6,6 +6,28 @@
 		padding-top: 75px; padding-bottom: 80px;
 	}
 
+	&._alt-reviews {
+		position: relative;
+		
+		margin-top: 55px; margin-bottom: 40px;
+
+		@include _768 {
+			margin-top: 75px; margin-bottom: 80px;
+		}
+		
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%; top: 0;
+			transform: translate(-50%,0);
+			width: #{$containerSuperLarge}px; height: 100%;
+			background: var(--light);
+			z-index: -1;
+		}
+	}
+
+	
+
 	// .reviews__title
 
 	&__title {
@@ -39,6 +61,13 @@
 	}
 
 	// .reviews__comment
+
+	&._alt-reviews &__comment {
+		border-color: var(--white);
+		&::after {
+			filter: none;
+		}
+	}
 
 	&__comment {
 		flex: 1 1 auto;
@@ -111,8 +140,10 @@
 
 	&__text {
 		padding-top: 15px; padding-bottom: 15px;
+		font-size: 1rem;
 		@include _768 {
 			padding-bottom: 40px;
+			
 		}
 	}
 

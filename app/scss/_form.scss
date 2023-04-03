@@ -49,6 +49,15 @@
 	&__text {
 		user-select: none;
 		font-size: 0.75rem;
+		
+		@include _768 {
+			font-size: 1.25rem;
+		}
+		
+		@include _992 {
+			font-size: 0.75rem;
+		}
+
 		color: var(--primary-color-1);
 		line-height: 116.666667%;
 	}
@@ -57,7 +66,16 @@
 .input {
 	padding: 23px;
 	border: 3px solid var(--primary-color-1);
-	font-size: 0.875rem;
+	font-size: 0.75rem;
+	
+	@include _768 {
+		font-size: 1.5rem;
+	}
+	
+	@include _992 {
+		font-size: 0.875rem;
+	}
+
 	line-height: 121.428571%;
 	&::placeholder {
 		color: var(--primary-color-1);
@@ -72,7 +90,15 @@
 .textarea {
 	padding: 23px;
 	border: 3px solid var(--primary-color-1);
-	font-size: 0.875rem;
+	font-size: 0.75rem;
+	
+	@include _768 {
+		font-size: 1.5rem;
+	}
+	
+	@include _992 {
+		font-size: 0.875rem;
+	}
 	line-height: 121.428571%;
 	resize: none;
 	&::placeholder {
@@ -86,11 +112,22 @@
 }
 
 .input-alt, .textarea-alt {
-	padding: 22px 26px;
+	padding: 16px 13px;
 	width: 100%;
 	background: var(--white);
-	font-size: 0.875rem;
+	font-size: 0.75rem;
+	
+	@include _768 {
+		font-size: 1.5rem;
+		padding: 33px 27px;
+	}
+	
+	@include _992 {
+		font-size: 0.875rem;
+		padding: 22px 27px;
+	}
 	line-height: 121.428571%;
+
 	&::placeholder {
 		color: var(--primary-color-1);
 		opacity: 1;
@@ -103,4 +140,26 @@
 
 .textarea-alt {
 	resize: none;
+}
+
+.password-toggle {
+	padding: 5px 12px;
+	background: var(--white);
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	& svg {
+		transition: fill .3s ease;
+	}
+	fill: var(--primary-color-1);
+	&._active svg {
+		fill: var(--accent);
+	}
+	&:hover {
+		fill: var(--primary-color-1-hover);
+	}
+	
+	&:active {
+		fill: var(--primary-color-1-active);
+	}
 }

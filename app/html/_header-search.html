@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+	<div class="wrapper">
+		<header class="header _searched container _large">
+			<a href="index.html" class="header__logo">
+				<img src="img/logo.svg" alt="Logo" width="236" height="60" loading="lazy" class="header__logo--img">
+				<img src="img/logo-2.svg" alt="Logo" width="236" height="60" loading="lazy" class="header__logo--img">
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<div class="header__sale-week-filter hide-on-tablet" id="header-filter"></div>
+					<ul class="header__nav--list visible-on-tablet">
+						<li>
+							<a href="catalog.html">
+								Catalog
+							</a>
+						</li>
+						<li>
+							<a href="sale-week.html">
+								Sale
+							</a>
+						</li>
+						<li>
+							<a href="news.html">
+								News
+							</a>
+						</li>
+						<li>
+							<a href="articles.html">
+								Articles
+							</a>
+						</li>
+						<li>
+							<a href="about-us.html">
+								About us
+							</a>
+						</li>
+						<li>
+							<a href="contacts.html">
+								Contacts
+							</a>
+						</li>
+						<li>
+							<a href="faq.html">
+								FAQ
+							</a>
+						</li>
+					</ul>
+					<div class="header__nav--account">
+						<div class="header__account" data-append-to-on-tablet="header-account-place">
+							<a href="#login-popup" class="header__account--user open-popup">
+								<svg width="23" height="27" viewBox="0 0 23 27">
+									<use xlink:href="img/sprites.svg#user"></use>
+								</svg>
+							</a>
+							<a href="#" class="header__account--cart">
+								<span>3</span>
+								<svg width="31" height="25" viewBox="0 0 31 25">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>$129</span>
+							</a>
+						</div>
+					</div>
+					<ul class="header__nav--add">
+						<li>
+							<a href="#" class="header__nav--message chat-btn _notification" title="Chat">
+								<svg width="25" height="25" viewBox="0 0 25 25">
+									<use xlink:href="img/sprites.svg#comment"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+					<div class="header__nav--search">
+						<div class="header__search" data-append-to-on-tablet="header-search-place">
+							<label class="header__search--label">
+								<input type="search" name="search" value="Vmware" class="header__search--input">
+							</label>
+							<button class="header__search--submit" type="submit" title="Search">
+								<svg width="23" height="25" viewBox="0 0 23 25">
+									<use xlink:href="img/sprites.svg#search"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<form class="header__nav--feedback header__feedback visible-on-tablet">
+						<label class="header__feedback--label">
+							<input type="text" name="name" placeholder="Name" required class="header__feedback--input input">
+						</label>
+						<label class="header__feedback--label">
+							<input type="email" name="email" placeholder="Email" required class="header__feedback--input input">
+						</label>
+						<label class="header__feedback--label">
+							<textarea name="message" placeholder="Message" class="header__feedback--textarea textarea"></textarea>
+						</label>
+						<label class="header__feedback--label checkbox">
+							<input type="checkbox" name="privacy" required class="checkbox__input">
+							<span class="checkbox__element"></span>
+							<span class="checkbox__text">Ознакомлен с политикой конфиденциальности и правилами обработки персональных данных</span>
+						</label>
+						<button class="header__feedback--submit btn _min _mode-3" type="button">send</button>
+					</form>
+				</div>
+			</nav>
+			<div class="header__account-place" id="header-account-place"></div>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="header__search-place" id="header-search-place"></div>
+		</header>

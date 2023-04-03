@@ -17,6 +17,7 @@
 			<nav class="header__nav">
 				<div class="header__nav--body">
 					<div class="header__sale-week-filter hide-on-tablet" id="header-filter"></div>
+					<div class="header__account-nav hide-on-tablet" id="header-account-nav"></div>
 					<ul class="header__nav--list">
 						<li>
 							<a href="catalog.html">
@@ -54,14 +55,23 @@
 							</a>
 						</li>
 					</ul>
-					<ul class="header__nav--add">
-						<li>
-							<a href="#" class="header__nav--cart cart-btn" title="Cart">
-								<svg width="31" height="27" viewBox="0 0 31 27">
-									<use xlink:href="img/sprites.svg#cart"></use>
+					<div class="header__nav--account">
+						<div class="header__account" data-append-to-on-tablet="header-account-place">
+							<a href="#login-popup" class="header__account--user open-popup">
+								<svg width="23" height="27" viewBox="0 0 23 27">
+									<use xlink:href="img/sprites.svg#user"></use>
 								</svg>
 							</a>
-						</li>
+							<a href="#" class="header__account--cart">
+								<span>3</span>
+								<svg width="31" height="25" viewBox="0 0 31 25">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>$129</span>
+							</a>
+						</div>
+					</div>
+					<ul class="header__nav--add">
 						<li>
 							<a href="#" class="header__nav--message chat-btn _notification" title="Chat">
 								<svg width="25" height="25" viewBox="0 0 25 25">
@@ -80,8 +90,26 @@
 							</svg>
 						</button>
 					</form>
+					<form class="header__nav--feedback header__feedback visible-on-tablet">
+						<label class="header__feedback--label">
+							<input type="text" name="name" placeholder="Name" required class="header__feedback--input input">
+						</label>
+						<label class="header__feedback--label">
+							<input type="email" name="email" placeholder="Email" required class="header__feedback--input input">
+						</label>
+						<label class="header__feedback--label">
+							<textarea name="message" placeholder="Message" class="header__feedback--textarea textarea"></textarea>
+						</label>
+						<label class="header__feedback--label checkbox">
+							<input type="checkbox" name="privacy" required class="checkbox__input">
+							<span class="checkbox__element"></span>
+							<span class="checkbox__text">Ознакомлен с политикой конфиденциальности и правилами обработки персональных данных</span>
+						</label>
+						<button class="header__feedback--submit btn _min _mode-3" type="button">send</button>
+					</form>
 				</div>
 			</nav>
+			<div class="header__account-place" id="header-account-place"></div>
 			<button class="header__burger" type="button" aria-label="Menu">
 				<span></span>
 				<span></span>

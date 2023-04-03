@@ -2,8 +2,12 @@
 
 	background: var(--primary-color-1);
 
-	padding-top: 50px; padding-bottom: 50px;
-	margin-top: 95px; margin-bottom: 95px;
+	padding-top: 20px; padding-bottom: 20px;
+	margin-top: 75px; margin-bottom: 75px;
+	@include _768 {
+		padding-top: 50px; padding-bottom: 50px;
+		margin-top: 95px; margin-bottom: 95px;
+	}
 
 	// .privacy-nav__list
 
@@ -24,7 +28,7 @@
 				border-top: 3px solid var(--primary-color-2);
 			}
 
-			@include _768 {
+			@include _992 {
 				justify-content: stretch;
 				flex: 0 1 50%;
 				padding: 45px 20px 45px 0;
@@ -42,17 +46,31 @@
 		& a {
 			display: flex;
 			align-items: center;
+			justify-content: center;
 			max-width: 450px;
 			width: 100%;
 
 			color: var(--white);
 			font-weight: 900;
-			font-size: 1.125rem;
+			font-size: 0.875rem;
+			text-transform: uppercase;
+
+			@include _768 {
+				font-size: 1.75rem;
+			}
+			
+			@include _992 {
+				font-size: 1.125rem;
+				justify-content: stretch;
+			}
 			line-height: 150%;
 
 			& img {
 				margin-right: 31px;
-
+				max-width: 35px;
+				@include _768 {
+					max-width: none;
+				}
 			}
 		}
 	}

@@ -6,8 +6,21 @@
 
 	&__wrapper {
 		padding: 45px 0;
+		@media (min-width: 375px) {
+			&::before {
+				width: calc(100% - 8px + (var(--container-padding) * 2));
+			}
+		}
+		@include _768 {
+			&::before {
+				width: calc(100% - 20px + (var(--container-padding) * 2));
+			}
+		}
 		@include _992 {
 			padding: 85px 0;
+			&::before {
+				width: #{$containerLarge}px;
+			}
 		}
 		position: relative;
 
@@ -18,7 +31,7 @@
 			transform: translate(-50%,0);
 			background: var(--light);
 			z-index: -1;
-			width: #{$containerLarge}px; height: 100%;
+			width: calc(100% - 8px + 30px); height: 100%;
 		}
 	}
 

@@ -7,10 +7,12 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" class="footer__cart cart-btn" title="Cart">
-							<svg width="31" height="27" viewBox="0 0 31 27">
+						<a href="cart.html" class="header__account--cart">
+							<span>3</span>
+							<svg width="31" height="25" viewBox="0 0 31 25">
 								<use xlink:href="img/sprites.svg#cart"></use>
 							</svg>
+							<span>$129</span>
 						</a>
 					</li>
 					<li>
@@ -39,37 +41,37 @@
 					<nav class="footer__nav">
 						<ul>
 							<li>
-								<a href="#">
+								<a href="catalog.html">
 									Catalog
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="about-us.html">
 									About us
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="sale-week.html">
 									Sale
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="contacts.html">
 									Contacts
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="news.html">
 									News
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="faq.html">
 									FAQ
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="articles.html">
 									Articles
 								</a>
 							</li>
@@ -101,29 +103,141 @@
 				</div>
 			</div>
 			<div class="footer__row">
-				<div class="footer__row--col">
+				<div class="footer__row--col _full">
 					<div class="footer__privacy">
 						<ul>
 							<li>
 								<a href="privacy.html">
-									Положение о конфиденциальности
+									Terms of Service
 								</a>
 							</li>
 							<li>
 								<a href="personal-data.html">
-									Соглашение об использовании персональных данных
+									Shipping Policy
+								</a>
+							</li>
+							<li>
+								<a href="personal-data.html">
+									Privacy Policy
+								</a>
+							</li>
+							<li>
+								<a href="personal-data.html">
+									Refund Policy 
+								</a>
+							</li>
+							<li>
+								<a href="personal-data.html">
+									Payment Policy
 								</a>
 							</li>
 						</ul>
 					</div>
-				</div>
-				<div class="footer__row--col">
 					<span class="footer__min-text system-text">
 						Постоянная величина поддерживает ортогональный определитель. Продолжая до бесконечности ряд 1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 и т.д., имеем комплексное число упорядочивает убывающий математический анализ
 					</span>
 				</div>
 			</div>
 		</footer>
+	</div>
+	<div class="cookie container _alt _hidden">
+		<h2 class="cookie__title title">
+			cookie policy
+		</h2>
+		<div class="cookie__text big-text _alt">
+			<p>
+				Our website uses cookies to improve your browsing experience. By using our site you agree to the use of cookies. 
+			</p>
+		</div>
+		<div class="cookie__block">
+			<ul>
+				<li>
+					<button type="button" class="cookie__btn btn _mode-3 _min">
+						Accept
+					</button>
+				</li>
+				<li>
+					<button type="button" class="cookie__btn btn _mode-3 _min">
+						Decline
+					</button>
+				</li>
+				<li>
+					<a href="#" class="cookie__btn btn _mode-3 _min">
+						Learn more
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="login-popup popup" id="login-popup">
+		<div class="login-popup__wrapper popup-wrapper">
+			<div class="login-popup__bg popup-bg popup-close"></div>
+			<div class="login-popup__body popup-body">
+				<button type="button" class="login-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="61" height="60" viewBox="0 0 61 60">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="login-popup__header">
+					<a href="#" class="login-popup__header--btn _active">
+						Login
+					</a>
+					<a href="#register-popup" class="login-popup__header--btn open-popup popup-close">
+						Register
+					</a>
+				</div>
+				<form class="login-popup__form">
+					<label class="login-popup__label">
+						<input type="email" name="email" placeholder="Email" class="login-popup__input input-alt">
+					</label>
+					<label class="login-popup__label">
+						<input type="password" name="password" placeholder="Password" class="login-popup__input input-alt">
+						<button class="password-toggle" type="button">
+							<svg width="27" height="16" viewBox="0 0 27 16">
+								<use xlink:href="img/sprites.svg#eay"></use>
+							</svg>
+						</button>
+					</label>
+					<button class="login-popup__submit btn _min _mode-3" type="submit">Send</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="login-popup popup" id="register-popup">
+		<div class="login-popup__wrapper popup-wrapper">
+			<div class="login-popup__bg popup-bg popup-close"></div>
+			<div class="login-popup__body popup-body">
+				<button type="button" class="login-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="61" height="60" viewBox="0 0 61 60">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="login-popup__header">
+					<a href="#login-popup" class="login-popup__header--btn open-popup popup-close">
+						Login
+					</a>
+					<a href="#" class="login-popup__header--btn _active">
+						Register
+					</a>
+				</div>
+				<form class="login-popup__form">
+					<label class="login-popup__label">
+						<input type="email" name="email" placeholder="Email" class="login-popup__input input-alt">
+					</label>
+					<label class="login-popup__label">
+						<input type="password" name="password" placeholder="Password" class="login-popup__input input-alt">
+						<button class="password-toggle" type="button">
+							<svg width="27" height="16" viewBox="0 0 27 16">
+								<use xlink:href="img/sprites.svg#eay"></use>
+							</svg>
+						</button>
+					</label>
+					<button class="login-popup__submit btn _min _mode-3" type="submit">Send</button>
+				</form>
+			</div>
+		</div>
 	</div>
 
 	<script src="js/libs.min.js"></script>

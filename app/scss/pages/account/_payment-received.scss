@@ -1,0 +1,48 @@
+.payment-received {
+
+	// .payment-received__title
+
+	&__title {
+		color: var(--primary-color-1);
+	}
+
+	// .payment-received__text
+
+	&__text {
+		padding-top: 20px;
+		max-width: 541px;
+	}
+
+	// .payment-received__footer
+
+	&__footer {
+		padding-top: 70px;
+		margin: -5px;
+
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+
+		text-transform: uppercase;
+		& > * {
+			display: inline-block;
+			padding: 5px;
+		}
+	}
+
+	// .payment-received__order
+
+	&__order {
+		color: var(--primary-color-1);
+		font-weight: 900;
+	}
+
+	// .payment-received__details
+
+	&__details {
+		color: var(--primary-color-1);
+		font-weight: 900;
+		text-decoration: underline;
+	}
+}

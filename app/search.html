@@ -1,0 +1,280 @@
+@@include("html/_header-search.html")
+
+	<main class="main">
+		<div class="page-address container _large">
+			<a href="index.html">
+				Main
+			</a>
+			<a href="#">
+				catalog
+			</a>
+		</div>
+		<section class="catalog">
+			<div class="catalog__result container _large">
+				<span class="small-text">search results for:</span>
+				<span class="main-title">
+					vmware
+				</span>
+			</div>
+			<div class="catalog__header container _large">
+				<h2 class="catalog__founded text">
+					Found 102 items
+				</h2>
+				<form class="catalog__sort">
+					<div class="catalog__sort--item">
+						<h3 class="catalog__sort--name">Цена</h3>
+						<label class="catalog__sort--mode">
+							<input type="radio" name="sort" value="price-ascending">
+							<span>
+								<svg width="12" height="8" viewBox="0 0 12 8">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+							</span>
+						</label>
+						<label class="catalog__sort--mode">
+							<input type="radio" name="sort" value="price-descending">
+							<span>
+								<svg width="12" height="8" viewBox="0 0 12 8">
+									<use xlink:href="img/sprites.svg#arrow-down"></use>
+								</svg>
+							</span>
+						</label>
+					</div>
+					<div class="catalog__sort--item">
+						<h3 class="catalog__sort--name">Размер скидки</h3>
+						<label class="catalog__sort--mode">
+							<input type="radio" name="sort" value="amount-of-discount-ascending">
+							<span>
+								<svg width="12" height="8" viewBox="0 0 12 8">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+							</span>
+						</label>
+						<label class="catalog__sort--mode">
+							<input type="radio" name="sort" value="amount-of-discount-descending">
+							<span>
+								<svg width="12" height="8" viewBox="0 0 12 8">
+									<use xlink:href="img/sprites.svg#arrow-down"></use>
+								</svg>
+							</span>
+						</label>
+					</div>
+					<div class="catalog__sort--item">
+						<h3 class="catalog__sort--name">Дата добавления</h3>
+						<label class="catalog__sort--mode">
+							<input type="radio" name="sort" value="date-added-ascending">
+							<span>
+								<svg width="12" height="8" viewBox="0 0 12 8">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+							</span>
+						</label>
+						<label class="catalog__sort--mode">
+							<input type="radio" name="sort" value="date-added-descending">
+							<span>
+								<svg width="12" height="8" viewBox="0 0 12 8">
+									<use xlink:href="img/sprites.svg#arrow-down"></use>
+								</svg>
+							</span>
+						</label>
+					</div>
+				</form>
+			</div>
+			<div class="catalog__wrapper container _large">
+				<aside class="catalog__aside">
+					<form class="filter" data-append-to-on-tablet="header-filter">
+						<fieldset class="filter__fieldset">
+							<legend class="filter__title title _super-min">
+								all goods
+							</legend>
+							<ul class="filter__list">
+								<li class="filter__item filter__category filter-category">
+									<button type="button" class="filter-category__target">Network</button>
+									<ul class="filter-category__list">
+										<li>
+											<label>
+												<input type="radio" name="network" value="vmware">
+												<span>VmWare</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="network" value="parallels">
+												<span>Parallels</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="network" value="acronis">
+												<span>Acronis</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="network" value="cisco">
+												<span>Cisco</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="filter__item filter__category filter-category">
+									<button type="button" class="filter-category__target">Windows</button>
+									<ul class="filter-category__list">
+										<li>
+											<label>
+												<input type="radio" name="windows" value="vmware">
+												<span>VmWare</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="windows" value="parallels">
+												<span>Parallels</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="windows" value="acronis">
+												<span>Acronis</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="windows" value="cisco">
+												<span>Cisco</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="filter__item filter__category filter-category">
+									<button type="button" class="filter-category__target">Adobe</button>
+									<ul class="filter-category__list">
+										<li>
+											<label>
+												<input type="radio" name="adobe" value="vmware">
+												<span>VmWare</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="adobe" value="parallels">
+												<span>Parallels</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="adobe" value="acronis">
+												<span>Acronis</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="adobe" value="cisco">
+												<span>Cisco</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</fieldset>
+						<fieldset class="filter__fieldset">
+							<legend class="filter__title title _super-min">
+								price
+							</legend>
+							<div class="filter__price filter-price">
+								<label class="filter-price__label">
+									<input type="number" name="price-from" placeholder="From" class="filter-price__input">
+								</label>
+								<label class="filter-price__label">
+									<input type="number" name="price-to" placeholder="To" class="filter-price__input">
+								</label>
+							</div>
+						</fieldset>
+					</form>
+				</aside>
+				<main class="catalog__main">
+					<ul class="catalog__list">
+						@@loop("html/_product-card.html", [
+							{
+								"class": 'catalog__item',
+								"image": '1',
+								"class_2": '',
+								"price": '<div class="price _standard">12,00$</div>',
+							},
+							{
+								"class": 'catalog__item',
+								"image": '2',
+								"class_2": '',
+								"price": '<div class="price _standard">12,00$</div>',
+							},
+							{
+								"class": 'catalog__item',
+								"image": '3',
+								"class_2": '',
+								"price": '<div class="price _standard">12,00$</div>',
+							},
+							{
+								"class": 'catalog__item',
+								"image": '1',
+								"class_2": '',
+								"price": '<div class="price _standard">12,00$</div>',
+							},
+							{
+								"class": 'catalog__item',
+								"image": '1',
+								"class_2": '',
+								"price": '<div class="price _standard">12,00$</div>',
+							},
+							{
+								"class": 'catalog__item',
+								"image": '2',
+								"class_2": '',
+								"price": '<div class="price _standard">12,00$</div>',
+							},
+							{
+								"class": 'catalog__item',
+								"image": '3',
+								"class_2": '',
+								"price": '<div class="price _standard">12,00$</div>',
+							},
+							{
+								"class": 'catalog__item',
+								"image": '1',
+								"class_2": '',
+								"price": '<div class="price _standard">12,00$</div>',
+							},
+							{
+								"class": 'catalog__item',
+								"image": '1',
+								"class_2": '',
+								"price": '<div class="price _standard">12,00$</div>',
+							},
+							{
+								"class": 'catalog__item',
+								"image": '2',
+								"class_2": '',
+								"price": '<div class="price _standard">12,00$</div>',
+							},
+							{
+								"class": 'catalog__item',
+								"image": '3',
+								"class_2": '',
+								"price": '<div class="price _standard">12,00$</div>',
+							},
+							{
+								"class": 'catalog__item',
+								"image": '1',
+								"class_2": '',
+								"price": '<div class="price _standard">12,00$</div>',
+							},
+						])
+					</ul>
+				</main>
+			</div>
+		</section>
+		@@include("html/_accent-product.html", {
+			"class": '',
+		})
+	</main>
+
+@@include("html/_footer.html")

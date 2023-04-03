@@ -1,0 +1,74 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-address container _large">
+			<a href="index.html">
+				Main
+			</a>
+			<a href="#">
+				Личный кабинет
+			</a>
+		</div>
+		<section class="account container _large">
+			<h1 class="account__title main-title _alt">
+				Корзина
+			</h1>
+			<aside class="account__aside">
+				@@include("html/_account-nav.html")
+			</aside>
+			<main class="account__main">
+				<form class="cart">
+					<div class="cart__date small-text visible-on-mob">
+						<b>12 мая 2023</b>
+						<b>№ 3478741</b>
+					</div>
+					<div class="cart__header small-text">
+						<span>Item</span>
+						<span>Price</span>
+						<span>Quantity</span>
+						<span>Shipping</span>
+					</div>
+					<div class="cart__list">
+						@@loop("html/_cart-product.html", [
+							{},
+							{},
+							{},
+						])
+					</div>
+					<div class="cart__footer">
+						<div class="cart__coupon product__coupon">
+							<span class="product__coupon--title product__min-block-title">Coupon</span>
+							<div class="product__coupon--body">
+								<label class="product__coupon--label">
+									<input type="text" name="coupon" value="sdfvk42" class="product__coupon--input">
+								</label>
+								<button class="product__coupon--apply" type="button">
+									Apply coupon
+								</button>
+							</div>
+						</div>
+						<div class="cart__total">
+							<b class="title _alt">total</b>
+							<div class="cart__price">
+								<div class="price-old">30,00 $</div>
+								<div class="price">
+									36,00 $
+								</div>
+							</div>
+							<div class="cart__buy">
+								<button class="cart__buy--btn" type="submit" aria-label="Buy">
+									<picture>
+										<source srcset="img/account/cart/buy-btn.webp" type="image/webp">
+										<img src="img/account/cart/buy-btn.png" alt="" width="504" height="169" loading="lazy">
+									</picture>
+								</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</main>
+		</section>
+		@@include("html/_all-for.html")
+	</main>
+
+@@include("html/_footer.html")

@@ -19,12 +19,12 @@
 
 		display: flex;
 		flex-direction: column;
-		padding: 15px 15px 0 15px;
-		@include _550 {
-			padding: 30px 30px 0 30px;
+		padding: 15px 10px 0 15px;
+		@media (min-width: 375px) {
+			padding: 48px 10px 0 40px;
 		}
 		@include _768 {
-			padding: 30px 30px 0 30px;
+			padding: 97px 30px 0 80px;
 		}
 		@include _992 {
 			flex-direction: row;
@@ -38,7 +38,7 @@
 	}
 
 	&._in-section &__wrapper {
-		padding: 15px 30px 0 30px;
+		padding: 15px 30px 0 50px;
 		@include _550 {
 			padding: 30px 50px 0 50px;
 		}
@@ -92,7 +92,7 @@
 	&__product {
 
 		flex: 0 1 50%;
-		padding-right: 15px; padding-top: 30px;
+		padding-right: 15px; padding-top: 15px;
 		@include _992 {
 			padding-right: 0; padding-top: 0;
 		}

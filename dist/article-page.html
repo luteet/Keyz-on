@@ -17,6 +17,7 @@
 			<nav class="header__nav">
 				<div class="header__nav--body">
 					<div class="header__sale-week-filter hide-on-tablet" id="header-filter"></div>
+					<div class="header__account-nav hide-on-tablet" id="header-account-nav"></div>
 					<ul class="header__nav--list">
 						<li>
 							<a href="catalog.html">
@@ -54,14 +55,23 @@
 							</a>
 						</li>
 					</ul>
-					<ul class="header__nav--add">
-						<li>
-							<a href="#" class="header__nav--cart cart-btn" title="Cart">
-								<svg width="31" height="27" viewBox="0 0 31 27">
-									<use xlink:href="img/sprites.svg#cart"></use>
+					<div class="header__nav--account">
+						<div class="header__account" data-append-to-on-tablet="header-account-place">
+							<a href="#login-popup" class="header__account--user open-popup">
+								<svg width="23" height="27" viewBox="0 0 23 27">
+									<use xlink:href="img/sprites.svg#user"></use>
 								</svg>
 							</a>
-						</li>
+							<a href="#" class="header__account--cart">
+								<span>3</span>
+								<svg width="31" height="25" viewBox="0 0 31 25">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>$129</span>
+							</a>
+						</div>
+					</div>
+					<ul class="header__nav--add">
 						<li>
 							<a href="#" class="header__nav--message chat-btn _notification" title="Chat">
 								<svg width="25" height="25" viewBox="0 0 25 25">
@@ -80,8 +90,26 @@
 							</svg>
 						</button>
 					</form>
+					<form class="header__nav--feedback header__feedback visible-on-tablet">
+						<label class="header__feedback--label">
+							<input type="text" name="name" placeholder="Name" required class="header__feedback--input input">
+						</label>
+						<label class="header__feedback--label">
+							<input type="email" name="email" placeholder="Email" required class="header__feedback--input input">
+						</label>
+						<label class="header__feedback--label">
+							<textarea name="message" placeholder="Message" class="header__feedback--textarea textarea"></textarea>
+						</label>
+						<label class="header__feedback--label checkbox">
+							<input type="checkbox" name="privacy" required class="checkbox__input">
+							<span class="checkbox__element"></span>
+							<span class="checkbox__text">Ознакомлен с политикой конфиденциальности и правилами обработки персональных данных</span>
+						</label>
+						<button class="header__feedback--submit btn _min _mode-3" type="button">send</button>
+					</form>
 				</div>
 			</nav>
+			<div class="header__account-place" id="header-account-place"></div>
 			<button class="header__burger" type="button" aria-label="Menu">
 				<span></span>
 				<span></span>
@@ -91,23 +119,15 @@
 
 	<main class="main">
 		<div class="page-address container _large">
-			<ul>
-				<li>
-					<a href="index.html">
-						Main
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						News
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						Новый релиз Касперского
-					</a>
-				</li>
-			</ul>
+			<a href="index.html">
+				Main
+			</a>
+			<a href="#">
+				Articles
+			</a>
+			<a href="#">
+				Движение спутника вертикально характеризует центр подвеса 
+			</a>
 		</div>
 		<section class="article-page">
 			<div class="article-page__wrapper container _min">
@@ -121,7 +141,7 @@
 						<img src="img/articles/image-large.jpg" alt="" width="1260" height="447" loading="lazy">
 					</picture>
 				</div>
-				<div class="article-page__text">
+				<div class="article-page__text big-text">
 					<p>
 						Микрохроматический интервал представляет собой деструктивный соноропериод. Векторно-зеркальная синхронность просветляет рефрен. Серпантинная волна выстраивает винил. Мнимотакт синхронно трансформирует деструктивный винил. Пентатоника сонорна. Показательный пример – крещендирующее хождение регрессийно вызывает мнимотакт, это и есть одномоментная вертикаль в сверхмногоголосной полифонической ткани.
 					</p>
@@ -176,7 +196,7 @@
 									Давление почвенной влаги синфазно 
 								</h3>
 							</a>
-							<div class="article__content">
+							<div class="article__content text">
 								<p>Микрохроматический интервал представляет собой деструктивный соноропериод. Векторно-зеркальная синхронность просветляет рефрен. Серпантинная волна выстраивает винил. </p>
 							</div>
 							<div class="article__footer">
@@ -197,7 +217,7 @@
 									<img src="img/articles/image.jpg" alt="" width="1267" height="447" loading="lazy">
 								</picture>
 							</a>
-							<div class="article__content">
+							<div class="article__content text">
 								<p>Уравнение Эйлера горизонтально учитывает угол курса. Расчеты предсказывают, что погрешность позволяет исключить из рассмотрения поплавковый подвес. Абсолютно твёрдое тело искажает математический маятник. Электромеханическая система, в первом приближении, методически проецирует объект.</p>
 							</div>
 							<div class="article__footer">
@@ -214,7 +234,7 @@
 									Оз изотермично ускоряет векторный динамометаморфизм, при этом дефект массы не образуется.
 								</h3>
 							</a>
-							<div class="article__content">
+							<div class="article__content text">
 								<p>Антеклиза по определению изогнута. При наступлении резонанса фосфоритообразование облучает вихревой луч. Расслоение противоречиво нейтрализует боксит. Диагностика минерала вероятна.</p>
 							</div>
 							<div class="article__footer">
@@ -229,7 +249,7 @@
 									Давление почвенной влаги синфазно 
 								</h3>
 							</a>
-							<div class="article__content">
+							<div class="article__content text">
 								<p>Микрохроматический интервал представляет собой деструктивный соноропериод. Векторно-зеркальная синхронность просветляет рефрен. Серпантинная волна выстраивает винил. </p>
 							</div>
 							<div class="article__footer">
@@ -242,7 +262,7 @@
 				</div>
 			</div>
 		</section>
-		<div class="accent-product container _large">
+		<div class="accent-product container _large _mob-padding-none">
     <div class="accent-product__wrapper">
         <div class="accent-product__bg">
             <img src="img/license/bg.svg" alt="" width="0" height="0" loading="lazy">
@@ -274,10 +294,12 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" class="footer__cart cart-btn" title="Cart">
-							<svg width="31" height="27" viewBox="0 0 31 27">
+						<a href="cart.html" class="header__account--cart">
+							<span>3</span>
+							<svg width="31" height="25" viewBox="0 0 31 25">
 								<use xlink:href="img/sprites.svg#cart"></use>
 							</svg>
+							<span>$129</span>
 						</a>
 					</li>
 					<li>
@@ -306,37 +328,37 @@
 					<nav class="footer__nav">
 						<ul>
 							<li>
-								<a href="#">
+								<a href="catalog.html">
 									Catalog
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="about-us.html">
 									About us
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="sale-week.html">
 									Sale
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="contacts.html">
 									Contacts
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="news.html">
 									News
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="faq.html">
 									FAQ
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="articles.html">
 									Articles
 								</a>
 							</li>
@@ -368,29 +390,141 @@
 				</div>
 			</div>
 			<div class="footer__row">
-				<div class="footer__row--col">
+				<div class="footer__row--col _full">
 					<div class="footer__privacy">
 						<ul>
 							<li>
 								<a href="privacy.html">
-									Положение о конфиденциальности
+									Terms of Service
 								</a>
 							</li>
 							<li>
 								<a href="personal-data.html">
-									Соглашение об использовании персональных данных
+									Shipping Policy
+								</a>
+							</li>
+							<li>
+								<a href="personal-data.html">
+									Privacy Policy
+								</a>
+							</li>
+							<li>
+								<a href="personal-data.html">
+									Refund Policy 
+								</a>
+							</li>
+							<li>
+								<a href="personal-data.html">
+									Payment Policy
 								</a>
 							</li>
 						</ul>
 					</div>
-				</div>
-				<div class="footer__row--col">
 					<span class="footer__min-text system-text">
 						Постоянная величина поддерживает ортогональный определитель. Продолжая до бесконечности ряд 1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 и т.д., имеем комплексное число упорядочивает убывающий математический анализ
 					</span>
 				</div>
 			</div>
 		</footer>
+	</div>
+	<div class="cookie container _alt _hidden">
+		<h2 class="cookie__title title">
+			cookie policy
+		</h2>
+		<div class="cookie__text big-text _alt">
+			<p>
+				Our website uses cookies to improve your browsing experience. By using our site you agree to the use of cookies. 
+			</p>
+		</div>
+		<div class="cookie__block">
+			<ul>
+				<li>
+					<button type="button" class="cookie__btn btn _mode-3 _min">
+						Accept
+					</button>
+				</li>
+				<li>
+					<button type="button" class="cookie__btn btn _mode-3 _min">
+						Decline
+					</button>
+				</li>
+				<li>
+					<a href="#" class="cookie__btn btn _mode-3 _min">
+						Learn more
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="login-popup popup" id="login-popup">
+		<div class="login-popup__wrapper popup-wrapper">
+			<div class="login-popup__bg popup-bg popup-close"></div>
+			<div class="login-popup__body popup-body">
+				<button type="button" class="login-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="61" height="60" viewBox="0 0 61 60">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="login-popup__header">
+					<a href="#" class="login-popup__header--btn _active">
+						Login
+					</a>
+					<a href="#register-popup" class="login-popup__header--btn open-popup popup-close">
+						Register
+					</a>
+				</div>
+				<form class="login-popup__form">
+					<label class="login-popup__label">
+						<input type="email" name="email" placeholder="Email" class="login-popup__input input-alt">
+					</label>
+					<label class="login-popup__label">
+						<input type="password" name="password" placeholder="Password" class="login-popup__input input-alt">
+						<button class="password-toggle" type="button">
+							<svg width="27" height="16" viewBox="0 0 27 16">
+								<use xlink:href="img/sprites.svg#eay"></use>
+							</svg>
+						</button>
+					</label>
+					<button class="login-popup__submit btn _min _mode-3" type="submit">Send</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="login-popup popup" id="register-popup">
+		<div class="login-popup__wrapper popup-wrapper">
+			<div class="login-popup__bg popup-bg popup-close"></div>
+			<div class="login-popup__body popup-body">
+				<button type="button" class="login-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="61" height="60" viewBox="0 0 61 60">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="login-popup__header">
+					<a href="#login-popup" class="login-popup__header--btn open-popup popup-close">
+						Login
+					</a>
+					<a href="#" class="login-popup__header--btn _active">
+						Register
+					</a>
+				</div>
+				<form class="login-popup__form">
+					<label class="login-popup__label">
+						<input type="email" name="email" placeholder="Email" class="login-popup__input input-alt">
+					</label>
+					<label class="login-popup__label">
+						<input type="password" name="password" placeholder="Password" class="login-popup__input input-alt">
+						<button class="password-toggle" type="button">
+							<svg width="27" height="16" viewBox="0 0 27 16">
+								<use xlink:href="img/sprites.svg#eay"></use>
+							</svg>
+						</button>
+					</label>
+					<button class="login-popup__submit btn _min _mode-3" type="submit">Send</button>
+				</form>
+			</div>
+		</div>
 	</div>
 
 	<script src="js/libs.min.js"></script>

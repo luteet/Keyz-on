@@ -1,0 +1,44 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-address container _large">
+			<a href="index.html">
+				Main
+			</a>
+			<a href="account.html">
+				Личный кабинет
+			</a>
+			<a href="#">
+				Payment Received
+			</a>
+		</div>
+		<section class="account container _large">
+			<h1 class="account__title main-title _alt">
+				Payment Received
+			</h1>
+			<aside class="account__aside">
+				@@include("html/_account-nav.html")
+			</aside>
+			<main class="account__main">
+				<div class="payment-received block-accent">
+					<h2 class="payment-received__title title _alt">
+						thanks for shopping with us
+					</h2>
+					<div class="payment-received__text text">
+						<p>
+							For all your order details, check out the confirmation email we`re sending to <mark class="primary-accent text">user@gmail.com.</mark>
+						</p>
+					</div>
+					<div class="payment-received__footer">
+						<b class="payment-received__order big-text _alt">Order № 3478741</b>
+						<a href="#" class="payment-received__details big-text _alt">
+							View details
+						</a>
+					</div>
+				</div>
+			</main>
+		</section>
+		@@include("html/_all-for-collection.html")
+	</main>
+
+@@include("html/_footer.html")

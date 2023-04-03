@@ -1,0 +1,36 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-address container _large">
+			<a href="index.html">
+				Main
+			</a>
+			<a href="account.html">
+				Личный кабинет
+			</a>
+			<a href="#">
+				Order history
+			</a>
+		</div>
+		<section class="account container _large">
+			<h1 class="account__title main-title _alt">
+				Order history
+			</h1>
+			<aside class="account__aside">
+				@@include("html/_account-nav.html")
+			</aside>
+			<main class="account__main">
+				<div class="order-history">
+					<div class="order-history__list">
+						@@loop("html/_order-history-block.html", [
+							{},
+							{},
+						])
+					</div>
+				</div>
+			</main>
+		</section>
+		@@include("html/_all-for-collection.html")
+	</main>
+
+@@include("html/_footer.html")

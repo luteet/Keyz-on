@@ -40,17 +40,15 @@
 	// .article__time
 
 	&__time {
-		margin-top: 15px;
-
-		display: inline-block;
-		align-self: self-start;
-		border-radius: 50px;
-		padding: 5px 10px;
-		background: var(--accent);
-
-		font-size: 0.875rem;
-		line-height: 121.428571%;
-		color: var(--primary-color-1);
+		margin-top: 13px;
+		
+		@include _768 {
+			margin-top: 10px;
+		}
+		
+		@include _992 {
+			margin-top: 26px;
+		}
 	}
 
 	// .article__image
@@ -83,16 +81,6 @@
 	&__content {
 		margin-top: 10px;
 
-		font-size: 1rem;
-		@include _768 {
-			font-size: 1.75rem;
-		}
-		
-		@include _992 {
-			font-size: 1.125rem;
-		}
-		line-height: 118.181818%;
-
 		& p {
 			margin: 10px 0;
 			display: -webkit-box;
@@ -106,19 +94,7 @@
 	}
 
 	&._main &__content {
-		font-size: 1rem;
-
-		@include _550 {
-			font-size: 1.125rem;
-		}
-
-		@include _768 {
-			font-size: 2rem;
-		}
 		
-		@include _992 {
-			font-size: 1.375rem;
-		}
 	}
 
 	// .article__footer

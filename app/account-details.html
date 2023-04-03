@@ -1,0 +1,84 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-address container _large">
+			<a href="index.html">
+				Main
+			</a>
+			<a href="account.html">
+				Личный кабинет
+			</a>
+			<a href="#">
+				Account details
+			</a>
+		</div>
+		<section class="account container _large">
+			<h1 class="account__title main-title _alt">
+				Account details
+			</h1>
+			<aside class="account__aside">
+				@@include("html/_account-nav.html")
+			</aside>
+			<main class="account__main">
+				<div class="account-details settings">
+					<div class="settings__block block-accent">
+						<form class="settings__form">
+							<div class="settings__item">
+								<h2 class="settings__title title _min">
+									first name
+								</h2>
+								<label class="settings__label">
+									<input type="text" name="first-name" value="johnny" placeholder="First name" required class="settings__input _large">
+								</label>
+							</div>
+							<div class="settings__item">
+								<h2 class="settings__title title _min">
+									Second name
+								</h2>
+								<label class="settings__label">
+									<input type="text" name="second-name" value="appleseed" placeholder="Second name" required class="settings__input _large">
+								</label>
+							</div>
+							<div class="settings__item">
+								<button class="settings__btn btn _mode-2" type="submit">
+									Save
+								</button>
+							</div>
+						</form>
+					</div>
+					<div class="settings__block block-accent">
+						<form class="settings__form">
+							<div class="settings__item">
+								<h2 class="settings__title title _min">
+									Phone
+								</h2>
+								<label class="settings__label">
+									<input type="tel" name="phone" value="+31 654 318-41-17" placeholder="Your phone" required class="settings__input _large">
+								</label>
+							</div>
+							<div class="settings__item">
+								<div class="account-details__get-phone-code">
+									<label class="account-details__get-phone-code--label">
+										<input type="text" name="confirm-phone" placeholder="Confirm phone" required class="account-details__get-phone-code--input settings__input">
+									</label>
+									<button class="account-details__get-phone-code--btn title _super-min" type="button">
+										Get code
+									</button>
+								</div>
+							</div>
+							<div class="settings__item">
+								<button class="settings__btn btn _mode-2" type="submit">
+									Save
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</main>
+		</section>
+		@@include("html/_accent-product.html", {
+			"class": '',
+		})
+	</main>
+
+@@include("html/_footer.html")

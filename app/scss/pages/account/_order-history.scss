@@ -1,0 +1,154 @@
+.order-history {
+
+	// .order-history__list
+
+	&__list {
+		display: grid;
+		gap: 67px 0;
+		
+		@include _768 {
+			gap: 90px 0;
+		}
+		
+		@include _992 {
+			gap: 41px 0;
+		}
+	}
+
+	// .order-history__block
+
+	&__block {
+
+		// .order-history__block--body
+
+		&--item {
+			position: relative;
+			padding: 17px 0;
+			color: var(--primary-color-1);
+
+			& > * {
+				padding: 10px 5px;
+				flex: 0 1 50%;
+				&:nth-child(even) {
+					text-align: right;
+				}
+				@media (min-width: 1200px) {
+					flex: 0 1 auto;
+					&:nth-child(even) {
+						text-align: left;
+					}
+				}
+			}
+
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			
+			&::before {
+				content: '';
+				position: absolute;
+				left: 50%; top: 0;
+				transform: translate(-50%,0);
+				background: var(--light);
+				width: calc(100% - 8px + 30px); height: 100%;
+				z-index: -1;
+			}
+
+			margin-top: 14px;
+
+			@media (min-width: 375px) {
+				&::before {
+					width: calc(100% - 8px + 84px);
+				}
+			}
+
+			@include _768 {
+				padding: 32px 43px;
+				margin-top: 22px;
+				&::before {
+					width: calc(100% - 20px + 84px);
+				}
+			}
+
+			@include _992 {
+				margin-top: 17px;
+				padding: 32px 80px;
+				background: var(--light);
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	// .order-history__date
+
+	&__date {
+		padding: 0 0 22px 0;
+		
+		@include _768 {
+			padding: 22px 43px;
+		}
+		
+		@include _992 {
+			padding: 22px 80px 10px 80px;
+		}
+
+		font-weight: 900;
+		color: var(--primary-color-1);
+	}
+
+	// .order-history__number
+
+	&__number {
+	}
+
+	// .order-history__total
+
+	&__total {
+		& b {
+			display: none;
+			@media (min-width: 1200px) {
+				padding-right: 40px;
+				display: inline-block;
+			}
+		}
+		& .price-old {
+			font-weight: 400;
+			font-size: 0.75rem;
+			
+			@include _768 {
+				font-size: 1.5rem;
+			}
+			
+			@include _992 {
+				font-size: 1.125rem;
+			}
+		}
+
+		& .price {
+			font-size: 0.875rem;
+			
+			@include _768 {
+				font-size: 1.75rem;
+			}
+			
+			@include _992 {
+				font-size: 1.375rem;
+			}
+		}
+	}
+
+	// .order-history__status
+
+	&__status {
+	}
+
+	// .order-history__delails
+
+	&__delails {
+		color: var(--primary-color-1);
+		text-decoration: underline;
+	}
+}

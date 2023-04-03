@@ -17,7 +17,7 @@
 		flex-direction: row;
 
 		padding-top: 100px; padding-bottom: 100px;
-		min-height: calc(var(--height-screen) - var(--height-header));
+		min-height: calc(var(--height-screen) - var(--height-header) + 1px);
 	}
 
 	background: var(--primary-color-2);

@@ -1,17 +1,38 @@
 .all-for-collection {
 
 	padding-top: 41px; padding-bottom: 41px;
+	margin-top: 73px;
+	@include _768 {
+		padding-top: 100px; padding-bottom: 41px;
+		margin-top: 68px;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%; top: 0;
+		transform: translate(-50%,0);
+		width: calc(100% - 8px); height: 100%;
+		@include _768 {
+			width: calc(100% - 20px);
+		}
+		background: var(--primary-color-2);
+		z-index: -1;
+	}
 	@include _992 {
 		padding-top: 71px; padding-bottom: 71px;
+		margin-top: 0;
+		&::before {
+			display: none;
+		}
 	}
 
 	// .all-for-collection__wrapper
 
 	&__wrapper {
 		background: var(--primary-color-2);
-		padding: 40px var(--container-padding);
+		//padding: 40px var(--container-padding);
 		@include _768 {
-			padding: 60px 70px;
+			//padding: 60px 70px;
 		}
 		@include _992 {
 			padding: 0;
@@ -44,8 +65,33 @@
 
 		padding: 20px 0 0 0;
 		background: var(--primary-color-2);
+		@include _768 {
+			grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+		}
 		@include _992 {
+			grid-template-columns: repeat(auto-fit, minmax(250px, auto));
 			padding: 77px 80px;
+		}
+		& > *, & > * > * {
+			min-height: 100%;
+		}
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: center;
+
+		padding-top: 20px;
+
+		@include _768 {
+			padding-top: 30px;
+		}
+		@include _992 {
+			display: none;
+		}
+
+		& a {
+			text-decoration: underline;
 		}
 	}
 }

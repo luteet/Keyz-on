@@ -5,7 +5,7 @@
 @import 'global';
 @import 'font';
 @import 'form';
-//@import 'popup';
+@import 'popup';
 
 @import 'main-sections/header';
 
@@ -24,6 +24,7 @@
 @import 'sections/all-for-collection-section';
 @import 'sections/text-section';
 @import 'sections/privacy-nav';
+@import 'sections/cookie';
 
 @import 'pages/sale-week/main';
 
@@ -42,6 +43,8 @@
 @import 'pages/article-page/main';
 
 @import 'pages/faq/main';
+
+@import 'pages/account/main';
 
 
 @import 'main-sections/footer';

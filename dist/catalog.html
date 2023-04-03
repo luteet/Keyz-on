@@ -17,6 +17,7 @@
 			<nav class="header__nav">
 				<div class="header__nav--body">
 					<div class="header__sale-week-filter hide-on-tablet" id="header-filter"></div>
+					<div class="header__account-nav hide-on-tablet" id="header-account-nav"></div>
 					<ul class="header__nav--list">
 						<li>
 							<a href="catalog.html">
@@ -54,14 +55,23 @@
 							</a>
 						</li>
 					</ul>
-					<ul class="header__nav--add">
-						<li>
-							<a href="#" class="header__nav--cart cart-btn" title="Cart">
-								<svg width="31" height="27" viewBox="0 0 31 27">
-									<use xlink:href="img/sprites.svg#cart"></use>
+					<div class="header__nav--account">
+						<div class="header__account" data-append-to-on-tablet="header-account-place">
+							<a href="#login-popup" class="header__account--user open-popup">
+								<svg width="23" height="27" viewBox="0 0 23 27">
+									<use xlink:href="img/sprites.svg#user"></use>
 								</svg>
 							</a>
-						</li>
+							<a href="#" class="header__account--cart">
+								<span>3</span>
+								<svg width="31" height="25" viewBox="0 0 31 25">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>$129</span>
+							</a>
+						</div>
+					</div>
+					<ul class="header__nav--add">
 						<li>
 							<a href="#" class="header__nav--message chat-btn _notification" title="Chat">
 								<svg width="25" height="25" viewBox="0 0 25 25">
@@ -80,8 +90,26 @@
 							</svg>
 						</button>
 					</form>
+					<form class="header__nav--feedback header__feedback visible-on-tablet">
+						<label class="header__feedback--label">
+							<input type="text" name="name" placeholder="Name" required class="header__feedback--input input">
+						</label>
+						<label class="header__feedback--label">
+							<input type="email" name="email" placeholder="Email" required class="header__feedback--input input">
+						</label>
+						<label class="header__feedback--label">
+							<textarea name="message" placeholder="Message" class="header__feedback--textarea textarea"></textarea>
+						</label>
+						<label class="header__feedback--label checkbox">
+							<input type="checkbox" name="privacy" required class="checkbox__input">
+							<span class="checkbox__element"></span>
+							<span class="checkbox__text">Ознакомлен с политикой конфиденциальности и правилами обработки персональных данных</span>
+						</label>
+						<button class="header__feedback--submit btn _min _mode-3" type="button">send</button>
+					</form>
 				</div>
 			</nav>
+			<div class="header__account-place" id="header-account-place"></div>
 			<button class="header__burger" type="button" aria-label="Menu">
 				<span></span>
 				<span></span>
@@ -114,18 +142,12 @@
     </div>
 </section>
 		<div class="page-address container _large">
-			<ul>
-				<li>
-					<a href="index.html">
-						Main
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						catalog
-					</a>
-				</li>
-			</ul>
+			<a href="index.html">
+				Main
+			</a>
+			<a href="#">
+				catalog
+			</a>
 		</div>
 		<section class="catalog">
 			<div class="catalog__header container _large">
@@ -200,7 +222,7 @@
 								all goods
 							</legend>
 							<ul class="filter__list">
-								<li class="filter__item filter__category filter-category _active">
+								<li class="filter__item filter__category filter-category">
 									<button type="button" class="filter-category__target">Network</button>
 									<ul class="filter-category__list">
 										<li>
@@ -312,13 +334,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -327,6 +346,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -337,13 +359,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -352,6 +371,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -362,13 +384,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -377,6 +396,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -387,13 +409,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -402,6 +421,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -412,13 +434,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -427,6 +446,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -437,13 +459,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -452,6 +471,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -462,13 +484,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -477,6 +496,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -487,13 +509,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -502,6 +521,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -512,13 +534,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -527,6 +546,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -537,13 +559,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -552,6 +571,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -562,13 +584,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -577,6 +596,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -587,13 +609,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -602,6 +621,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -614,32 +636,32 @@
 	<div class="all-for__slider swiper">
 		<div class="all-for__slider--wrapper swiper-wrapper">
 			<a href="all-for-collection.html" class="all-for__slider--card all-for__card swiper-slide">
-				<h3 class="all-for__card--title main-title">
+				<h3 class="all-for__card--title main-title _alt">
 					all for servers collection
 				</h3>
 			</a>
 			<a href="all-for-collection.html" class="all-for__slider--card all-for__card swiper-slide">
-				<h3 class="all-for__card--title main-title">
+				<h3 class="all-for__card--title main-title _alt">
 					all for windows collection
 				</h3>
 			</a>
 			<a href="all-for-collection.html" class="all-for__slider--card all-for__card swiper-slide">
-				<h3 class="all-for__card--title main-title">
+				<h3 class="all-for__card--title main-title _alt">
 					all for servers collection
 				</h3>
 			</a>
 			<a href="all-for-collection.html" class="all-for__slider--card all-for__card swiper-slide">
-				<h3 class="all-for__card--title main-title">
+				<h3 class="all-for__card--title main-title _alt">
 					all for windows collection
 				</h3>
 			</a>
 			<a href="all-for-collection.html" class="all-for__slider--card all-for__card swiper-slide">
-				<h3 class="all-for__card--title main-title">
+				<h3 class="all-for__card--title main-title _alt">
 					all for servers collection
 				</h3>
 			</a>
 			<a href="all-for-collection.html" class="all-for__slider--card all-for__card swiper-slide">
-				<h3 class="all-for__card--title main-title">
+				<h3 class="all-for__card--title main-title _alt">
 					all for windows collection
 				</h3>
 			</a>
@@ -655,13 +677,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -670,6 +689,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -680,13 +702,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -695,6 +714,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -705,13 +727,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -720,6 +739,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -730,13 +752,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -745,6 +764,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -755,13 +777,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -770,6 +789,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -780,13 +802,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -795,6 +814,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -805,13 +827,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -820,6 +839,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -830,13 +852,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -845,6 +864,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -855,13 +877,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -870,6 +889,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -880,13 +902,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -895,6 +914,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -905,13 +927,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -920,6 +939,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -930,13 +952,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -945,6 +964,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -953,30 +975,29 @@
 					</ul>
 				</main>
 			</div>
-			<section class="sale-week-section container _large">
+			<section class="sale-week-section container _large _mob-padding-none">
 	<div class="sale-week-section__wrapper">
-		<div class="sale-week-section__intro">
-			<h2 class="sale-week-section__title main-title">
-				Sale of the week
-			</h2>
-			<a href="sale-week.html" class="sale-week-section__link section-title">
-				Go to the sale page
-			</a>
-		</div>
 		<ul class="sale-week-section__list">
+			<li class="sale-week-section__item">
+				<div class="sale-week-section__intro">
+					<h2 class="sale-week-section__title main-title">
+						Sale of the week
+					</h2>
+					<a href="sale-week.html" class="sale-week-section__link section-title">
+						Go to the sale page
+					</a>
+				</div>
+			</li>
 			<li class="sale-week-section__item">
 	<div class="product-card">
 		<span class="product-card__category">
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -985,6 +1006,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<del class="price-old">$30,00</del><div class="price">$12,00</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -995,13 +1019,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1010,6 +1031,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<del class="price-old">$30,00</del><div class="price">$12,00</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1020,13 +1044,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1035,6 +1056,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<del class="price-old">$30,00</del><div class="price">$12,00</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1045,13 +1069,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1060,6 +1081,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<del class="price-old">$30,00</del><div class="price">$12,00</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1077,13 +1101,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1092,6 +1113,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1102,13 +1126,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1117,6 +1138,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1127,13 +1151,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1142,6 +1163,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1152,13 +1176,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1167,6 +1188,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1177,13 +1201,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1192,6 +1213,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1202,13 +1226,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1217,6 +1238,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1227,13 +1251,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1242,6 +1263,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1252,13 +1276,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1267,6 +1288,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1277,13 +1301,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1292,6 +1313,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1302,13 +1326,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1317,6 +1338,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1327,13 +1351,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1342,6 +1363,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1352,13 +1376,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1367,6 +1388,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1381,7 +1405,7 @@
 				</main>
 			</div>
 		</section>
-		<div class="accent-product container _large">
+		<div class="accent-product container _large _mob-padding-none">
     <div class="accent-product__wrapper">
         <div class="accent-product__bg">
             <img src="img/license/bg.svg" alt="" width="0" height="0" loading="lazy">
@@ -1420,7 +1444,7 @@
 					<img src="img/articles/image.jpg" alt="" width="1267" height="447" loading="lazy">
 				</picture>
 			</a>
-			<div class="article__content">
+			<div class="article__content text">
 				<p>Уравнение Эйлера горизонтально учитывает угол курса. Расчеты предсказывают, что погрешность позволяет исключить из рассмотрения поплавковый подвес. Абсолютно твёрдое тело искажает математический маятник. Электромеханическая система, в первом приближении, методически проецирует объект.</p>
 			</div>
 			<div class="article__footer">
@@ -1437,7 +1461,7 @@
 					Давление почвенной влаги синфазно 
 				</h3>
 			</a>
-			<div class="article__content">
+			<div class="article__content text">
 				<p>Микрохроматический интервал представляет собой деструктивный соноропериод. Векторно-зеркальная синхронность просветляет рефрен. Серпантинная волна выстраивает винил. </p>
 			</div>
 			<div class="article__footer">
@@ -1452,7 +1476,7 @@
 					Оз изотермично ускоряет векторный динамометаморфизм, при этом дефект массы не образуется. 
 				</h3>
 			</a>
-			<div class="article__content">
+			<div class="article__content text">
 				<p>Антеклиза по определению изогнута. При наступлении резонанса фосфоритообразование облучает вихревой луч. Расслоение противоречиво нейтрализует боксит. Диагностика минерала вероятна.</p>
 			</div>
 			<div class="article__footer">
@@ -1469,7 +1493,7 @@
 	<div class="all-for-collection-section__wrapper">
 		<ul class="all-for-collection-section__list">
 			<li class="all-for-collection-section__item all-for__card">
-				<h3 class="all-for__card--title main-title">
+				<h3 class="all-for__card--title main-title _alt">
 					all for windows collection
 				</h3>
 			</li>
@@ -1479,13 +1503,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1494,6 +1515,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1504,13 +1528,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1519,6 +1540,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1529,13 +1553,10 @@
 			Network / Vmware
 		</span>
 		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title section-title">
+			<h3 class="product-card__title title _super-min">
 				Vmware Workstation 17 Pro Lifetime License
 			</h3>
 		</a>
-		<div class="product-card__price price">
-			12,00$
-		</div>
 		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
 			<div class="product-card__image--body">
 				<picture>
@@ -1544,6 +1565,9 @@
 				</picture>
 			</div>
 		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
 		<a href="#" class="product-card__btn btn _mode-2 _min">
 			add to cart
 		</a>
@@ -1565,7 +1589,7 @@
 					Новый релиз Касперского
 				</h3>
 			</a>
-			<time class="news-article__time" datetime="12-05-2023">12 мая 2023</time>
+			<time class="news-article__time article-time" datetime="12-05-2023">12 мая 2023</time>
 			<div class="news-article__block">
 				<div class="news-article__image">
 					<div class="news-article__image--body">
@@ -1575,7 +1599,7 @@
 						</picture>
 					</div>
 				</div>
-				<div class="news-article__content">
+				<div class="news-article__content small-text">
 					<p>Микрохроматический интервал представляет собой деструктивный соноропериод. Векторно-зеркальная синхронность просветляет рефрен. Серпантинная волна выстраивает винил. Мнимотакт синхронно трансформирует деструктивный винил. </p>
 					<a href="#" class="news-article__link">
 						Читать дальше
@@ -1589,9 +1613,9 @@
 					Комбинаторное приращение традиционно диссонирует диссонансный стиль, что связано со смысловыми
 				</h3>
 			</a>
-			<time class="news-article__time" datetime="12-05-2023">12 мая 2023</time>
+			<time class="news-article__time article-time" datetime="12-05-2023">12 мая 2023</time>
 			<div class="news-article__block">
-				<div class="news-article__content">
+				<div class="news-article__content small-text">
 					<p>Микрохроматический интервал представляет собой деструктивный соноропериод. Векторно-зеркальная синхронность просветляет рефрен. Серпантинная волна выстраивает винил. Мнимотакт синхронно трансформирует деструктивный винил. </p>
 					<a href="#" class="news-article__link">
 						Читать дальше
@@ -1607,7 +1631,7 @@
 					Диалектический характер выбирает лирический замысел
 				</h3>
 			</a>
-			<time class="news-article__time" datetime="12-05-2023">12 мая 2023</time>
+			<time class="news-article__time article-time" datetime="12-05-2023">12 мая 2023</time>
 			<div class="news-article__block">
 				<div class="news-article__image">
 					<div class="news-article__image--body">
@@ -1617,7 +1641,7 @@
 						</picture>
 					</div>
 				</div>
-				<div class="news-article__content">
+				<div class="news-article__content small-text">
 					<p>Микрохроматический интервал представляет собой деструктивный соноропериод. Векторно-зеркальная синхронность просветляет рефрен. Серпантинная волна выстраивает винил. Мнимотакт синхронно трансформирует деструктивный винил. </p>
 					<a href="#" class="news-article__link">
 						Читать дальше
@@ -1631,7 +1655,7 @@
 					Новый релиз Касперского
 				</h3>
 			</a>
-			<time class="news-article__time" datetime="12-05-2023">12 мая 2023</time>
+			<time class="news-article__time article-time" datetime="12-05-2023">12 мая 2023</time>
 			<div class="news-article__block">
 				<div class="news-article__image">
 					<div class="news-article__image--body">
@@ -1641,7 +1665,7 @@
 						</picture>
 					</div>
 				</div>
-				<div class="news-article__content">
+				<div class="news-article__content small-text">
 					<p>Микрохроматический интервал представляет собой деструктивный соноропериод. Векторно-зеркальная синхронность просветляет рефрен. Серпантинная волна выстраивает винил. Мнимотакт синхронно трансформирует деструктивный винил. </p>
 					<a href="#" class="news-article__link">
 						Читать дальше
@@ -1664,10 +1688,12 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" class="footer__cart cart-btn" title="Cart">
-							<svg width="31" height="27" viewBox="0 0 31 27">
+						<a href="cart.html" class="header__account--cart">
+							<span>3</span>
+							<svg width="31" height="25" viewBox="0 0 31 25">
 								<use xlink:href="img/sprites.svg#cart"></use>
 							</svg>
+							<span>$129</span>
 						</a>
 					</li>
 					<li>
@@ -1696,37 +1722,37 @@
 					<nav class="footer__nav">
 						<ul>
 							<li>
-								<a href="#">
+								<a href="catalog.html">
 									Catalog
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="about-us.html">
 									About us
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="sale-week.html">
 									Sale
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="contacts.html">
 									Contacts
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="news.html">
 									News
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="faq.html">
 									FAQ
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="articles.html">
 									Articles
 								</a>
 							</li>
@@ -1758,29 +1784,141 @@
 				</div>
 			</div>
 			<div class="footer__row">
-				<div class="footer__row--col">
+				<div class="footer__row--col _full">
 					<div class="footer__privacy">
 						<ul>
 							<li>
 								<a href="privacy.html">
-									Положение о конфиденциальности
+									Terms of Service
 								</a>
 							</li>
 							<li>
 								<a href="personal-data.html">
-									Соглашение об использовании персональных данных
+									Shipping Policy
+								</a>
+							</li>
+							<li>
+								<a href="personal-data.html">
+									Privacy Policy
+								</a>
+							</li>
+							<li>
+								<a href="personal-data.html">
+									Refund Policy 
+								</a>
+							</li>
+							<li>
+								<a href="personal-data.html">
+									Payment Policy
 								</a>
 							</li>
 						</ul>
 					</div>
-				</div>
-				<div class="footer__row--col">
 					<span class="footer__min-text system-text">
 						Постоянная величина поддерживает ортогональный определитель. Продолжая до бесконечности ряд 1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 и т.д., имеем комплексное число упорядочивает убывающий математический анализ
 					</span>
 				</div>
 			</div>
 		</footer>
+	</div>
+	<div class="cookie container _alt _hidden">
+		<h2 class="cookie__title title">
+			cookie policy
+		</h2>
+		<div class="cookie__text big-text _alt">
+			<p>
+				Our website uses cookies to improve your browsing experience. By using our site you agree to the use of cookies. 
+			</p>
+		</div>
+		<div class="cookie__block">
+			<ul>
+				<li>
+					<button type="button" class="cookie__btn btn _mode-3 _min">
+						Accept
+					</button>
+				</li>
+				<li>
+					<button type="button" class="cookie__btn btn _mode-3 _min">
+						Decline
+					</button>
+				</li>
+				<li>
+					<a href="#" class="cookie__btn btn _mode-3 _min">
+						Learn more
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="login-popup popup" id="login-popup">
+		<div class="login-popup__wrapper popup-wrapper">
+			<div class="login-popup__bg popup-bg popup-close"></div>
+			<div class="login-popup__body popup-body">
+				<button type="button" class="login-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="61" height="60" viewBox="0 0 61 60">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="login-popup__header">
+					<a href="#" class="login-popup__header--btn _active">
+						Login
+					</a>
+					<a href="#register-popup" class="login-popup__header--btn open-popup popup-close">
+						Register
+					</a>
+				</div>
+				<form class="login-popup__form">
+					<label class="login-popup__label">
+						<input type="email" name="email" placeholder="Email" class="login-popup__input input-alt">
+					</label>
+					<label class="login-popup__label">
+						<input type="password" name="password" placeholder="Password" class="login-popup__input input-alt">
+						<button class="password-toggle" type="button">
+							<svg width="27" height="16" viewBox="0 0 27 16">
+								<use xlink:href="img/sprites.svg#eay"></use>
+							</svg>
+						</button>
+					</label>
+					<button class="login-popup__submit btn _min _mode-3" type="submit">Send</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="login-popup popup" id="register-popup">
+		<div class="login-popup__wrapper popup-wrapper">
+			<div class="login-popup__bg popup-bg popup-close"></div>
+			<div class="login-popup__body popup-body">
+				<button type="button" class="login-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="61" height="60" viewBox="0 0 61 60">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="login-popup__header">
+					<a href="#login-popup" class="login-popup__header--btn open-popup popup-close">
+						Login
+					</a>
+					<a href="#" class="login-popup__header--btn _active">
+						Register
+					</a>
+				</div>
+				<form class="login-popup__form">
+					<label class="login-popup__label">
+						<input type="email" name="email" placeholder="Email" class="login-popup__input input-alt">
+					</label>
+					<label class="login-popup__label">
+						<input type="password" name="password" placeholder="Password" class="login-popup__input input-alt">
+						<button class="password-toggle" type="button">
+							<svg width="27" height="16" viewBox="0 0 27 16">
+								<use xlink:href="img/sprites.svg#eay"></use>
+							</svg>
+						</button>
+					</label>
+					<button class="login-popup__submit btn _min _mode-3" type="submit">Send</button>
+				</form>
+			</div>
+		</div>
 	</div>
 
 	<script src="js/libs.min.js"></script>

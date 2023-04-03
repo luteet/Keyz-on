@@ -1,0 +1,235 @@
+.popup {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+
+	padding: 4px;
+	@include _768 {
+		padding: 10px;
+	}
+
+	z-index: 100;
+
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+
+	perspective: 400px;
+
+	&._transition-none {
+		transition: none;
+	}
+
+	&._transition-none &-body {
+		transition: none;
+	}
+
+	&._active._transition-none &-body {
+		transition: none;
+	}
+
+	will-change: opacity;
+
+	&._active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	/* &._active &-body {
+		transform: translate3d(0, 0, 0);
+		transition: transform 0.3s ease;
+	} */
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		min-height: 100%;
+		width: 100%;
+
+		z-index: 2;
+	}
+	&-bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: var(--light);
+
+		opacity: 0.85;
+		///cursor: pointer;
+	}
+	&-body {
+		margin: auto;
+		position: relative;
+		background: white;
+
+		/* transform: translate3d(0, 15px, 0);
+		transition: transform 0.4s ease; */
+
+		overflow-y: auto;
+		max-height: calc(var(--height-screen) - 30px);
+		max-width: 620px;
+		padding: 50px 0;
+		@include _768 {
+			padding: 70px 0;
+		}
+		@include _992 {
+			padding: 0;
+		}
+		width: 100%;
+
+		border-radius: 0;
+
+		z-index: 2;
+	}
+	&-close-btn {
+		position: absolute;
+		right: 30px; top: 0;
+		line-height: 100%;
+		width: 35px; height: 35px;
+		@include _768 {
+			width: 60px; height: 60px;
+		}
+		@include _992 {
+			display: none;
+		}
+
+		& svg {
+			width: 100%; height: 100%;
+			fill: var(--primary-color-1);
+		}
+
+		background: transparent;
+	}
+}
+
+.login-popup {
+
+	// .login-popup__wrapper
+
+	&__wrapper {
+	}
+
+	// .login-popup__bg
+
+	&__bg {
+	}
+
+	// .login-popup__close-btn
+
+	&__close-btn {
+	}
+
+	// .login-popup__body
+
+	&__body {
+		background: transparent;
+	}
+
+	// .login-popup__header
+
+	&__header {
+
+		display: flex;
+		flex-wrap: wrap;
+
+		// .login-popup__header--btn
+
+		&--btn {
+			flex: 0 1 50%;
+			text-align: center;
+			font-weight: 900;
+			
+			font-size: 1rem;
+			@include _768 {
+				font-size: 2rem;
+				padding: 30px 23px;
+			}
+			
+			@include _992 {
+				padding: 23px;
+				font-size: 1.375rem;
+			}
+			text-transform: uppercase;
+			background: transparent;
+
+			padding: 23px;
+			display: inline-block;
+
+			color: var(--primary-color-1);
+
+			transition: background .3s ease, color .3s ease;
+			&._active {
+				pointer-events: none;
+				background: var(--primary-color-1);
+				color: var(--white);
+			}
+
+			&:hover {
+				color: var(--white);
+				background: var(--primary-color-1-hover);
+			}
+			
+			&:active {
+				background: var(--primary-color-1-active);
+			}
+
+			@include _768 {
+			
+			}
+			
+			@include _992 {
+				font-size: 1.375rem;
+			}
+		}
+	}
+
+	// .login-popup__form
+
+	&__form {
+		padding: 38px;
+		
+		@include _768 {
+			padding: 75px 80px;
+		}
+		
+		@include _992 {
+			padding: 75px 80px;
+		}
+		margin-top: -1px;
+		background: var(--primary-color-1);
+
+		display: flex;
+		flex-direction: column;
+
+		& > *:not(:first-child) {
+			margin-top: 20px;
+		}
+	}
+
+	// .login-popup__label
+
+	&__label {
+		display: flex;
+	}
+
+	// .login-popup__input
+
+	&__input {
+		width: 100%;
+		border: 0;
+	}
+
+	// .login-popup__submit
+
+	&__submit {
+	}
+}

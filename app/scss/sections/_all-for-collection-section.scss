@@ -30,7 +30,10 @@
 
     &__list {
         display: grid;
-        gap: 20px;
+		gap: 11px;
+        @include _768 {
+			gap: 20px;
+		}
         grid-template-columns: 100%;
         @include _992 {
             grid-template-columns: 1fr 1fr;
@@ -38,6 +41,31 @@
     }
 
     // .all-for-collection-section__item
+
+	&__item {
+		@include _768 {
+			justify-self: center;
+		}
+		@include _992 {
+			justify-self: auto;
+		}
+	}
+
+	&__item.all-for__card {
+		padding: 26px 15px;
+		@media (min-width: 375px) {
+			padding: 26px 36px;
+		}
+		@include _768 {
+			padding: 72px 53px;
+		}
+		@include _992 {
+			padding: 75px 30px;
+		}
+		@media (min-width: 1200px) {
+			padding: 75px;
+		}
+	}
 
     &__item > * {
         min-height: 100%;

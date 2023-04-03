@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+	<div class="wrapper">
+		<header class="header _searched container _large">
+			<a href="index.html" class="header__logo">
+				<img src="img/logo.svg" alt="Logo" width="236" height="60" loading="lazy" class="header__logo--img">
+				<img src="img/logo-2.svg" alt="Logo" width="236" height="60" loading="lazy" class="header__logo--img">
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<div class="header__sale-week-filter hide-on-tablet" id="header-filter"></div>
+					<ul class="header__nav--list visible-on-tablet">
+						<li>
+							<a href="catalog.html">
+								Catalog
+							</a>
+						</li>
+						<li>
+							<a href="sale-week.html">
+								Sale
+							</a>
+						</li>
+						<li>
+							<a href="news.html">
+								News
+							</a>
+						</li>
+						<li>
+							<a href="articles.html">
+								Articles
+							</a>
+						</li>
+						<li>
+							<a href="about-us.html">
+								About us
+							</a>
+						</li>
+						<li>
+							<a href="contacts.html">
+								Contacts
+							</a>
+						</li>
+						<li>
+							<a href="faq.html">
+								FAQ
+							</a>
+						</li>
+					</ul>
+					<div class="header__nav--account">
+						<div class="header__account" data-append-to-on-tablet="header-account-place">
+							<a href="#login-popup" class="header__account--user open-popup">
+								<svg width="23" height="27" viewBox="0 0 23 27">
+									<use xlink:href="img/sprites.svg#user"></use>
+								</svg>
+							</a>
+							<a href="#" class="header__account--cart">
+								<span>3</span>
+								<svg width="31" height="25" viewBox="0 0 31 25">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>$129</span>
+							</a>
+						</div>
+					</div>
+					<ul class="header__nav--add">
+						<li>
+							<a href="#" class="header__nav--message chat-btn _notification" title="Chat">
+								<svg width="25" height="25" viewBox="0 0 25 25">
+									<use xlink:href="img/sprites.svg#comment"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+					<div class="header__nav--search">
+						<div class="header__search" data-append-to-on-tablet="header-search-place">
+							<label class="header__search--label">
+								<input type="search" name="search" value="Vmware" class="header__search--input">
+							</label>
+							<button class="header__search--submit" type="submit" title="Search">
+								<svg width="23" height="25" viewBox="0 0 23 25">
+									<use xlink:href="img/sprites.svg#search"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<form class="header__nav--feedback header__feedback visible-on-tablet">
+						<label class="header__feedback--label">
+							<input type="text" name="name" placeholder="Name" required class="header__feedback--input input">
+						</label>
+						<label class="header__feedback--label">
+							<input type="email" name="email" placeholder="Email" required class="header__feedback--input input">
+						</label>
+						<label class="header__feedback--label">
+							<textarea name="message" placeholder="Message" class="header__feedback--textarea textarea"></textarea>
+						</label>
+						<label class="header__feedback--label checkbox">
+							<input type="checkbox" name="privacy" required class="checkbox__input">
+							<span class="checkbox__element"></span>
+							<span class="checkbox__text">Ознакомлен с политикой конфиденциальности и правилами обработки персональных данных</span>
+						</label>
+						<button class="header__feedback--submit btn _min _mode-3" type="button">send</button>
+					</form>
+				</div>
+			</nav>
+			<div class="header__account-place" id="header-account-place"></div>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="header__search-place" id="header-search-place"></div>
+		</header>
+
+	<main class="main">
+		<div class="page-address container _large">
+			<a href="index.html">
+				Main
+			</a>
+			<a href="#">
+				catalog
+			</a>
+		</div>
+		<section class="catalog">
+			<div class="catalog__result container _large">
+				<span class="small-text">search results for:</span>
+				<span class="main-title">
+					vmware
+				</span>
+			</div>
+			<div class="catalog__header container _large">
+				<h2 class="catalog__founded text">
+					Found 102 items
+				</h2>
+				<form class="catalog__sort">
+					<div class="catalog__sort--item">
+						<h3 class="catalog__sort--name">Цена</h3>
+						<label class="catalog__sort--mode">
+							<input type="radio" name="sort" value="price-ascending">
+							<span>
+								<svg width="12" height="8" viewBox="0 0 12 8">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+							</span>
+						</label>
+						<label class="catalog__sort--mode">
+							<input type="radio" name="sort" value="price-descending">
+							<span>
+								<svg width="12" height="8" viewBox="0 0 12 8">
+									<use xlink:href="img/sprites.svg#arrow-down"></use>
+								</svg>
+							</span>
+						</label>
+					</div>
+					<div class="catalog__sort--item">
+						<h3 class="catalog__sort--name">Размер скидки</h3>
+						<label class="catalog__sort--mode">
+							<input type="radio" name="sort" value="amount-of-discount-ascending">
+							<span>
+								<svg width="12" height="8" viewBox="0 0 12 8">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+							</span>
+						</label>
+						<label class="catalog__sort--mode">
+							<input type="radio" name="sort" value="amount-of-discount-descending">
+							<span>
+								<svg width="12" height="8" viewBox="0 0 12 8">
+									<use xlink:href="img/sprites.svg#arrow-down"></use>
+								</svg>
+							</span>
+						</label>
+					</div>
+					<div class="catalog__sort--item">
+						<h3 class="catalog__sort--name">Дата добавления</h3>
+						<label class="catalog__sort--mode">
+							<input type="radio" name="sort" value="date-added-ascending">
+							<span>
+								<svg width="12" height="8" viewBox="0 0 12 8">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+							</span>
+						</label>
+						<label class="catalog__sort--mode">
+							<input type="radio" name="sort" value="date-added-descending">
+							<span>
+								<svg width="12" height="8" viewBox="0 0 12 8">
+									<use xlink:href="img/sprites.svg#arrow-down"></use>
+								</svg>
+							</span>
+						</label>
+					</div>
+				</form>
+			</div>
+			<div class="catalog__wrapper container _large">
+				<aside class="catalog__aside">
+					<form class="filter" data-append-to-on-tablet="header-filter">
+						<fieldset class="filter__fieldset">
+							<legend class="filter__title title _super-min">
+								all goods
+							</legend>
+							<ul class="filter__list">
+								<li class="filter__item filter__category filter-category">
+									<button type="button" class="filter-category__target">Network</button>
+									<ul class="filter-category__list">
+										<li>
+											<label>
+												<input type="radio" name="network" value="vmware">
+												<span>VmWare</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="network" value="parallels">
+												<span>Parallels</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="network" value="acronis">
+												<span>Acronis</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="network" value="cisco">
+												<span>Cisco</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="filter__item filter__category filter-category">
+									<button type="button" class="filter-category__target">Windows</button>
+									<ul class="filter-category__list">
+										<li>
+											<label>
+												<input type="radio" name="windows" value="vmware">
+												<span>VmWare</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="windows" value="parallels">
+												<span>Parallels</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="windows" value="acronis">
+												<span>Acronis</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="windows" value="cisco">
+												<span>Cisco</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="filter__item filter__category filter-category">
+									<button type="button" class="filter-category__target">Adobe</button>
+									<ul class="filter-category__list">
+										<li>
+											<label>
+												<input type="radio" name="adobe" value="vmware">
+												<span>VmWare</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="adobe" value="parallels">
+												<span>Parallels</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="adobe" value="acronis">
+												<span>Acronis</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="radio" name="adobe" value="cisco">
+												<span>Cisco</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</fieldset>
+						<fieldset class="filter__fieldset">
+							<legend class="filter__title title _super-min">
+								price
+							</legend>
+							<div class="filter__price filter-price">
+								<label class="filter-price__label">
+									<input type="number" name="price-from" placeholder="From" class="filter-price__input">
+								</label>
+								<label class="filter-price__label">
+									<input type="number" name="price-to" placeholder="To" class="filter-price__input">
+								</label>
+							</div>
+						</fieldset>
+					</form>
+				</aside>
+				<main class="catalog__main">
+					<ul class="catalog__list">
+						<li class="catalog__item">
+	<div class="product-card">
+		<span class="product-card__category">
+			Network / Vmware
+		</span>
+		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<h3 class="product-card__title title _super-min">
+				Vmware Workstation 17 Pro Lifetime License
+			</h3>
+		</a>
+		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<div class="product-card__image--body">
+				<picture>
+					<source srcset="img/product-cards/image-1.webp" type="image/webp">
+					<img src="img/product-cards/image-1.png" alt="" width="260" height="293" loading="lazy">
+				</picture>
+			</div>
+		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
+		<a href="#" class="product-card__btn btn _mode-2 _min">
+			add to cart
+		</a>
+	</div>
+</li><li class="catalog__item">
+	<div class="product-card">
+		<span class="product-card__category">
+			Network / Vmware
+		</span>
+		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<h3 class="product-card__title title _super-min">
+				Vmware Workstation 17 Pro Lifetime License
+			</h3>
+		</a>
+		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<div class="product-card__image--body">
+				<picture>
+					<source srcset="img/product-cards/image-2.webp" type="image/webp">
+					<img src="img/product-cards/image-2.png" alt="" width="260" height="293" loading="lazy">
+				</picture>
+			</div>
+		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
+		<a href="#" class="product-card__btn btn _mode-2 _min">
+			add to cart
+		</a>
+	</div>
+</li><li class="catalog__item">
+	<div class="product-card">
+		<span class="product-card__category">
+			Network / Vmware
+		</span>
+		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<h3 class="product-card__title title _super-min">
+				Vmware Workstation 17 Pro Lifetime License
+			</h3>
+		</a>
+		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<div class="product-card__image--body">
+				<picture>
+					<source srcset="img/product-cards/image-3.webp" type="image/webp">
+					<img src="img/product-cards/image-3.png" alt="" width="260" height="293" loading="lazy">
+				</picture>
+			</div>
+		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
+		<a href="#" class="product-card__btn btn _mode-2 _min">
+			add to cart
+		</a>
+	</div>
+</li><li class="catalog__item">
+	<div class="product-card">
+		<span class="product-card__category">
+			Network / Vmware
+		</span>
+		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<h3 class="product-card__title title _super-min">
+				Vmware Workstation 17 Pro Lifetime License
+			</h3>
+		</a>
+		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<div class="product-card__image--body">
+				<picture>
+					<source srcset="img/product-cards/image-1.webp" type="image/webp">
+					<img src="img/product-cards/image-1.png" alt="" width="260" height="293" loading="lazy">
+				</picture>
+			</div>
+		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
+		<a href="#" class="product-card__btn btn _mode-2 _min">
+			add to cart
+		</a>
+	</div>
+</li><li class="catalog__item">
+	<div class="product-card">
+		<span class="product-card__category">
+			Network / Vmware
+		</span>
+		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<h3 class="product-card__title title _super-min">
+				Vmware Workstation 17 Pro Lifetime License
+			</h3>
+		</a>
+		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<div class="product-card__image--body">
+				<picture>
+					<source srcset="img/product-cards/image-1.webp" type="image/webp">
+					<img src="img/product-cards/image-1.png" alt="" width="260" height="293" loading="lazy">
+				</picture>
+			</div>
+		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
+		<a href="#" class="product-card__btn btn _mode-2 _min">
+			add to cart
+		</a>
+	</div>
+</li><li class="catalog__item">
+	<div class="product-card">
+		<span class="product-card__category">
+			Network / Vmware
+		</span>
+		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<h3 class="product-card__title title _super-min">
+				Vmware Workstation 17 Pro Lifetime License
+			</h3>
+		</a>
+		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<div class="product-card__image--body">
+				<picture>
+					<source srcset="img/product-cards/image-2.webp" type="image/webp">
+					<img src="img/product-cards/image-2.png" alt="" width="260" height="293" loading="lazy">
+				</picture>
+			</div>
+		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
+		<a href="#" class="product-card__btn btn _mode-2 _min">
+			add to cart
+		</a>
+	</div>
+</li><li class="catalog__item">
+	<div class="product-card">
+		<span class="product-card__category">
+			Network / Vmware
+		</span>
+		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<h3 class="product-card__title title _super-min">
+				Vmware Workstation 17 Pro Lifetime License
+			</h3>
+		</a>
+		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<div class="product-card__image--body">
+				<picture>
+					<source srcset="img/product-cards/image-3.webp" type="image/webp">
+					<img src="img/product-cards/image-3.png" alt="" width="260" height="293" loading="lazy">
+				</picture>
+			</div>
+		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
+		<a href="#" class="product-card__btn btn _mode-2 _min">
+			add to cart
+		</a>
+	</div>
+</li><li class="catalog__item">
+	<div class="product-card">
+		<span class="product-card__category">
+			Network / Vmware
+		</span>
+		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<h3 class="product-card__title title _super-min">
+				Vmware Workstation 17 Pro Lifetime License
+			</h3>
+		</a>
+		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<div class="product-card__image--body">
+				<picture>
+					<source srcset="img/product-cards/image-1.webp" type="image/webp">
+					<img src="img/product-cards/image-1.png" alt="" width="260" height="293" loading="lazy">
+				</picture>
+			</div>
+		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
+		<a href="#" class="product-card__btn btn _mode-2 _min">
+			add to cart
+		</a>
+	</div>
+</li><li class="catalog__item">
+	<div class="product-card">
+		<span class="product-card__category">
+			Network / Vmware
+		</span>
+		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<h3 class="product-card__title title _super-min">
+				Vmware Workstation 17 Pro Lifetime License
+			</h3>
+		</a>
+		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<div class="product-card__image--body">
+				<picture>
+					<source srcset="img/product-cards/image-1.webp" type="image/webp">
+					<img src="img/product-cards/image-1.png" alt="" width="260" height="293" loading="lazy">
+				</picture>
+			</div>
+		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
+		<a href="#" class="product-card__btn btn _mode-2 _min">
+			add to cart
+		</a>
+	</div>
+</li><li class="catalog__item">
+	<div class="product-card">
+		<span class="product-card__category">
+			Network / Vmware
+		</span>
+		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<h3 class="product-card__title title _super-min">
+				Vmware Workstation 17 Pro Lifetime License
+			</h3>
+		</a>
+		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<div class="product-card__image--body">
+				<picture>
+					<source srcset="img/product-cards/image-2.webp" type="image/webp">
+					<img src="img/product-cards/image-2.png" alt="" width="260" height="293" loading="lazy">
+				</picture>
+			</div>
+		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
+		<a href="#" class="product-card__btn btn _mode-2 _min">
+			add to cart
+		</a>
+	</div>
+</li><li class="catalog__item">
+	<div class="product-card">
+		<span class="product-card__category">
+			Network / Vmware
+		</span>
+		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<h3 class="product-card__title title _super-min">
+				Vmware Workstation 17 Pro Lifetime License
+			</h3>
+		</a>
+		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<div class="product-card__image--body">
+				<picture>
+					<source srcset="img/product-cards/image-3.webp" type="image/webp">
+					<img src="img/product-cards/image-3.png" alt="" width="260" height="293" loading="lazy">
+				</picture>
+			</div>
+		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
+		<a href="#" class="product-card__btn btn _mode-2 _min">
+			add to cart
+		</a>
+	</div>
+</li><li class="catalog__item">
+	<div class="product-card">
+		<span class="product-card__category">
+			Network / Vmware
+		</span>
+		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<h3 class="product-card__title title _super-min">
+				Vmware Workstation 17 Pro Lifetime License
+			</h3>
+		</a>
+		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+			<div class="product-card__image--body">
+				<picture>
+					<source srcset="img/product-cards/image-1.webp" type="image/webp">
+					<img src="img/product-cards/image-1.png" alt="" width="260" height="293" loading="lazy">
+				</picture>
+			</div>
+		</a>
+		<div class="product-card__price">
+			<div class="price _standard">12,00$</div>
+		</div>
+		<a href="#" class="product-card__btn btn _mode-2 _min">
+			add to cart
+		</a>
+	</div>
+</li>
+					</ul>
+				</main>
+			</div>
+		</section>
+		<div class="accent-product container _large _mob-padding-none">
+    <div class="accent-product__wrapper">
+        <div class="accent-product__bg">
+            <img src="img/license/bg.svg" alt="" width="0" height="0" loading="lazy">
+        </div>
+        <h2 class="accent-product__title main-title">
+            Vmware Workstation 17 Pro Lifetime License
+        </h2>
+        <a href="#" class="accent-product__product">
+            <div class="accent-product__product--image">
+                <picture>
+                    <source srcset="img/license/image.webp" type="image/webp">
+                    <img src="img/license/image.png" alt="" width="669" height="453" loading="lazy">
+                </picture>
+            </div>
+            <div class="accent-product__product--price price _large">
+                12,00 $
+            </div>
+        </a>
+    </div>
+</div>
+	</main>
+
+		<footer class="footer container _large">
+			<div class="footer__intro">
+				<ul>
+					<li>
+						<a href="index.html" class="footer__logo">
+							<img src="img/logo-2.svg" width="237" height="60" loading="lazy" alt="Logo" class="footer__logo--img">
+						</a>
+					</li>
+					<li>
+						<a href="cart.html" class="header__account--cart">
+							<span>3</span>
+							<svg width="31" height="25" viewBox="0 0 31 25">
+								<use xlink:href="img/sprites.svg#cart"></use>
+							</svg>
+							<span>$129</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="footer__chat chat-btn _notification _alt" title="Chat">
+							<svg width="25" height="25" viewBox="0 0 25 25">
+								<use xlink:href="img/sprites.svg#comment"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<form action="#" class="footer__search">
+							<label class="footer__search--label">
+								<input type="search" name="search" required class="footer__search--input">
+							</label>
+							<button class="footer__search--submit" type="submit" title="Search">
+								<svg width="23" height="25" viewBox="0 0 23 25">
+									<use xlink:href="img/sprites.svg#search"></use>
+								</svg>
+							</button>
+						</form>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__row">
+				<div class="footer__row--col">
+					<nav class="footer__nav">
+						<ul>
+							<li>
+								<a href="catalog.html">
+									Catalog
+								</a>
+							</li>
+							<li>
+								<a href="about-us.html">
+									About us
+								</a>
+							</li>
+							<li>
+								<a href="sale-week.html">
+									Sale
+								</a>
+							</li>
+							<li>
+								<a href="contacts.html">
+									Contacts
+								</a>
+							</li>
+							<li>
+								<a href="news.html">
+									News
+								</a>
+							</li>
+							<li>
+								<a href="faq.html">
+									FAQ
+								</a>
+							</li>
+							<li>
+								<a href="articles.html">
+									Articles
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__row--col">
+					<form action="#" class="footer__feedback">
+						<label class="footer__feedback--label">
+							<input type="text" name="name" placeholder="Name" required class="footer__feedback--input input-alt">
+						</label>
+						<label class="footer__feedback--label">
+							<input type="email" name="email" placeholder="Email" required class="footer__feedback--input input-alt">
+						</label>
+						<label class="footer__feedback--label">
+							<textarea name="message" placeholder="Message" class="footer__feedback--textarea textarea-alt"></textarea>
+						</label>
+						<label class="footer__feedback--checkbox checkbox">
+							<input type="checkbox" name="privacy-policy" required class="checkbox__input">
+							<span class="checkbox__element"></span>
+							<span class="checkbox__text">
+								Ознакомлен с политикой конфиденциальности и правилами обработки персональных данных
+							</span>
+						</label>
+						<button class="footer__feedback--submit btn _mode-3 _min">
+							Send
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="footer__row">
+				<div class="footer__row--col _full">
+					<div class="footer__privacy">
+						<ul>
+							<li>
+								<a href="privacy.html">
+									Terms of Service
+								</a>
+							</li>
+							<li>
+								<a href="personal-data.html">
+									Shipping Policy
+								</a>
+							</li>
+							<li>
+								<a href="personal-data.html">
+									Privacy Policy
+								</a>
+							</li>
+							<li>
+								<a href="personal-data.html">
+									Refund Policy 
+								</a>
+							</li>
+							<li>
+								<a href="personal-data.html">
+									Payment Policy
+								</a>
+							</li>
+						</ul>
+					</div>
+					<span class="footer__min-text system-text">
+						Постоянная величина поддерживает ортогональный определитель. Продолжая до бесконечности ряд 1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 и т.д., имеем комплексное число упорядочивает убывающий математический анализ
+					</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div class="cookie container _alt _hidden">
+		<h2 class="cookie__title title">
+			cookie policy
+		</h2>
+		<div class="cookie__text big-text _alt">
+			<p>
+				Our website uses cookies to improve your browsing experience. By using our site you agree to the use of cookies. 
+			</p>
+		</div>
+		<div class="cookie__block">
+			<ul>
+				<li>
+					<button type="button" class="cookie__btn btn _mode-3 _min">
+						Accept
+					</button>
+				</li>
+				<li>
+					<button type="button" class="cookie__btn btn _mode-3 _min">
+						Decline
+					</button>
+				</li>
+				<li>
+					<a href="#" class="cookie__btn btn _mode-3 _min">
+						Learn more
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="login-popup popup" id="login-popup">
+		<div class="login-popup__wrapper popup-wrapper">
+			<div class="login-popup__bg popup-bg popup-close"></div>
+			<div class="login-popup__body popup-body">
+				<button type="button" class="login-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="61" height="60" viewBox="0 0 61 60">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="login-popup__header">
+					<a href="#" class="login-popup__header--btn _active">
+						Login
+					</a>
+					<a href="#register-popup" class="login-popup__header--btn open-popup popup-close">
+						Register
+					</a>
+				</div>
+				<form class="login-popup__form">
+					<label class="login-popup__label">
+						<input type="email" name="email" placeholder="Email" class="login-popup__input input-alt">
+					</label>
+					<label class="login-popup__label">
+						<input type="password" name="password" placeholder="Password" class="login-popup__input input-alt">
+						<button class="password-toggle" type="button">
+							<svg width="27" height="16" viewBox="0 0 27 16">
+								<use xlink:href="img/sprites.svg#eay"></use>
+							</svg>
+						</button>
+					</label>
+					<button class="login-popup__submit btn _min _mode-3" type="submit">Send</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="login-popup popup" id="register-popup">
+		<div class="login-popup__wrapper popup-wrapper">
+			<div class="login-popup__bg popup-bg popup-close"></div>
+			<div class="login-popup__body popup-body">
+				<button type="button" class="login-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="61" height="60" viewBox="0 0 61 60">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="login-popup__header">
+					<a href="#login-popup" class="login-popup__header--btn open-popup popup-close">
+						Login
+					</a>
+					<a href="#" class="login-popup__header--btn _active">
+						Register
+					</a>
+				</div>
+				<form class="login-popup__form">
+					<label class="login-popup__label">
+						<input type="email" name="email" placeholder="Email" class="login-popup__input input-alt">
+					</label>
+					<label class="login-popup__label">
+						<input type="password" name="password" placeholder="Password" class="login-popup__input input-alt">
+						<button class="password-toggle" type="button">
+							<svg width="27" height="16" viewBox="0 0 27 16">
+								<use xlink:href="img/sprites.svg#eay"></use>
+							</svg>
+						</button>
+					</label>
+					<button class="login-popup__submit btn _min _mode-3" type="submit">Send</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

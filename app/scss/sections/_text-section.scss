@@ -13,11 +13,15 @@
 	}
 
 	& p {
-		font-size: 1rem;
+		font-size: 0.875rem;
+		line-height: 120%;
 		@include _768 {
+			font-size: 1.75rem;
+		}
+		@include _992 {
 			font-size: 1.125rem;
 		}
-		line-height: 150%;
+		
 		padding-top: 20px;
 	}
 }

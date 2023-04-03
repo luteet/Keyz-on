@@ -1,0 +1,193 @@
+.account {
+
+	display: grid;
+	padding-top: 44px; padding-bottom: 70px;
+
+	@include _768 {
+		padding-top: 90px; padding-bottom: 70px;
+	}
+
+	@include _992 {
+		grid-template-columns: 250px auto;
+		gap: 20px;
+		padding-top: 111px; padding-bottom: 70px;
+	}
+
+	@media (min-width: 1200px) {
+		grid-template-columns: 300px auto;
+	}
+	
+
+	// .account__title
+
+	&__title {
+		color: var(--primary-color-1);
+		padding-bottom: 61px;
+
+		@include _768 {
+			padding-bottom: 147px;
+		}
+
+		@include _992 {
+			grid-column: 2 span;
+			padding-bottom: 150px;
+			
+		}
+	}
+
+	// .account__aside
+
+	&__aside {
+	}
+
+	// .account__aside-nav
+
+	&__aside-nav {
+		padding: 35px 15px;
+
+		& h2 {
+			text-transform: uppercase;
+			color: var(--white);
+			font-size: 1rem;
+			@include _768 {
+				font-size: 2.75rem;
+			}
+			
+			@include _992 {
+				color: var(--primary-color-1);
+				font-size: 1.125rem;
+			}
+			
+			font-weight: 900;
+		}
+
+		& ul {
+			display: flex;
+			flex-direction: column;
+			padding-top: 14px;
+			
+			@include _768 {
+				padding-top: 24px;
+			}
+			
+			@include _992 {
+				padding-top: 24px;
+			}
+
+			& li {
+				display: flex;
+				padding: 5px 0;
+				&::before {
+					content: '•';
+					font-size: 1.25rem;
+					color: var(--primary-color-2);
+					margin-right: 5px;
+				}
+			}
+
+			& a {
+				color: var(--white);
+				@include _992 {
+					color: var(--black);
+				}
+				display: block;
+				
+				transition: color .3s ease;
+				&:hover {
+					color: var(--primary-color-2-hover);
+				}
+				
+				&:active {
+					color: var(--primary-color-2-hover);
+				}
+			}
+		}
+	}
+
+	// .account__main
+
+	&__main {
+	}
+
+	// .account__nav
+
+	&__nav {
+		display: grid;
+		grid-template-columns: 100%;
+		gap: 10px;
+		
+		@include _768 {
+			gap: 22px;
+		}
+		@include _992 {
+			grid-template-columns: repeat(auto-fit, minmax(400px,auto));
+			gap: 21px;
+		}
+	}
+
+	// .account__nav-card
+
+	&__nav-card {
+
+		padding: 26px 30px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@include _768 {
+			min-height: 273px;
+		}
+
+		@include _992 {
+			min-height: 194px;
+		}
+
+		background: var(--primary-color-1);
+		color: var(--white);
+		
+		transition: background .3s ease;
+		&:hover {
+			background: var(--primary-color-1-hover);
+		}
+		
+		&:active {
+			background: var(--primary-color-1-active);
+		}
+
+		// .account__nav-card--header
+
+		&--header {
+			display: flex;
+			justify-content: space-between;
+
+			padding-bottom: 30px;
+		}
+
+		// .account__nav-card--title
+
+		&--title {
+		}
+
+		// .account__nav-card--icon
+
+		&--icon {
+			@media (max-width: 768px) {
+				width: 35px; height: auto;
+			}
+		}
+
+		// .account__nav-card--info
+
+		&--info {
+			color: var(--white);
+		}
+	}
+}
+
+@import "cart";
+@import "payment-received";
+@import "order-details";
+@import "order-history";
+@import "settings";
+@import "account-details";

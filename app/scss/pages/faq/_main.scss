@@ -72,14 +72,6 @@
 		// .faq__item--text
 
 		&--text {
-			font-size: 1rem;
-
-			@include _768 {
-				font-size: 1.125rem;
-			}
-			font-size: 1.125rem;
-			line-height: 122.222222%;
-
 			& p {
 				padding: 10px 0;
 			}

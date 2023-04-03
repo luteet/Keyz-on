@@ -15,7 +15,7 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	//padding-right: var(--popup-padding);
+	padding-right: var(--popup-padding);
 
 	&._mob-menu-active {
 		overflow: hidden;
@@ -54,20 +54,68 @@ section {
 }
 
 .container {
-	padding-left: var(--container-padding);
-	padding-right: var(--container-padding);
+	padding-left: 15px;
+	padding-right: 15px;
+	&._mob-padding-none {
+		padding-left: 4px;
+		padding-right: 4px;	
+	}
+	@media (min-width: 375px) {
+		padding-left: var(--container-padding);
+		padding-right: var(--container-padding);
+		&._mob-padding-none {
+			padding-left: 4px;
+			padding-right: 4px;	
+		}
+	}
+
+	@include _768 {
+		&._large-padding {
+			padding-left: 90px;
+			padding-right: 90px;
+		}
+	}
+
+	&._mob-padding-none {
+		@include _768 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		@include _992 {
+			padding-left: var(--container-padding);
+			padding-right: var(--container-padding);
+		}
+	}
+	
 	&._in-section {
 		padding-left: 0;
 		padding-right: 0;
-		margin: 0 -20px;
+		margin: 0 calc(-15px + 4px);
+		@media (min-width: 375px) {
+			margin: 0 -42px;	
+		}
+		@include _768 {
+			margin: 0 -95px;
+		}
+		@include _992 {
+			margin: 0;
+		}
 	}
 
 	&._super-large {
-		padding-left: 0px;
-		padding-right: 0px;
+		padding-left: 15px;
+		padding-right: 15px;
+		@media (min-width: 375px) {
+			padding-left: var(--container-padding);
+			padding-right: var(--container-padding);
+		}
 		@include _768 {
-			padding-left: 10px;
-			padding-right: 10px;
+			padding-left: var(--container-padding);
+			padding-right: var(--container-padding);
+			&._large-padding {
+				padding-left: 90px;
+				padding-right: 90px;
+			}
 		}
 	}
 	
@@ -75,6 +123,7 @@ section {
 		&._in-section {
 			margin: 0;
 		}
+
 		padding-left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
 		padding-right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
 
@@ -94,8 +143,8 @@ section {
 		}
 
 		&._super-large {
-			padding-left: max(10px, calc(50% - #{math.div($containerSuperLarge, 2)}px));
-			padding-right: max(10px, calc(50% - #{math.div($containerSuperLarge, 2)}px));
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerSuperLarge, 2)}px));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerSuperLarge, 2)}px));
 		}
 	}
 }
@@ -121,14 +170,24 @@ section {
 	text-align: center;
 	
 	padding: 16px 15px;
+	font-size: 0.875rem;
 	@include _550 {
 		padding: 26px 46.5px;
+		font-size: 1.125rem;
 	}
 
 	text-transform: uppercase;
 	color: var(--primary-color-1);
 	font-weight: 900;
-	font-size: 1.125rem;
+	
+	@include _768 {
+		font-size: 1.75rem;
+		padding: 30px 66.5px;
+	}
+	@include _992 {
+		font-size: 1.125rem;
+		padding: 26px 46.5px;
+	}
 	line-height: 122.222222%;
 
 	background: var(--accent);
@@ -177,9 +236,12 @@ section {
 		}
 	}
 	&._min {
-		padding: 15px;
-		@include _550 {
-			padding: 20px;
+		padding: 12px 15px;
+		@include _768 {
+			padding: 30px 66.5px;
+		}
+		@include _992 {
+			padding: 20px 16.5px;
 		}
 	}
 	/* &._min-2 {
@@ -201,16 +263,35 @@ section {
 	display: inline-block;
 
 	font-size: 1rem;
-	padding: 10px 20px;
+	padding: 5px 10px;
+	&._standard {
+		padding-left: 0; padding-right: 0;
+		color: var(--black);
+		background: transparent;
+	}
 
 	@include _768 {
-		font-size: 1.375rem;
+		font-size: 2rem;
 		padding: 15px 30px;
 	}
 	
 	@include _992 {
 		font-size: 1.375rem;
 		padding: 7px 17px;
+	}
+
+	&._alt {
+		font-size: 1.375rem;
+		padding: 10px 20px;
+		@include _768 {
+			font-size: 2rem;
+			padding: 15px 30px;
+		}
+		
+		@include _992 {
+			font-size: 2rem;
+			padding: 7px 25px;
+		}
 	}
 
 	&._large {
@@ -236,6 +317,46 @@ section {
 	}
 }
 
+.price-old {
+	text-decoration: none;
+	padding: 0 2px; margin-right: 8px;
+	display: inline-block;
+	position: relative;
+	font-size: 0.875rem;
+	
+	@include _768 {
+		font-size: 1.75rem;
+		padding: 0 7px; margin-right: 8px;
+	}
+	
+	@include _992 {
+		font-size: 1.125rem;
+	}
+
+	&._alt {
+		font-size: 1.125rem;
+		
+		@include _768 {
+			font-size: 2.25rem;
+		}
+		
+		@include _992 {
+			font-size: 1.125rem;
+			line-height: 119.444444%;
+		}
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0; top: 50%;
+		transform: translate(0,-50%);
+		width: 100%; height: 1px;
+		background: var(--black);
+		pointer-events: none;
+	}
+}
+
 .product-card {
 
 	border: 3px solid var(--white);
@@ -254,14 +375,15 @@ section {
 	}
 
 	&._wide {
-		
+		@include _768 {
+			padding: 60px 48px 80px 48px;
+		}
 		@include _992 {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			gap: 0 20px;
 			padding: 30px 15px 35px 20px;
 		}
-		
 		
 		@media (min-width: 1200px) {
 			padding: 50px 15px 35px 50px;
@@ -278,12 +400,13 @@ section {
 		@include _992 {
 			grid-column: 1;
 			max-width: 219px;
+			padding-top: 0px;
 		}
 	}
 
 	&._wide &__image {
 		@include _992 {
-			grid-column: 2; grid-row: 1/6;
+			grid-column: 2; grid-row: 1/5;
 			margin-top: 0;
 
 			&--body {
@@ -294,19 +417,27 @@ section {
 
 	&._wide &__price {
 		@include _992 {
-			grid-column: 1; grid-row: 4;
-			margin-top: 30px;
-			position: static;
+			grid-column: 1; grid-row: 3;
+
+			margin-top: 30px; padding-right: 30px;
+
+			width: 100%;
+
 			align-self: self-end;
 			justify-self: self-start;
+		}
+		& .price {
+			background: transparent;
+			color: var(--black);
+			padding: 0;
 		}
 	}
 
 	&._wide &__btn {
 		@include _992 {
-			grid-column: 1; grid-row: 5;
+			grid-column: 1; grid-row: 4;
 			align-self: self-end;
-			margin-top: 50px;
+			margin-top: 20px;
 			max-width: 270px;
 		}
 	}
@@ -321,6 +452,7 @@ section {
 
 	&__title {
 		padding-top: 15px;
+		color: var(--primary-color-1);
 	}
 
 	// .product-card__image
@@ -352,14 +484,26 @@ section {
 
 	&__price {
 		z-index: 2;
-		position: absolute;
-		right: 20px; bottom: 170px;
+
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-end;
 	}
 
 	// .product-card__btn
 
 	&__btn {
 		width: 100%;
+		margin-top: 13px;
+		
+		@include _768 {
+			margin-top: 35px;
+		}
+		
+		@include _992 {
+			margin-top: 28px;
+		}
 	}
 }
 
@@ -400,6 +544,18 @@ section {
 		}
 	}
 
+	& svg {
+		width: 37px; height: auto;
+
+		@include _768 {
+			width: 71px;
+		}
+		
+		@include _992 {
+			width: 24px;
+		}
+	}
+
 	&::before {
 		content: '';
 		position: absolute;
@@ -414,19 +570,40 @@ section {
 		position: absolute;
 		right: 0; top: 0;
 		transform: translate(50%,-50%);
-		width: 15px; height: 15px;
+		width: 22px; height: 22px;
+		@include _768 {
+			width: 48px; height: 48px;
+		}
 		border-radius: 50%;
 		border: 2px solid var(--primary-color-1);
 		@include _992 {
+			width: 15px; height: 15px;
 			border: 2px solid var(--primary-color-2);
 		}
 		background: var(--accent);
 	}
 
+	&._alt {
+		width: 20px; height: auto;
+
+		@include _768 {
+			width: 41px;
+		}
+		
+		@include _992 {
+			width: 24px;
+		}
+	}
+
 	&._alt._notification::after {
 		border: 2px solid var(--primary-color-1);
+		width: 12px; height: 12px;
+		@include _768 {
+			width: 24px; height: 24px;
+		}
 		@include _992 {
 			border: 2px solid var(--primary-color-1);
+			width: 15px; height: 15px;
 		}
 	}
 }
@@ -448,15 +625,8 @@ section {
 .page-address {
 	margin-top: 76px;
 
-	& ul {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-	}
-
-	& li:not(:first-child)::before {
+	& a:not(:first-child)::before {
 		content: '/';
-		margin-left: 5px;
 		font-weight: 900;
 		color: var(--primary-color-1);
 	}
@@ -472,9 +642,17 @@ section {
 			color: var(--primary-color-1-active);
 		}
 
-		font-size: 0.875rem;
+		font-size: 0.75rem;
+		
+		@include _768 {
+			font-size: 1.5rem;
+		}
+		
+		@include _992 {
+			font-size: 0.875rem;
+		}
 		text-transform: uppercase;
-		line-height: 150%;
+		line-height: 125%;
 		font-weight: 900;
 	}
 }
@@ -507,7 +685,19 @@ section {
 	}
 }
 
+.visible-on-mob {
+	@include _768 {
+		display: none;
+	}
+}
+
 .hide-on-tablet {
+	@include _992 {
+		display: none;
+	}
+}
+
+.visible-on-tablet {
 	@include _992 {
 		display: none;
 	}
@@ -517,10 +707,52 @@ section {
 	display: inline-block;
 	align-self: self-start;
 	border-radius: 50px;
-	padding: 5px 10px;
+	padding: 5px 15px;
 	background: var(--accent);
 
-	font-size: 0.875rem;
+	font-size: 0.75rem;
+	@include _768 {
+		font-size: 1.5rem;
+		padding: 5px 20px;
+	}
+	
+	@include _992 {
+		font-size: 0.875rem;
+		padding: 5px 10px;
+	}
 	line-height: 121.428571%;
 	color: var(--primary-color-1);
+}
+
+.block-accent {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%; top: 0;
+		transform: translate(-50%,0);
+		width: calc(100% - 8px + (var(--container-padding) * 2)); height: 100%;
+		background: var(--light);
+		z-index: -1;
+	}
+	
+	padding: 54px 15px;
+	@media (min-width: 375px) {
+		padding: 54px 5px;
+	}
+
+	@include _768 {
+		padding: 93px 13px;
+		&::before {
+			width: calc(100% - 30px + (var(--container-padding) * 2));
+		}
+	}
+
+	@include _992 {
+		padding: 80px;
+		background: var(--light);
+		&::before {
+			display: none;
+		}
+	}
 }

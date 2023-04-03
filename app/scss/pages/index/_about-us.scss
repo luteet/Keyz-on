@@ -112,8 +112,11 @@
 
 	&__title {
 		margin-top: 0px;
+		@include _768 {
+			padding-right: 100px;
+		}
 		@include _992 {
-			margin-top: 40px;
+			margin-top: 40px; padding-right: 0;
 		}
 		color: var(--primary-color-2);
 	}
@@ -127,11 +130,22 @@
 		}
 		@include _992 {
 			padding-top: 100px;
+			max-width: 450px;
 		}
 		flex: 1 1 auto;
-		max-width: 450px;
+
+		& .title {
+			color: var(--primary-color-1);
+		}
+		
 		& p {
 			padding-top: 10px;
+			@include _768 {
+				padding-right: 100px;
+			}
+			@include _992 {
+				padding-right: 0;
+			}
 		}
 	}
 

@@ -5,22 +5,30 @@
 	line-height: 119.354839%;
 	text-transform: uppercase;
 
-	font-size: 2rem;
-
-	@include _550 {
-		font-size: 3.125rem;
+	font-size: 2.25rem;
+	&._alt {
+		font-size: 1.875rem;
 	}
 
 	@include _768 {
 		font-size: 4.5rem;
+		&._alt {
+			font-size: 4.5rem;
+		}
 	}
 
 	@include _992 {
 		font-size: 3.25rem;
+		&._alt {
+			font-size: 3.25rem;
+		}
 	}
 
 	@media (min-width: 1440px) {
 		font-size: 3.875rem;
+		&._alt {
+			font-size: 3.875rem;
+		}
 	}
 }
 
@@ -28,84 +36,143 @@
 	
 	font-family: var(--title-font);
 	font-weight: 900;
-	font-size: 1.75rem;
+	font-size: 1.75rem; // 28px
+	&._alt {
+		font-size: 1.375rem; // 22px
+	}
 	&._large {
-		font-size: 2.25rem;
+		font-size: 1.6875rem; // 27px
 	}
 	&._min {
-		font-size: 1.25rem;
+		font-size: 1rem; // 16px
+	}
+	&._min-2 {
+		font-size: 0.875rem; // 14px
 	}
 	&._super-min {
-		font-size: 1rem;
+		font-size: 0.875rem; // 14px
+	}
+	@include _550 {
+		font-size: 1.75rem; // 28px
+		&._alt {
+			font-size: 1.75rem; // 28px
+		}
+		&._large {
+			font-size: 2rem; // 32px
+		}
+		&._min {
+			font-size: 1.25rem; // 20px
+		}
+		&._min-2 {
+			font-size: 1.125rem; // 18px
+		}
+		&._super-min {
+			font-size: 1rem; // 16px
+		}
 	}
 	line-height: 120.833333%;
 	text-transform: uppercase;
 
-	@include _550 {
-		font-size: 2.75rem;
+	@include _768 {
+		font-size: 2.75rem; // 44px
+		&._alt {
+			font-size: 2.75rem; // 44px
+		}
 		&._large {
-			font-size: 4rem;
+			font-size: 4rem; // 64px
 		}
 		&._min {
-			font-size: 2rem;
+			font-size: 2rem; // 32px
+		}
+		&._min-2 {
+			font-size: 1.75rem; // 28px
 		}
 		&._super-min {
-			font-size: 1.75rem;
+			font-size: 1.75rem; // 28px
 		}
 	}
 	
 	@include _992 {
-		font-size: 2rem;
+		font-size: 2rem; // 32px
+		&._alt {
+			font-size: 2rem; // 32px
+		}
 		&._large {
-			font-size: 3rem;
+			font-size: 3rem; // 48px
 		}
 		&._min {
-			font-size: 1.375rem;
+			font-size: 1.375rem; // 22px
+		}
+		&._min-2 {
+			font-size: 1.375rem; // 22px
 		}
 		&._super-min {
-			font-size: 1.125rem;
+			font-size: 1.125rem; // 18px
 		}
 	}
 
 }
 
 .big-text {
-	font-size: 1.25rem;
+	font-size: 1.25rem; // 20px
+	&._alt {
+		font-size: 1rem; // 16px
+	}
 	line-height: 118.75%;
 	font-weight: 400;
 
-	@include _550 {
-		font-size: 2rem;
+	@include _768 {
+		font-size: 2rem; // 32px
+		&._alt {
+			font-size: 2rem; // 32px
+		}
 	}
 	
 	@include _992 {
-		font-size: 1.375rem;
+		font-size: 1.375rem; // 22px
+		&._alt {
+			font-size: 1.375rem; // 22px
+		}
 	}
 }
 
 .text {
-	font-size: 1rem;
+	font-size: 0.875rem; // 14px
+	&._min {
+		font-size: 0.75rem; // 12px
+	}
 	line-height: 118.75%;
 	font-weight: 400;
-	@include _550 {
-		font-size: 1.75rem;
+	@include _768 {
+		font-size: 1.75rem; // 28px
+		&._min {
+			font-size: 1.75rem; // 28px
+		}
 	}
 	
 	@include _992 {
-		font-size: 1.125rem;
+		font-size: 1.125rem; // 18px
+
+		&._min {
+			font-size: 1.125rem; // 18px
+		}
 	}
 }
 
 .small-text {
-	font-size: 0.875rem;
+	font-size: 0.75rem;
 	line-height: 118.75%;
 	font-weight: 400;
 	@include _550 {
-		font-size: 1.5rem;
+		font-size: 0.875rem; // 14px
+	}
+	
+	@include _768 {
+		font-size: 1.5rem; // 24px
 	}
 	
 	@include _992 {
-		font-size: 0.875rem;
+		font-size: 0.875rem; // 14px
 	}
 }
 
@@ -114,7 +181,7 @@
 	line-height: 116.666667%;
 	font-weight: 400;
 
-	@include _550 {
+	@include _768 {
 		font-size: 1.25rem;
 	}
 	
@@ -126,13 +193,16 @@
 .section-title {
 
 	font-weight: 900;
-	font-size: 1.375rem;
-	line-height: 26px;
+	font-size: 1rem;
+	line-height: 118.181818%;
 	text-transform: uppercase;
 	color: var(--primary-color-1);
 
-	@include _550 {
-		font-size: 1.375rem;
+	@include _768 {
+		font-size: 2rem;
+		&._min {
+			font-size: 1.5rem;
+		}
 	}
 	
 	@include _992 {
@@ -142,4 +212,11 @@
 
 .txt-center {
 	text-align: center;
+}
+
+.primary-accent {
+	color: var(--primary-color-1);
+	background: transparent;
+	font-weight: 900;
+	text-transform: uppercase;
 }

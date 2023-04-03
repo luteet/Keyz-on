@@ -36,12 +36,13 @@
 	// .reviews__list
 
 	&__list {
-		padding-top: 58px;
+		padding-top: 35px;
 
 		display: grid;
 		gap: 40px 0;
 		@include _768 {
 			gap: 83px 20px;
+			padding-top: 58px;
 		}
 		grid-template-columns: 100%;
 		@include _992 {	
@@ -140,7 +141,9 @@
 
 	&__text {
 		padding-top: 15px; padding-bottom: 15px;
-		font-size: 1rem;
+		text-transform: uppercase;
+		color: var(--primary-color-1);
+		font-weight: 900;
 		@include _768 {
 			padding-bottom: 40px;
 			
@@ -150,7 +153,15 @@
 	// .reviews__person
 
 	&__person {
-		margin-top: 47px;
+		margin-top: 37px;
+		
+		@include _768 {
+			margin-top: 47px;
+		}
+		
+		@include _992 {
+			margin-top: 47px;
+		}
 
 		display: flex;
 		align-items: center;
@@ -160,17 +171,18 @@
 
 	&__avatar {
 		margin-right: 18px;
-		& img {
-			border-radius: 50%;
-			width: 60px; height: 60px;
+		//margin-left: 18px;
+		& svg {
+			width: 32px; height: auto;
+			margin-left: 14px;
 			@include _768 {
-				width: 139px; height: 139px;
+				width: 38px; margin-left: 11px;
 			}
 			@include _992 {
-				width: 60px; height: 60px;
+				width: 21px; margin-left: 18px;
 			}
-			object-fit: cover;
 		}
+		fill: var(--primary-color-1);
 	}
 
 	// .reviews__name

@@ -1,34 +1,40 @@
-<section class="sale-week-section container _large">
+<section class="sale-week-section container _large _mob-padding-none">
 	<div class="sale-week-section__wrapper">
-		<div class="sale-week-section__intro">
-			<h2 class="sale-week-section__title main-title">
-				Sale of the week
-			</h2>
-			<a href="sale-week.html" class="sale-week-section__link section-title">
-				Go to the sale page
-			</a>
-		</div>
 		<ul class="sale-week-section__list">
+			<li class="sale-week-section__item">
+				<div class="sale-week-section__intro">
+					<h2 class="sale-week-section__title main-title">
+						Sale of the week
+					</h2>
+					<a href="sale-week.html" class="sale-week-section__link section-title">
+						Go to the sale page
+					</a>
+				</div>
+			</li>
 			@@loop("_product-card.html", [
 				{
 					"class": 'sale-week-section__item',
 					"image": '1',
 					"class_2": '',
+					"price": '<del class="price-old">$30,00</del><div class="price">$12,00</div>',
 				},
 				{
 					"class": 'sale-week-section__item',
 					"image": '2',
 					"class_2": '',
+					"price": '<del class="price-old">$30,00</del><div class="price">$12,00</div>',
 				},
 				{
 					"class": 'sale-week-section__item',
 					"image": '3',
 					"class_2": '',
+					"price": '<del class="price-old">$30,00</del><div class="price">$12,00</div>',
 				},
 				{
 					"class": 'sale-week-section__item',
 					"image": '1',
 					"class_2": '',
+					"price": '<del class="price-old">$30,00</del><div class="price">$12,00</div>',
 				},
 			])
 		</ul>

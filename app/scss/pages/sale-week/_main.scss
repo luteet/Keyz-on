@@ -2,9 +2,24 @@
 
 	padding-top: 71px; margin-top: 60px;
 	padding-bottom: 30px; margin-bottom: 30px;
-	background: var(--light);
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%; top: 0;
+		transform: translate(-50%,0);
+		width: calc(100% - 8px); height: 100%;
+		@include _768 {
+			width: calc(100% - 20px);
+		}
+		background: var(--light);
+		z-index: -1;
+	}
+	//background: var(--light);
 	@include _992 {
 		background: transparent; 
+		&::before {
+			display: none;
+		}
 		margin-top: 0; padding-bottom: 35px;
 	}
 
@@ -39,12 +54,13 @@
 	// .sale-week__wrapper
 
 	&__wrapper {
-		display: grid;
+		
 
 		position: relative;
-		padding: 0px 0 50px 0;
+		padding: 0 0 50px 0;
 		@include _992 {
 			padding: 77px 0;
+			display: grid;
 			grid-template-columns: 320px auto;
 			&::before {
 				content: '';
@@ -81,7 +97,10 @@
 
 	&__list {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+		grid-template-columns: 100%;
+		@include _992 {
+			grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+		}
 		gap: 20px;
 
 		&._accent-first > *:first-child .product-card {

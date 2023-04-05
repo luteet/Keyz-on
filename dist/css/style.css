@@ -3394,7 +3394,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
 .all-for-collection__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
     gap: 20px;
     padding: 20px 0 0;
     background: var(--primary-color-2)
@@ -3525,7 +3525,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
 .catalog__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     gap: 20px
 }
 
@@ -3866,7 +3866,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 .related-products__list {
     padding-top: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     gap: 15px
 }
 
@@ -5031,7 +5031,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     }
 
     .sale-week-section__list {
-        grid-template-columns: repeat(auto-fit,minmax(250px,auto))
+        grid-template-columns: repeat(auto-fill,minmax(250px,1fr))
     }
 
     .news-main__footer {
@@ -5091,8 +5091,8 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     }
 
     .container._super-large._large-padding {
-        padding-left: 90px;
-        padding-right: 90px
+        padding-left: max(90px,50% - 860px);
+        padding-right: max(90px,50% - 860px)
     }
 
     .section-padding {
@@ -5371,7 +5371,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     }
 
     .sale-week-section__list {
-        grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
         gap: 22px
     }
 
@@ -5604,7 +5604,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     }
 
     .all-for-collection__list {
-        grid-template-columns: repeat(auto-fit,minmax(350px,auto))
+        grid-template-columns: repeat(auto-fill,minmax(350px,1fr))
     }
 
     .all-for-collection__footer {
@@ -6402,7 +6402,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     }
 
     .sale-week-section__list {
-        grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+        grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
         gap: 20px
     }
 
@@ -6696,7 +6696,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     }
 
     .sale-week__list {
-        grid-template-columns: repeat(auto-fit,minmax(300px,auto))
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr))
     }
 
     .sale-week__footer {
@@ -6735,7 +6735,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     }
 
     .all-for-collection__list {
-        grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+        grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
         padding: 77px 80px
     }
 
@@ -7017,7 +7017,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     }
 
     .account__nav {
-        grid-template-columns: repeat(auto-fit,minmax(400px,auto));
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
         gap: 21px
     }
 

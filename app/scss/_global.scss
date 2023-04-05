@@ -113,8 +113,8 @@ section {
 			padding-left: var(--container-padding);
 			padding-right: var(--container-padding);
 			&._large-padding {
-				padding-left: 90px;
-				padding-right: 90px;
+				padding-left: max(90px, calc(50% - #{math.div($containerSuperLarge, 2)}px));
+				padding-right: max(90px, calc(50% - #{math.div($containerSuperLarge, 2)}px));
 			}
 		}
 	}
@@ -126,6 +126,10 @@ section {
 
 		padding-left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
 		padding-right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+		/* &._large-padding {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+		} */
 
 		&._large {
 			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerLarge, 2)}px));

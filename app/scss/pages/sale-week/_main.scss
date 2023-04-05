@@ -99,7 +99,7 @@
 		display: grid;
 		grid-template-columns: 100%;
 		@include _992 {
-			grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		}
 		gap: 20px;
 

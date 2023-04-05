@@ -60,16 +60,16 @@
 	&__list {
 
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 		gap: 20px;
 
 		padding: 20px 0 0 0;
 		background: var(--primary-color-2);
 		@include _768 {
-			grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+			grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 		}
 		@include _992 {
-			grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 			padding: 77px 80px;
 		}
 		& > *, & > * > * {

@@ -558,6 +558,23 @@ section {
 		@include _992 {
 			width: 24px;
 		}
+
+		transition: fill .3s ease;
+	}
+
+	&._min {
+		& svg {
+			width: 27px; height: auto;
+	
+			@include _768 {
+				width: 37px;
+			}
+			
+			@include _992 {
+				width: 24px;
+			}
+		}
+		
 	}
 
 	&::before {
@@ -585,6 +602,21 @@ section {
 			border: 2px solid var(--primary-color-2);
 		}
 		background: var(--accent);
+
+		transition: border-color .3s ease;
+	}
+
+	&._min._notification::after {
+		width: 17px; height: 17px;
+
+		@include _768 {
+			width: 20px; height: 20px;
+			border-color: var(--primary-color-2);
+		}
+		
+		@include _992 {
+			width: 15px; height: 15px;
+		}
 	}
 
 	&._alt {

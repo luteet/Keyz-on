@@ -371,6 +371,13 @@ appendToOnTablet.forEach(appendToOnTablet => {
 	appendToOnTabletArray.push([appendToOnTablet, document.querySelector('#' + appendToOnTablet.dataset.appendToOnTablet), appendToOnTablet.parentElement]);
 })
 
+const appendToOnMob = document.querySelectorAll('[data-append-to-on-mob]');
+let appendToOnMobArray = [];
+
+appendToOnMob.forEach(appendToOnMob => {
+	appendToOnMobArray.push([appendToOnMob, document.querySelector('#' + appendToOnMob.dataset.appendToOnMob), appendToOnMob.parentElement]);
+})
+
 let resizeCheck = {}, windowSize;
 
 function resizeCheckFunc(size, minWidth, maxWidth) {
@@ -392,6 +399,25 @@ function resize() {
 	html.style.setProperty('--width-header-nav', nav.offsetWidth + "px")
 
 	windowSize = window.innerWidth
+
+	resizeCheckFunc(768,
+		function () {  // screen >
+
+			Array.from(appendToOnMobArray).forEach(appendToOnMob => {
+				if(appendToOnMob[0].parentElement != appendToOnMob[2]) {
+					appendToOnMob[2].append(appendToOnMob[0]);
+				}
+			})			
+
+		},
+		function () {  // screen <
+
+			Array.from(appendToOnMobArray).forEach(appendToOnMob => {
+				appendToOnMob[1].append(appendToOnMob[0]);
+			})
+
+		}
+	);
 
 	resizeCheckFunc(992,
 		function () {  // screen > 992px

@@ -15,12 +15,12 @@ progress,sub,sup {
     flex-direction: column
 }
 
-.btn,.guarantee__title,.login-popup__header--btn,.order-details__block--header>:nth-child(2),.order-details__block--header>:nth-child(3),.product__amount--input,.product__coupon--apply,.sign__btn,.swiper-pagination,.swiper-zoom-container,.txt-center {
-    text-align: center
+.chat-btn._notification::after,.chat-btn::before,.price-old::before,.swiper-centered>.swiper-wrapper::before,.swiper-cube .swiper-cube-shadow:before,.swiper-virtual.swiper-css-mode .swiper-wrapper::after {
+    content: ""
 }
 
-.popup,.swiper-cube .swiper-slide,.swiper-slide-invisible-blank {
-    visibility: hidden
+.price-old,a,a:hover,a:visited {
+    text-decoration: none
 }
 
 body {
@@ -211,8 +211,8 @@ summary {
     display: block
 }
 
-.swiper-button-lock,.swiper-pagination-lock {
-    display: none
+.swiper-slide-invisible-blank {
+    visibility: hidden
 }
 
 .swiper-autoheight,.swiper-autoheight .swiper-slide {
@@ -308,7 +308,6 @@ summary {
 }
 
 .swiper-centered>.swiper-wrapper::before {
-    content: "";
     flex-shrink: 0;
     order: 9999
 }
@@ -405,7 +404,6 @@ summary {
 }
 
 .swiper-virtual.swiper-css-mode .swiper-wrapper::after {
-    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -483,12 +481,13 @@ summary {
     content: "next"
 }
 
-.chat-btn._notification::after,.chat-btn::before,.price-old::before,.swiper-cube .swiper-cube-shadow:before {
-    content: ""
+.swiper-button-lock {
+    display: none
 }
 
 .swiper-pagination {
     position: absolute;
+    text-align: center;
     transition: .3s opacity;
     transform: translate3d(0,0,0);
     z-index: 10
@@ -665,6 +664,10 @@ button.swiper-pagination-bullet {
     top: 0
 }
 
+.swiper-pagination-lock {
+    display: none
+}
+
 .swiper-scrollbar {
     border-radius: var(--swiper-scrollbar-border-radius,10px);
     position: relative;
@@ -719,7 +722,8 @@ button.swiper-pagination-bullet {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    text-align: center
 }
 
 .swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg {
@@ -774,6 +778,7 @@ button.swiper-pagination-bullet {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     z-index: 1;
+    visibility: hidden;
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
     width: 100%;
@@ -934,10 +939,6 @@ button::-moz-focus-inner {
     border: 0
 }
 
-a,a:hover,a:visited {
-    text-decoration: none
-}
-
 ul li {
     list-style: none
 }
@@ -982,6 +983,10 @@ body {
     line-height: 150%;
     display: flex;
     padding-right: var(--popup-padding)
+}
+
+.btn,.price {
+    font-weight: 900
 }
 
 body._mob-menu-active,body._popup-active {
@@ -1040,10 +1045,10 @@ section {
 }
 
 .btn {
+    text-align: center;
     padding: 16px 15px;
     font-size: .875rem;
     color: var(--primary-color-1);
-    font-weight: 900;
     line-height: 122.222222%;
     background: var(--accent);
     transition: color .2s ease-in-out,background .2s ease-in-out
@@ -1108,7 +1113,6 @@ section {
 }
 
 .price {
-    font-weight: 900;
     border-radius: 50px;
     line-height: 100%;
     font-size: 1rem;
@@ -1134,7 +1138,6 @@ section {
 }
 
 .price-old {
-    text-decoration: none;
     padding: 0 2px;
     margin-right: 8px;
     font-size: .875rem
@@ -1209,17 +1212,17 @@ section {
     object-fit: contain
 }
 
-.chat-btn::before,.header__burger::before {
-    top: 50%;
-    -webkit-transform: translate(-50%,-50%)
-}
-
 .product-card__price {
     z-index: 2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end
+}
+
+.cart-btn,.chat-btn {
+    display: flex;
+    align-items: center
 }
 
 .product-card__btn {
@@ -1231,13 +1234,7 @@ section {
     padding: 10px 15px;
     transition: background .3s ease;
     border-radius: 30px;
-    display: flex;
-    align-items: center;
     fill: var(--primary-color-1)
-}
-
-.chat-btn,.checkbox,.password-toggle,.popup,.sign__element--header {
-    align-items: center
 }
 
 .cart-btn:hover {
@@ -1249,7 +1246,6 @@ section {
 }
 
 .chat-btn {
-    display: flex;
     position: relative;
     margin: 15px 20px 10px;
     fill: var(--primary-color-2)
@@ -1257,12 +1253,20 @@ section {
 
 .chat-btn svg {
     width: 37px;
+    height: auto;
+    transition: fill .3s ease
+}
+
+.chat-btn._min svg {
+    width: 27px;
     height: auto
 }
 
 .chat-btn::before {
     position: absolute;
     left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     width: calc(100% + 30px);
     height: calc(100% + 40px)
@@ -1277,7 +1281,18 @@ section {
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    border: 2px solid var(--primary-color-1)
+    border: 2px solid var(--primary-color-1);
+    transition: border-color .3s ease
+}
+
+.loadmore,.page-address a {
+    transition: color .3s ease;
+    font-weight: 900
+}
+
+.chat-btn._min._notification::after {
+    width: 17px;
+    height: 17px
 }
 
 .chat-btn._alt {
@@ -1305,11 +1320,6 @@ section {
     overflow: hidden
 }
 
-.catalog__sort--mode input,.checkbox__input,.filter-category__list input {
-    -webkit-clip-path: inset(100%);
-    overflow: hidden
-}
-
 .page-address {
     margin-top: 76px
 }
@@ -1326,10 +1336,8 @@ section {
 
 .page-address a {
     color: var(--primary-color-1);
-    transition: color .3s ease;
     font-size: .75rem;
-    line-height: 125%;
-    font-weight: 900
+    line-height: 125%
 }
 
 .page-address a:hover {
@@ -1344,11 +1352,9 @@ section {
     display: inline-block;
     color: var(--primary-color-1);
     font-family: var(--title-font);
-    font-weight: 900;
     line-height: 120.833333%;
     background: rgba(0,0,0,0);
-    padding: 15px 30px;
-    transition: color .3s ease
+    padding: 15px 30px
 }
 
 .loadmore:hover {
@@ -1456,6 +1462,10 @@ section {
     line-height: 118.181818%
 }
 
+.txt-center {
+    text-align: center
+}
+
 .primary-accent {
     background: rgba(0,0,0,0);
     font-weight: 900
@@ -1463,6 +1473,7 @@ section {
 
 .checkbox {
     display: flex;
+    align-items: center;
     position: relative
 }
 
@@ -1475,13 +1486,10 @@ section {
     width: 1px;
     height: 1px;
     margin: -1px;
+    -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
-    clip: rect(0 0 0 0)
-}
-
-.checkbox__element,.password-toggle {
-    position: relative;
-    background: var(--white)
+    clip: rect(0 0 0 0);
+    overflow: hidden
 }
 
 .checkbox__element {
@@ -1491,7 +1499,9 @@ section {
     width: 30px;
     height: 30px;
     border: 3px solid var(--primary-color-1);
-    cursor: pointer
+    background: var(--white);
+    cursor: pointer;
+    position: relative
 }
 
 .checkbox__element::before,.popup,.popup-bg {
@@ -1703,7 +1713,10 @@ section {
 
 .password-toggle {
     padding: 5px 12px;
+    background: var(--white);
     display: inline-flex;
+    align-items: center;
+    position: relative;
     fill: var(--primary-color-1)
 }
 
@@ -1726,22 +1739,24 @@ section {
 .popup {
     position: fixed;
     display: flex;
+    align-items: center;
     padding: 4px;
     z-index: 100;
     opacity: 0;
+    visibility: hidden;
     transition: opacity .4s ease,visibility .4s ease;
     -webkit-perspective: 400px;
     perspective: 400px;
     will-change: opacity
 }
 
-.popup._active,.sign__item._error .sign__error {
-    opacity: 1;
-    visibility: visible
-}
-
 .popup._active._transition-none .popup-body,.popup._transition-none,.popup._transition-none .popup-body {
     transition: none
+}
+
+.popup._active {
+    opacity: 1;
+    visibility: visible
 }
 
 .popup-wrapper {
@@ -1801,6 +1816,7 @@ section {
 
 .login-popup__header--btn {
     flex: 0 1 50%;
+    text-align: center;
     font-weight: 900;
     font-size: 1rem;
     padding: 23px;
@@ -1873,12 +1889,13 @@ section {
     color: var(--primary-color-1)
 }
 
-.sign__element._accent {
+.header__account--user,.sign__element._accent {
     background: var(--accent)
 }
 
 .sign__element--header {
     display: flex;
+    align-items: center;
     font-weight: 900;
     line-height: 122.222222%;
     font-size: 1rem
@@ -1910,6 +1927,11 @@ section {
 
 .sign__item._error .sign__label {
     border-color: red
+}
+
+.sign__item._error .sign__error {
+    opacity: 1;
+    visibility: visible
 }
 
 .header__logo--img:nth-child(2),.header__nav,.sign__error {
@@ -1991,6 +2013,7 @@ section {
 }
 
 .sign__btn {
+    text-align: center;
     font-weight: 900;
     color: var(--white);
     text-decoration: underline;
@@ -2008,7 +2031,6 @@ section {
     z-index: 99;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center
 }
 
@@ -2082,7 +2104,7 @@ section {
     font-size: 1rem;
     line-height: 122.222222%;
     color: var(--primary-color-2);
-    padding: 10px
+    padding: 7px 10px
 }
 
 .header__nav--list li a:hover {
@@ -2106,6 +2128,10 @@ section {
     padding-right: 5px
 }
 
+.header__nav--message .chat-btn {
+    fill: var(--primary-color-1)
+}
+
 .header__nav--search {
     order: 1;
     margin-top: 10px
@@ -2114,6 +2140,12 @@ section {
 .header__sale-week-filter {
     order: 2;
     padding-top: 20px
+}
+
+.header__add {
+    order: 3;
+    display: flex;
+    justify-content: center
 }
 
 .header__account {
@@ -2134,7 +2166,6 @@ section {
     width: 27px;
     height: 27px;
     border-radius: 50%;
-    background: var(--accent);
     margin-right: 9px
 }
 
@@ -2248,7 +2279,10 @@ section {
 }
 
 .header__account-place {
-    z-index: 3
+    z-index: 3;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end
 }
 
 .header__search-place {
@@ -2295,8 +2329,10 @@ section {
 .header__burger::before {
     position: absolute;
     left: 50%;
+    top: 50%;
     width: 150%;
     height: 150%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%)
 }
 
@@ -2972,7 +3008,8 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
 .guarantee__title {
     max-width: 643px;
-    padding-top: 20px
+    padding-top: 20px;
+    text-align: center
 }
 
 .guarantee__text {
@@ -3451,8 +3488,10 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     border: 0;
     padding: 0;
     white-space: nowrap;
+    -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
-    clip: rect(0 0 0 0)
+    clip: rect(0 0 0 0);
+    overflow: hidden
 }
 
 .all-for-collection::before,.news::before {
@@ -3643,8 +3682,10 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     height: 1px;
     padding: 0;
     border: 0;
+    -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
-    clip: rect(0 0 0 0)
+    clip: rect(0 0 0 0);
+    overflow: hidden
 }
 
 .account__aside-nav ul li::before,.product__characteristics ul li::before {
@@ -3867,6 +3908,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     font-size: 1.375rem;
     text-transform: uppercase;
     line-height: 100%;
+    text-align: center;
     font-weight: 900;
     width: 100%
 }
@@ -3960,6 +4002,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     font-weight: 900;
     font-size: .875rem;
     line-height: 122.222222%;
+    text-align: center;
     text-transform: uppercase;
     color: var(--white);
     padding: 0 5px;
@@ -4560,6 +4603,10 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
 .order-details__block--header>:nth-child(1) {
     display: inline-block
+}
+
+.order-details__block--header>:nth-child(2),.order-details__block--header>:nth-child(3) {
+    text-align: center
 }
 
 .order-details__block--list {
@@ -5309,9 +5356,19 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
         width: 71px
     }
 
+    .chat-btn._min svg {
+        width: 37px
+    }
+
     .chat-btn._notification::after {
         width: 48px;
         height: 48px
+    }
+
+    .chat-btn._min._notification::after {
+        width: 20px;
+        height: 20px;
+        border-color: var(--primary-color-2)
     }
 
     .chat-btn._alt {
@@ -5554,6 +5611,14 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
     .header__burger span {
         height: 8px
+    }
+
+    body._mob-menu-active .header__nav--message .chat-btn {
+        fill: var(--primary-color-2)
+    }
+
+    body._mob-menu-active .header__nav--message .chat-btn._notification::after {
+        border-color: var(--primary-color-1)
     }
 
     .hero {
@@ -6173,8 +6238,8 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 }
 
 @media (min-width:992px) {
-    .chat-btn,.header__search--submit {
-        fill: var(--primary-color-1)
+    .account__aside-nav h2,.filter__title,.header._searched .header__search--input,.header__nav--list li a,.header__search--input {
+        color: var(--primary-color-1)
     }
 
     .container._mob-padding-none {
@@ -6273,7 +6338,11 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
         margin-top: 28px
     }
 
-    .chat-btn svg {
+    .chat-btn {
+        fill: var(--primary-color-1)
+    }
+
+    .chat-btn svg,.chat-btn._min svg {
         width: 24px
     }
 
@@ -6281,6 +6350,11 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
         width: 15px;
         height: 15px;
         border: 2px solid var(--primary-color-2)
+    }
+
+    .chat-btn._min._notification::after {
+        width: 15px;
+        height: 15px
     }
 
     .chat-btn._alt {
@@ -6440,7 +6514,9 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     }
 
     .header__logo {
-        max-width: 100px
+        max-width: 236px;
+        flex: 0 0 236px;
+        margin-right: 40px
     }
 
     .header__nav {
@@ -6469,7 +6545,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     .header__nav--list {
         order: 1;
         align-items: stretch;
-        margin: -10px;
+        margin: 7px -10px;
         padding-right: 30px;
         padding-top: 0;
         flex: 1 1 auto
@@ -6483,7 +6559,6 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     .header__nav--list li a {
         font-size: 1rem;
         width: auto;
-        color: var(--primary-color-1);
         line-height: 122.222222%
     }
 
@@ -6505,21 +6580,30 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
         justify-content: stretch
     }
 
-    .header._searched .header__search--input,.header__search--input {
-        border: 0;
-        padding: 5px 40px 5px 15px;
-        color: var(--primary-color-1)
+    .header__nav--message {
+        order: 2
     }
 
     .header__nav--search {
         order: 3;
-        margin-top: 0
+        margin-top: 0;
+        min-width: 139px
+    }
+
+    .header__add {
+        order: initial
+    }
+
+    .header__account {
+        width: 200px;
+        flex-wrap: wrap
     }
 
     .header__account--user {
         width: 60px;
         height: 60px;
-        margin-right: 11px
+        margin-right: 25px;
+        order: 1
     }
 
     .header__account--user svg {
@@ -6529,7 +6613,8 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
     .header__account--cart {
         height: 60px;
-        font-size: 1.125rem
+        font-size: 1.125rem;
+        order: 3
     }
 
     .header__account--cart svg {
@@ -6540,12 +6625,18 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
         margin: 0 7.5px
     }
 
+    .header__account .header__account--cart {
+        margin-top: 16px
+    }
+
     .header__search {
         width: 114px;
         height: 35px
     }
 
     .header__search--input {
+        border: 0;
+        padding: 5px 40px 5px 15px;
         background: var(--white);
         font-size: .875rem
     }
@@ -6556,7 +6647,8 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
     .header__search--submit {
         width: 40px;
-        right: 0
+        right: 0;
+        fill: var(--primary-color-1)
     }
 
     .header__search--submit:hover {
@@ -6574,12 +6666,18 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     }
 
     .header._searched .header__search--input {
+        border: 0;
+        padding: 5px 40px 5px 15px;
         background: var(--white);
         font-size: .875rem
     }
 
     .header._searched .header__search--input:focus {
         width: 533px
+    }
+
+    .header__account-place {
+        flex: 0 1
     }
 
     .header__burger {
@@ -6965,10 +7063,6 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
         background: var(--white)
     }
 
-    .filter__title {
-        color: var(--primary-color-1)
-    }
-
     .filter__list {
         padding-left: 0
     }
@@ -7261,7 +7355,6 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     }
 
     .account__aside-nav h2 {
-        color: var(--primary-color-1);
         font-size: 1.125rem
     }
 
@@ -7613,8 +7706,12 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
     .header {
         justify-content: space-between;
-        padding-top: 63px;
-        padding-bottom: 63px
+        padding-top: 29px;
+        padding-bottom: 29px
+    }
+
+    .header__logo {
+        margin-right: 80px
     }
 
     .header__nav {
@@ -7622,7 +7719,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     }
 
     .header__nav--list {
-        flex: 0 1 auto;
+        flex: 1 1 auto;
         justify-content: stretch
     }
 
@@ -7681,6 +7778,10 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 }
 
 @media (min-width:1440px) {
+    .header__account--cart,.header__account--user,.header__nav--message {
+        order: initial
+    }
+
     .cart-btn {
         padding: 15px 25.5px 18px
     }
@@ -7689,9 +7790,15 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
         font-size: 3.875rem
     }
 
+    .header {
+        padding-top: 63px;
+        padding-bottom: 63px
+    }
+
     .header__nav--list {
         margin: -13px;
-        padding-right: 70px
+        padding-right: 70px;
+        flex: 0 1 auto
     }
 
     .header__nav--list li a {
@@ -7706,6 +7813,22 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
     .header__nav--add li {
         padding: 10px
+    }
+
+    .header__account {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: auto
+    }
+
+    .header__account--user {
+        margin-right: 11px
+    }
+
+    .header__account .header__account--cart {
+        margin-top: 0;
+        margin-right: 20px
     }
 
     .header__search {
@@ -7793,10 +7916,6 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 }
 
 @media (min-width:1600px) {
-    .header__logo {
-        max-width: 236px
-    }
-
     .all-for__card.swiper-slide-active {
         background: var(--primary-color-1);
         color: var(--primary-color-2)

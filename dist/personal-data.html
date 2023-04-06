@@ -16,8 +16,8 @@
 			</a>
 			<nav class="header__nav">
 				<div class="header__nav--body">
-					<div class="header__sale-week-filter hide-on-tablet" id="header-filter"></div>
-					<div class="header__account-nav hide-on-tablet" id="header-account-nav"></div>
+					<div class="header__sale-week-filter visible-on-tablet" id="header-filter"></div>
+					<div class="header__account-nav visible-on-tablet" id="header-account-nav"></div>
 					<ul class="header__nav--list">
 						<li>
 							<a href="catalog.html">
@@ -55,6 +55,7 @@
 							</a>
 						</li>
 					</ul>
+					<div class="header__add hide-on-mob" id="header-add"></div>
 					<div class="header__nav--account">
 						<div class="header__account" data-append-to-on-tablet="header-account-place">
 							<a href="#sign-in-popup" class="header__account--user open-popup">
@@ -69,17 +70,15 @@
 								</svg>
 								<span>$129</span>
 							</a>
+							<div class="header__nav--message">
+								<a href="#" class="chat-btn _min _notification" data-append-to-on-mob="header-add" title="Chat">
+									<svg width="25" height="25" viewBox="0 0 25 25">
+										<use xlink:href="img/sprites.svg#comment"></use>
+									</svg>
+								</a>
+							</div>
 						</div>
 					</div>
-					<ul class="header__nav--add">
-						<li>
-							<a href="#" class="header__nav--message chat-btn _notification" title="Chat">
-								<svg width="25" height="25" viewBox="0 0 25 25">
-									<use xlink:href="img/sprites.svg#comment"></use>
-								</svg>
-							</a>
-						</li>
-					</ul>
 					<form action="#" class="header__nav--search header__search">
 						<label class="header__search--label">
 							<input type="search" name="search" class="header__search--input">

@@ -7797,7 +7797,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
     .header__nav--list {
         margin: -13px;
-        padding-right: 70px;
+        padding-right: 50px;
         flex: 0 1 auto
     }
 

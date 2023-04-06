@@ -443,6 +443,9 @@ function resize() {
 resize();
 
 window.onresize = resize;
+window.onload = function () {
+	resize();	
+}
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </resize> -=-=-=-=-=-=-=-=-=-=-=-=
 

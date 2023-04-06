@@ -224,10 +224,14 @@
 				</div>
 				<form class="login-popup__form">
 					<label class="login-popup__label">
-						<input type="email" name="email" placeholder="Email" class="login-popup__input input-alt">
+						<span class="sign__input-wrapper">
+							<input type="email" name="email" placeholder="Email" class="login-popup__input input-alt">
+						</span>
 					</label>
 					<label class="login-popup__label">
-						<input type="password" name="password" placeholder="Password" class="login-popup__input input-alt">
+						<span class="sign__input-wrapper">
+							<input type="password" name="password" placeholder="Password" class="login-popup__input input-alt">
+						</span>
 						<button class="password-toggle" type="button">
 							<svg width="27" height="16" viewBox="0 0 27 16">
 								<use xlink:href="img/sprites.svg#eay"></use>
@@ -236,6 +240,444 @@
 					</label>
 					<button class="login-popup__submit btn _min _mode-3" type="submit">Send</button>
 				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="sign popup" id="sign-in-popup">
+		<div class="sign__wrapper popup-wrapper">
+			<div class="sign__bg popup-bg popup-close"></div>
+			<div class="sign__body popup-body">
+				<button type="button" class="sign__close-btn popup-close-btn popup-close" title="Close popup">
+					<svg width="61" height="60" viewBox="0 0 61 60">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="sign__block">
+					<div class="sign__block--col">
+						<form class="sign__element">
+							<div class="sign__element--header">
+								<svg width="23" height="27" viewBox="0 0 23 27">
+									<use xlink:href="img/sprites.svg#user"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									Sign in
+								</h3>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="email" name="email" required placeholder="Email" class="sign__input input _mode-1">
+									</span>
+								</label>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="password" name="password" required placeholder="Password" class="sign__input input _mode-1">
+									</span>
+									<button class="password-toggle" type="button" type="Show/Hide password">
+										<svg width="27" height="16" viewBox="0 0 27 16">
+											<use xlink:href="img/sprites.svg#eay"></use>
+										</svg>
+									</button>
+								</label>
+								<button class="sign__min-submit" type="submit" title="Submit">
+									<svg width="23" height="24" viewBox="0 0 23 24">
+										<use xlink:href="img/sprites.svg#min-arrow-next"></use>
+									</svg>
+								</button>
+							</div>
+						</form>
+						<a href="#sign-up-popup" class="sign__element open-popup popup-close">
+							<div class="sign__element--header">
+								<svg width="30" height="27" viewBox="0 0 30 27">
+									<use xlink:href="img/sprites.svg#user-add"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									new user? <u>sign up</u>
+								</h3>
+							</div>
+						</a>
+					</div>
+					<div class="sign__block--col">
+						<a href="#sign-guest-order-popup" class="sign__element popup-close open-popup _accent visible-on-tablet">
+							<div class="sign__element--header">
+								<svg width="31" height="25" viewBox="0 0 31 25">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									<u>find a guest order</u>
+								</h3>
+							</div>
+						</a>
+						<form class="sign__element _accent hide-on-tablet">
+							<div class="sign__element--header">
+								<svg width="31" height="25" viewBox="0 0 31 25">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									find a guest order
+								</h3>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="text" name="order-number" required placeholder="Order number" class="sign__input input _mode-1">
+									</span>
+								</label>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="email" name="email" required placeholder="Email" class="sign__input input _mode-1">
+									</span>
+								</label>
+								<button class="sign__min-submit" type="submit" title="Submit">
+									<svg width="23" height="24" viewBox="0 0 23 24">
+										<use xlink:href="img/sprites.svg#min-arrow-next"></use>
+									</svg>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="sign popup" id="sign-in-error-popup">
+		<div class="sign__wrapper popup-wrapper">
+			<div class="sign__bg popup-bg popup-close"></div>
+			<div class="sign__body popup-body">
+				<button type="button" class="sign__close-btn popup-close-btn popup-close" title="Close popup">
+					<svg width="61" height="60" viewBox="0 0 61 60">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="sign__block">
+					<div class="sign__block--col">
+						<form class="sign__element">
+							<div class="sign__element--header">
+								<svg width="23" height="27" viewBox="0 0 23 27">
+									<use xlink:href="img/sprites.svg#user"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									Sign in
+								</h3>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="email" name="email" required placeholder="Email" class="sign__input input _mode-1">
+									</span>
+								</label>
+							</div>
+							<div class="sign__item _error">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="password" name="password" required placeholder="Password" class="sign__input input _mode-1">
+									</span>
+									<button class="password-toggle" type="button" type="Show/Hide password">
+										<svg width="27" height="16" viewBox="0 0 27 16">
+											<use xlink:href="img/sprites.svg#eay"></use>
+										</svg>
+									</button>
+								</label>
+								<button class="sign__min-submit" type="submit" title="Submit">
+									<svg width="23" height="24" viewBox="0 0 23 24">
+										<use xlink:href="img/sprites.svg#min-arrow-next"></use>
+									</svg>
+								</button>
+								<div class="sign__error">
+									<svg width="31" height="31" viewBox="0 0 31 31">
+										<use xlink:href="img/sprites.svg#error"></use>
+									</svg>
+									Incorrect password.
+								</div>
+							</div>
+						</form>
+						<a href="#" class="sign__btn text">
+							Reset password
+						</a>
+						<a href="#sign-up-popup" class="sign__element open-popup popup-close">
+							<div class="sign__element--header">
+								<svg width="30" height="27" viewBox="0 0 30 27">
+									<use xlink:href="img/sprites.svg#user-add"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									new user? <u>sign up</u>
+								</h3>
+							</div>
+						</a>
+					</div>
+					<div class="sign__block--col">
+						<a href="#sign-guest-order-popup" class="sign__element popup-close open-popup _accent visible-on-tablet">
+							<div class="sign__element--header">
+								<svg width="31" height="25" viewBox="0 0 31 25">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									<u>find a guest order</u>
+								</h3>
+							</div>
+						</a>
+						<form class="sign__element _accent hide-on-tablet">
+							<div class="sign__element--header">
+								<svg width="31" height="25" viewBox="0 0 31 25">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									find a guest order
+								</h3>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="text" name="order-number" required placeholder="Order number" class="sign__input input _mode-1">
+									</span>
+								</label>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="email" name="email" required placeholder="Email" class="sign__input input _mode-1">
+									</span>
+								</label>
+								<button class="sign__min-submit" type="submit" title="Submit">
+									<svg width="23" height="24" viewBox="0 0 23 24">
+										<use xlink:href="img/sprites.svg#min-arrow-next"></use>
+									</svg>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="sign popup" id="sign-up-popup">
+		<div class="sign__wrapper popup-wrapper">
+			<div class="sign__bg popup-bg popup-close"></div>
+			<div class="sign__body popup-body">
+				<button type="button" class="sign__close-btn popup-close-btn popup-close" title="Close popup">
+					<svg width="61" height="60" viewBox="0 0 61 60">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="sign__block">
+					<div class="sign__block--col">
+						<form class="sign__element visible-on-tablet">
+							<div class="sign__element--header">
+								<svg width="30" height="27" viewBox="0 0 30 27">
+									<use xlink:href="img/sprites.svg#user-add"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									New user
+								</h3>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="email" name="email" required placeholder="Email" class="sign__input input _mode-1">
+									</span>
+								</label>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="password" name="password" required placeholder="Password" class="sign__input input _mode-1">
+									</span>
+									<button class="password-toggle" type="button" type="Show/Hide password">
+										<svg width="27" height="16" viewBox="0 0 27 16">
+											<use xlink:href="img/sprites.svg#eay"></use>
+										</svg>
+									</button>
+								</label>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="password" name="password" required placeholder="Password" class="sign__input input _mode-1">
+									</span>
+									<button class="password-toggle" type="button" type="Show/Hide password">
+										<svg width="27" height="16" viewBox="0 0 27 16">
+											<use xlink:href="img/sprites.svg#eay"></use>
+										</svg>
+									</button>
+								</label>
+							</div>
+							<div class="sign__item">
+								<button class="sign__submit btn _mode-2 _min" type="submit">
+									Sign UP
+								</button>
+							</div>
+						</form>
+						<a href="#sign-in-popup" class="sign__element popup-close open-popup">
+							<div class="sign__element--header">
+								<svg width="23" height="27" viewBox="0 0 23 27">
+									<use xlink:href="img/sprites.svg#user"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									<u>Sign in</u>
+								</h3>
+							</div>
+						</a>
+						<form class="sign__element hide-on-tablet">
+							<div class="sign__element--header">
+								<svg width="30" height="27" viewBox="0 0 30 27">
+									<use xlink:href="img/sprites.svg#user-add"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									New user
+								</h3>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="email" name="email" required placeholder="Email" class="sign__input input _mode-1">
+									</span>
+								</label>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="password" name="password" required placeholder="Password" class="sign__input input _mode-1">
+									</span>
+									<button class="password-toggle" type="button" type="Show/Hide password">
+										<svg width="27" height="16" viewBox="0 0 27 16">
+											<use xlink:href="img/sprites.svg#eay"></use>
+										</svg>
+									</button>
+								</label>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="password" name="password" required placeholder="Password" class="sign__input input _mode-1">
+									</span>
+									<button class="password-toggle" type="button" type="Show/Hide password">
+										<svg width="27" height="16" viewBox="0 0 27 16">
+											<use xlink:href="img/sprites.svg#eay"></use>
+										</svg>
+									</button>
+								</label>
+							</div>
+							<div class="sign__item">
+								<button class="sign__submit btn _mode-2 _min" type="submit">
+									Sign UP
+								</button>
+							</div>
+						</form>
+					</div>
+					<div class="sign__block--col">
+						<a href="#sign-guest-order-popup" class="sign__element popup-close open-popup _accent visible-on-tablet">
+							<div class="sign__element--header">
+								<svg width="31" height="25" viewBox="0 0 31 25">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									<u>find a guest order</u>
+								</h3>
+							</div>
+						</a>
+						<form class="sign__element _accent hide-on-tablet">
+							<div class="sign__element--header">
+								<svg width="31" height="25" viewBox="0 0 31 25">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									find a guest order
+								</h3>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="text" name="order-number" required placeholder="Order number" class="sign__input input _mode-1">
+									</span>
+								</label>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="email" name="email" required placeholder="Email" class="sign__input input _mode-1">
+									</span>
+								</label>
+								<button class="sign__min-submit" type="submit" title="Submit">
+									<svg width="23" height="24" viewBox="0 0 23 24">
+										<use xlink:href="img/sprites.svg#min-arrow-next"></use>
+									</svg>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="sign popup" id="sign-guest-order-popup">
+		<div class="sign__wrapper popup-wrapper">
+			<div class="sign__bg popup-bg popup-close"></div>
+			<div class="sign__body popup-body">
+				<button type="button" class="sign__close-btn popup-close-btn popup-close" title="Close popup">
+					<svg width="61" height="60" viewBox="0 0 61 60">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="sign__block">
+					<div class="sign__block--col">
+						<form class="sign__element _accent">
+							<div class="sign__element--header">
+								<svg width="31" height="25" viewBox="0 0 31 25">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									find a guest order
+								</h3>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="text" name="order-number" required placeholder="Order number" class="sign__input input _mode-1">
+									</span>
+								</label>
+							</div>
+							<div class="sign__item">
+								<label class="sign__label">
+									<span class="sign__input-wrapper">
+										<input type="email" name="email" required placeholder="Email" class="sign__input input _mode-1">
+									</span>
+								</label>
+								<button class="sign__min-submit" type="submit" title="Submit">
+									<svg width="23" height="24" viewBox="0 0 23 24">
+										<use xlink:href="img/sprites.svg#min-arrow-next"></use>
+									</svg>
+								</button>
+							</div>
+						</form>
+					</div>
+					<div class="sign__block--col">
+						<a href="#sign-in-popup" class="sign__element popup-close open-popup">
+							<div class="sign__element--header">
+								<svg width="23" height="27" viewBox="0 0 23 27">
+									<use xlink:href="img/sprites.svg#user"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									Sign in
+								</h3>
+							</div>
+						</a>
+						<a href="#sign-up-popup" class="sign__element">
+							<div class="sign__element--header">
+								<svg width="30" height="27" viewBox="0 0 30 27">
+									<use xlink:href="img/sprites.svg#user-add"></use>
+								</svg>
+								<h3 class="sign__element--name">
+									new user? <u>sign up</u>
+								</h3>
+							</div>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

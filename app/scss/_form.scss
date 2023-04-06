@@ -80,10 +80,33 @@
 	&::placeholder {
 		color: var(--primary-color-1);
 		opacity: 1;
-		transition: opacity .3s ease;
+		transition: opacity .2s ease;
 	}
 	&:focus::placeholder {
 		opacity: 0;
+	}
+
+	&._mode-1 {
+		border: 0;
+		font-weight: 900;
+		color: var(--primary-color-1);
+		&::placeholder {
+			font-weight: 400;
+		}
+		
+		padding: 13px 15px;
+		font-size: 0.875rem;
+		
+		@include _768 {
+			padding: 30px 34px;
+			font-size: 1.75rem;
+		}
+		
+		@include _992 {
+			padding: 16px 20px;
+			font-size: 1.125rem;
+			
+		}
 	}
 }
 

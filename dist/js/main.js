@@ -141,11 +141,9 @@ function Popup(arg) {
 						html.style.setProperty('--popup-padding', '0px');
 					}
 
-					if (saveHref) {
-						removeHash();
-						if (activePopups[activePopups.length - 1]) {
-							history.pushState('', "", "#" + activePopups[activePopups.length - 1].getAttribute('id'));
-						}
+					removeHash();
+					if (activePopups[activePopups.length - 1]) {
+						history.pushState('', "", "#" + activePopups[activePopups.length - 1].getAttribute('id'));
 					}
 
 					popupCheckClose = true;
@@ -189,11 +187,9 @@ function Popup(arg) {
 
 			});
 
-			if (saveHref) {
-				let url = new URL(window.location);
-				if (url.hash) {
-					open(url.hash, true);
-				}
+			let url = new URL(window.location);
+			if (url.hash) {
+				open(url.hash, true);
 			}
 		},
 

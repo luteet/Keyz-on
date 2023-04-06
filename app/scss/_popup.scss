@@ -233,3 +233,270 @@
 	&__submit {
 	}
 }
+
+.sign {
+
+	// .sign__wrapper
+
+	&__wrapper {
+	}
+
+	// .sign__bg
+
+	&__bg {
+	}
+
+	// .sign__body
+
+	&__body {
+		max-width: 940px;
+		background: transparent;
+	}
+
+	// .sign__close-btn
+
+	&__close-btn {
+	}
+
+	// .sign__block
+
+	&__block {
+
+		padding: 30px 20px;
+
+		@media (min-width: 375px) {
+			padding: 40px 37px;
+		}
+		background: var(--primary-color-1);
+
+		display: grid;
+		grid-template-columns: 100%;
+
+		@include _768 {
+			padding: 81px 77px;
+		}
+		@include _992 {
+			padding: 77px 80px;
+			grid-template-columns: 1fr 1fr;
+		}
+		gap: 20px;
+
+		// .sign__block--col
+
+		&--col {
+			display: grid;
+			gap: 20px;
+			& > * {
+				align-self: self-start;
+			}
+		}
+	}
+
+	// .sign__element
+
+	&__element {
+
+		padding: 20px 23px;
+		
+		@include _768 {
+			padding: 45px 40px;
+		}
+		
+		@include _992 {
+			padding: 28px 30px;
+		}
+		background: var(--primary-color-2);
+		color: var(--primary-color-1);
+
+		&._accent {
+			background: var(--accent);
+		}
+
+		// .sign__element--header
+
+		&--header {
+			display: flex;
+			align-items: center;
+
+			font-weight: 900;
+			line-height: 122.222222%;
+			font-size: 1rem;
+			text-transform: uppercase;
+			
+			@include _768 {
+				font-size: 2rem;
+			}
+			
+			@include _992 {
+				font-size: 1.125rem;
+			}
+
+			& svg {
+				margin-right: 18px;
+				fill: var(--primary-color-1);
+			}
+		}
+
+		// .sign__element--name
+
+		&--name {
+			font-weight: 900;
+			color: var(--primary-color-1);
+		}
+	}
+
+	// .sign__item
+
+	&__item {
+		padding-top: 18px;
+
+		display: flex;
+		transition: padding .3s ease;
+		position: relative;
+		z-index: 2;
+
+		&._error {
+			padding-bottom: 50px;
+			
+			@include _768 {
+				padding-bottom: 50px;
+			}
+			
+			@include _992 {
+				padding-bottom: 40px;
+			}
+		}
+	}
+
+	&__item._error &__label {
+		border-color: red;
+	}
+
+	&__item._error &__error {
+		opacity: 1; visibility: visible;
+	}
+
+	&__error {
+		position: absolute;
+		left: 0; bottom: 0;
+
+		user-select: none; pointer-events: none;
+
+		transition: opacity .15s ease, visibility .15s ease;
+		opacity: 0; visibility: hidden;
+		z-index: -1;
+
+		display: flex;
+		align-items: center;
+
+		fill: red;
+		color: red;
+
+		& svg {
+			margin-right: 10px;
+		}
+
+		font-size: 0.875rem;
+		line-height: 122%;
+		
+		@include _768 {
+			font-size: 1.75rem;
+		}
+		
+		@include _992 {
+			font-size: 1.125rem;
+		}
+	}
+
+	// .sign__label
+
+	&__label {
+		flex: 1 1 auto;
+		display: flex;
+
+		background: var(--white);
+		border: 2px solid var(--white);
+		@include _768 {
+			border: 3px solid var(--white);
+		}
+		transition: border-color .2s ease;
+		
+		//grid-template-columns: repeat(auto-fill, auto);
+	}
+
+	&__input-wrapper {
+		display: block;
+		position: relative;
+		height: 45px;
+		
+		@include _768 {
+			height: 95px;
+		}
+		
+		@include _992 {
+			height: 61px;
+		}
+		flex: 1 1 auto;
+	}
+
+	// .sign__input
+
+	&__input {
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+	}
+
+	// .sign__min-submit
+
+	&__min-submit {
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 44px;
+		
+		@include _768 {
+			width: 93px;
+		}
+		
+		@include _992 {
+			width: 60px;
+		}
+
+		fill: var(--white);
+
+		transition: background .3s ease;
+		background: var(--primary-color-1);
+
+		&:hover {
+			background: var(--primary-color-1-hover);
+		}
+		
+		&:active {
+			background: var(--primary-color-1-active);
+		}
+
+		& svg {
+			width: 40%; height: 40%;
+		}
+	}
+
+	// .sign__submit
+
+	&__submit {
+		width: 100%;
+	}
+
+	&__btn {
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 900;
+		color: var(--white);
+		text-decoration: underline;
+		display: block;
+		padding: 15px;
+	}
+}
+

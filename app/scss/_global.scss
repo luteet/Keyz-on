@@ -696,7 +696,7 @@ section {
 }
 
 .hide-on-tablet {
-	@include _992 {
+	@media (max-width: 991px) {
 		display: none;
 	}
 }

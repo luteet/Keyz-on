@@ -19,6 +19,10 @@ progress,sub,sup {
     content: ""
 }
 
+.btn,.guarantee__title,.login-popup__header--btn,.order-details__block--header>:nth-child(2),.order-details__block--header>:nth-child(3),.product__amount--input,.product__coupon--apply,.sign__btn,.swiper-pagination,.swiper-zoom-container,.txt-center {
+    text-align: center
+}
+
 .price-old,a,a:hover,a:visited {
     text-decoration: none
 }
@@ -487,7 +491,6 @@ summary {
 
 .swiper-pagination {
     position: absolute;
-    text-align: center;
     transition: .3s opacity;
     transform: translate3d(0,0,0);
     z-index: 10
@@ -722,8 +725,7 @@ button.swiper-pagination-bullet {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center
+    align-items: center
 }
 
 .swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg {
@@ -926,6 +928,10 @@ input::-ms-clear {
     display: none
 }
 
+.wrapper,body {
+    display: flex
+}
+
 button {
     cursor: pointer
 }
@@ -981,12 +987,16 @@ body {
     font-family: var(--main-font);
     font-weight: 400;
     line-height: 150%;
-    display: flex;
     padding-right: var(--popup-padding)
 }
 
 .btn,.price {
     font-weight: 900
+}
+
+.product-card,.wrapper {
+    flex-direction: column;
+    min-height: 100%
 }
 
 body._mob-menu-active,body._popup-active {
@@ -1000,12 +1010,6 @@ body._mob-menu-active,body._popup-active {
 
 section {
     z-index: 2
-}
-
-.wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column
 }
 
 .btn,.price,.price-old {
@@ -1045,7 +1049,6 @@ section {
 }
 
 .btn {
-    text-align: center;
     padding: 16px 15px;
     font-size: .875rem;
     color: var(--primary-color-1);
@@ -1166,7 +1169,6 @@ section {
     position: relative;
     max-width: 768px;
     display: flex;
-    flex-direction: column;
     transition: border-color .3s ease
 }
 
@@ -1460,10 +1462,6 @@ section {
     font-weight: 900;
     font-size: 1rem;
     line-height: 118.181818%
-}
-
-.txt-center {
-    text-align: center
 }
 
 .primary-accent {
@@ -1816,7 +1814,6 @@ section {
 
 .login-popup__header--btn {
     flex: 0 1 50%;
-    text-align: center;
     font-weight: 900;
     font-size: 1rem;
     padding: 23px;
@@ -2013,7 +2010,6 @@ section {
 }
 
 .sign__btn {
-    text-align: center;
     font-weight: 900;
     color: var(--white);
     text-decoration: underline;
@@ -3008,8 +3004,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
 .guarantee__title {
     max-width: 643px;
-    padding-top: 20px;
-    text-align: center
+    padding-top: 20px
 }
 
 .guarantee__text {
@@ -3908,7 +3903,6 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     font-size: 1.375rem;
     text-transform: uppercase;
     line-height: 100%;
-    text-align: center;
     font-weight: 900;
     width: 100%
 }
@@ -4002,7 +3996,6 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
     font-weight: 900;
     font-size: .875rem;
     line-height: 122.222222%;
-    text-align: center;
     text-transform: uppercase;
     color: var(--white);
     padding: 0 5px;
@@ -4603,10 +4596,6 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
 .order-details__block--header>:nth-child(1) {
     display: inline-block
-}
-
-.order-details__block--header>:nth-child(2),.order-details__block--header>:nth-child(3) {
-    text-align: center
 }
 
 .order-details__block--list {

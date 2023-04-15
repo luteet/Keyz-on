@@ -444,7 +444,8 @@ resize();
 
 window.onresize = resize;
 window.onload = function () {
-	resize();	
+	resize();
+	body.classList.add('page-loaded');
 }
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </resize> -=-=-=-=-=-=-=-=-=-=-=-=

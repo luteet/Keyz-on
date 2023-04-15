@@ -11,12 +11,20 @@ progress,sub,sup {
     padding: 0
 }
 
+.swiper-vertical>.swiper-wrapper,body {
+    flex-direction: column
+}
+
 .chat-btn._notification::after,.chat-btn::before,.price-old::before,.swiper-centered>.swiper-wrapper::before,.swiper-cube .swiper-cube-shadow:before,.swiper-virtual.swiper-css-mode .swiper-wrapper::after {
     content: ""
 }
 
 .btn,.guarantee__title,.login-popup__header--btn,.order-details__block--header>:nth-child(2),.order-details__block--header>:nth-child(3),.product__amount--input,.product__coupon--apply,.sign__btn,.swiper-pagination,.swiper-zoom-container,.txt-center {
     text-align: center
+}
+
+.cart-btn,.password-toggle {
+    fill: var(--primary-color-1)
 }
 
 body {
@@ -170,10 +178,6 @@ summary {
     display: block
 }
 
-.swiper-vertical>.swiper-wrapper {
-    flex-direction: column
-}
-
 .swiper-wrapper {
     position: relative;
     width: 100%;
@@ -209,10 +213,6 @@ summary {
     transition-property: transform;
     transition-property: transform,-webkit-transform;
     display: block
-}
-
-.swiper-button-lock,.swiper-pagination-lock {
-    display: none
 }
 
 .swiper-slide-invisible-blank {
@@ -463,6 +463,10 @@ summary {
     line-height: 1
 }
 
+.btn,.loadmore,.login-popup__header--btn,.main-title,.page-address a,.primary-accent,.section-title,.sign__btn,.sign__element--header,.title {
+    text-transform: uppercase
+}
+
 .swiper-button-prev,.swiper-rtl .swiper-button-next {
     left: var(--swiper-navigation-sides-offset,10px);
     right: auto
@@ -479,6 +483,10 @@ summary {
 
 .swiper-button-next:after,.swiper-rtl .swiper-button-prev:after {
     content: "next"
+}
+
+.swiper-button-lock {
+    display: none
 }
 
 .swiper-pagination {
@@ -657,6 +665,10 @@ button.swiper-pagination-bullet {
     height: 100%;
     left: 0;
     top: 0
+}
+
+.swiper-pagination-lock {
+    display: none
 }
 
 .swiper-scrollbar {
@@ -976,22 +988,11 @@ body {
     font-weight: 400;
     line-height: 150%;
     display: flex;
-    flex-direction: column;
     padding-right: var(--popup-padding)
-}
-
-.loadmore,.main-title,.title {
-    font-family: var(--title-font);
-    text-transform: uppercase
 }
 
 .btn,.price {
     font-weight: 900
-}
-
-.product-card,.wrapper {
-    flex-direction: column;
-    min-height: 100%
 }
 
 body._mob-menu-active,body._popup-active {
@@ -1008,11 +1009,9 @@ section {
 }
 
 .wrapper {
-    display: flex
-}
-
-.btn,.price,.price-old {
-    display: inline-block
+    min-height: 100%;
+    display: flex;
+    flex-direction: column
 }
 
 .main {
@@ -1048,9 +1047,9 @@ section {
 }
 
 .btn {
+    display: inline-block;
     padding: 16px 15px;
     font-size: .875rem;
-    text-transform: uppercase;
     color: var(--primary-color-1);
     line-height: 122.222222%;
     background: var(--accent);
@@ -1107,7 +1106,7 @@ section {
     background: var(--primary-color-2-active)
 }
 
-.cart-btn,.chat-btn._notification::after,.price {
+.cart-btn,.price {
     background: var(--accent)
 }
 
@@ -1118,6 +1117,7 @@ section {
 .price {
     border-radius: 50px;
     line-height: 100%;
+    display: inline-block;
     font-size: 1rem;
     padding: 5px 10px
 }
@@ -1144,6 +1144,7 @@ section {
     text-decoration: none;
     padding: 0 2px;
     margin-right: 8px;
+    display: inline-block;
     font-size: .875rem
 }
 
@@ -1169,15 +1170,10 @@ section {
     padding: 30px 15px;
     position: relative;
     max-width: 768px;
+    min-height: 100%;
     display: flex;
+    flex-direction: column;
     transition: border-color .3s ease
-}
-
-.article__content p,.product-card__title {
-    display: -webkit-box;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    overflow: hidden
 }
 
 .product-card:hover {
@@ -1197,7 +1193,11 @@ section {
 .product-card__title {
     padding-top: 15px;
     color: var(--primary-color-1);
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
     -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
     line-clamp: 4;
     box-orient: vertical
 }
@@ -1233,11 +1233,6 @@ section {
     justify-content: flex-end
 }
 
-.cart-btn,.chat-btn {
-    display: flex;
-    align-items: center
-}
-
 .product-card__btn {
     width: 100%;
     margin-top: 13px
@@ -1247,7 +1242,12 @@ section {
     padding: 10px 15px;
     transition: background .3s ease;
     border-radius: 30px;
-    fill: var(--primary-color-1)
+    display: flex;
+    align-items: center
+}
+
+.chat-btn,.checkbox,.password-toggle {
+    align-items: center
 }
 
 .cart-btn:hover {
@@ -1259,6 +1259,7 @@ section {
 }
 
 .chat-btn {
+    display: flex;
     position: relative;
     margin: 15px 20px 10px;
     fill: var(--primary-color-2)
@@ -1295,6 +1296,7 @@ section {
     height: 22px;
     border-radius: 50%;
     border: 2px solid var(--primary-color-1);
+    background: var(--accent);
     transition: border-color .3s ease
 }
 
@@ -1350,7 +1352,6 @@ section {
 .page-address a {
     color: var(--primary-color-1);
     font-size: .75rem;
-    text-transform: uppercase;
     line-height: 125%
 }
 
@@ -1365,6 +1366,7 @@ section {
 .loadmore {
     display: inline-block;
     color: var(--primary-color-1);
+    font-family: var(--title-font);
     line-height: 120.833333%;
     background: rgba(0,0,0,0);
     padding: 15px 30px
@@ -1378,10 +1380,6 @@ section {
     color: var(--primary-color-1-active)
 }
 
-.article-time,.checkbox__text,.input._mode-1,.login-popup__header--btn,.primary-accent,.section-title {
-    color: var(--primary-color-1)
-}
-
 .article-time {
     display: inline-block;
     align-self: self-start;
@@ -1389,7 +1387,12 @@ section {
     padding: 5px 15px;
     background: var(--accent);
     font-size: .75rem;
-    line-height: 121.428571%
+    line-height: 121.428571%;
+    color: var(--primary-color-1)
+}
+
+.checkbox__element,.input {
+    border: 3px solid var(--primary-color-1)
 }
 
 .block-accent {
@@ -1410,6 +1413,7 @@ section {
 }
 
 .main-title {
+    font-family: var(--title-font);
     font-weight: 900;
     line-height: 119.354839%;
     font-size: 2.25rem
@@ -1420,6 +1424,7 @@ section {
 }
 
 .title {
+    font-family: var(--title-font);
     font-weight: 900;
     font-size: 1.75rem;
     line-height: 120.833333%
@@ -1467,22 +1472,22 @@ section {
     font-weight: 400
 }
 
-.section-title {
+.input._mode-1,.primary-accent,.section-title {
     font-weight: 900;
+    color: var(--primary-color-1)
+}
+
+.section-title {
     font-size: 1rem;
-    line-height: 118.181818%;
-    text-transform: uppercase
+    line-height: 118.181818%
 }
 
 .primary-accent {
-    background: rgba(0,0,0,0);
-    font-weight: 900;
-    text-transform: uppercase
+    background: rgba(0,0,0,0)
 }
 
 .checkbox {
     display: flex;
-    align-items: center;
     position: relative
 }
 
@@ -1507,7 +1512,6 @@ section {
     display: block;
     width: 30px;
     height: 30px;
-    border: 3px solid var(--primary-color-1);
     background: var(--white);
     cursor: pointer;
     position: relative
@@ -1537,12 +1541,12 @@ section {
     -ms-user-select: none;
     user-select: none;
     font-size: .75rem;
+    color: var(--primary-color-1);
     line-height: 116.666667%
 }
 
 .input {
     padding: 23px;
-    border: 3px solid var(--primary-color-1);
     font-size: .75rem;
     line-height: 121.428571%
 }
@@ -1592,7 +1596,6 @@ section {
 
 .input._mode-1 {
     border: 0;
-    font-weight: 900;
     padding: 13px 15px;
     font-size: .875rem
 }
@@ -1724,9 +1727,7 @@ section {
     padding: 5px 12px;
     background: var(--white);
     display: inline-flex;
-    align-items: center;
-    position: relative;
-    fill: var(--primary-color-1)
+    position: relative
 }
 
 .password-toggle._active svg,.product__rating[data-rating="2"] li:nth-child(-n+2),.product__rating[data-rating="1"] li:nth-child(-n+1),.product__rating[data-rating="5"] li:nth-child(-n+5),.product__rating[data-rating="4"] li:nth-child(-n+4),.product__rating[data-rating="3"] li:nth-child(-n+3),.reviews__rating[data-rating="2"] li:nth-child(-n+2),.reviews__rating[data-rating="1"] li:nth-child(-n+1),.reviews__rating[data-rating="5"] li:nth-child(-n+5),.reviews__rating[data-rating="4"] li:nth-child(-n+4),.reviews__rating[data-rating="3"] li:nth-child(-n+3) {
@@ -1745,6 +1746,10 @@ section {
     fill: var(--primary-color-1-active)
 }
 
+.header__nav--message .chat-btn,.popup-close-btn svg,.sign__element--header svg {
+    fill: var(--primary-color-1)
+}
+
 .popup {
     position: fixed;
     display: flex;
@@ -1753,7 +1758,6 @@ section {
     z-index: 100;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .4s ease,visibility .4s ease;
     -webkit-perspective: 400px;
     perspective: 400px;
     will-change: opacity
@@ -1814,8 +1818,11 @@ section {
 
 .popup-close-btn svg {
     width: 100%;
-    height: 100%;
-    fill: var(--primary-color-1)
+    height: 100%
+}
+
+.page-loaded .popup {
+    transition: opacity .4s ease,visibility .4s ease
 }
 
 .login-popup__header {
@@ -1827,9 +1834,9 @@ section {
     flex: 0 1 50%;
     font-weight: 900;
     font-size: 1rem;
-    text-transform: uppercase;
     padding: 23px;
     display: inline-block;
+    color: var(--primary-color-1);
     transition: background .3s ease,color .3s ease
 }
 
@@ -1907,13 +1914,11 @@ section {
     align-items: center;
     font-weight: 900;
     line-height: 122.222222%;
-    font-size: 1rem;
-    text-transform: uppercase
+    font-size: 1rem
 }
 
 .sign__element--header svg {
-    margin-right: 18px;
-    fill: var(--primary-color-1)
+    margin-right: 18px
 }
 
 .header__logo,.sign__error svg {
@@ -2023,7 +2028,6 @@ section {
 }
 
 .sign__btn {
-    text-transform: uppercase;
     font-weight: 900;
     color: var(--white);
     text-decoration: underline;
@@ -2136,10 +2140,6 @@ section {
     align-items: center;
     justify-content: space-evenly;
     padding-right: 5px
-}
-
-.header__nav--message .chat-btn {
-    fill: var(--primary-color-1)
 }
 
 .header__nav--search {
@@ -2700,7 +2700,11 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
 .article__content p {
     margin: 10px 0;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
     -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
     line-clamp: 6;
     box-orient: vertical
 }

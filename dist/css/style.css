@@ -11,20 +11,12 @@ progress,sub,sup {
     padding: 0
 }
 
-.swiper-vertical>.swiper-wrapper,body {
-    flex-direction: column
-}
-
 .chat-btn._notification::after,.chat-btn::before,.price-old::before,.swiper-centered>.swiper-wrapper::before,.swiper-cube .swiper-cube-shadow:before,.swiper-virtual.swiper-css-mode .swiper-wrapper::after {
     content: ""
 }
 
 .btn,.guarantee__title,.login-popup__header--btn,.order-details__block--header>:nth-child(2),.order-details__block--header>:nth-child(3),.product__amount--input,.product__coupon--apply,.sign__btn,.swiper-pagination,.swiper-zoom-container,.txt-center {
     text-align: center
-}
-
-.price-old,a,a:hover,a:visited {
-    text-decoration: none
 }
 
 body {
@@ -178,6 +170,10 @@ summary {
     display: block
 }
 
+.swiper-vertical>.swiper-wrapper {
+    flex-direction: column
+}
+
 .swiper-wrapper {
     position: relative;
     width: 100%;
@@ -213,6 +209,10 @@ summary {
     transition-property: transform;
     transition-property: transform,-webkit-transform;
     display: block
+}
+
+.swiper-button-lock,.swiper-pagination-lock {
+    display: none
 }
 
 .swiper-slide-invisible-blank {
@@ -463,10 +463,6 @@ summary {
     line-height: 1
 }
 
-.btn,.loadmore,.login-popup__header--btn,.main-title,.page-address a,.primary-accent,.section-title,.sign__btn,.sign__element--header,.title {
-    text-transform: uppercase
-}
-
 .swiper-button-prev,.swiper-rtl .swiper-button-next {
     left: var(--swiper-navigation-sides-offset,10px);
     right: auto
@@ -483,10 +479,6 @@ summary {
 
 .swiper-button-next:after,.swiper-rtl .swiper-button-prev:after {
     content: "next"
-}
-
-.swiper-button-lock {
-    display: none
 }
 
 .swiper-pagination {
@@ -665,10 +657,6 @@ button.swiper-pagination-bullet {
     height: 100%;
     left: 0;
     top: 0
-}
-
-.swiper-pagination-lock {
-    display: none
 }
 
 .swiper-scrollbar {
@@ -928,10 +916,6 @@ input::-ms-clear {
     display: none
 }
 
-.wrapper,body {
-    display: flex
-}
-
 button {
     cursor: pointer
 }
@@ -943,6 +927,10 @@ address {
 button::-moz-focus-inner {
     padding: 0;
     border: 0
+}
+
+a,a:hover,a:visited {
+    text-decoration: none
 }
 
 ul li {
@@ -987,7 +975,14 @@ body {
     font-family: var(--main-font);
     font-weight: 400;
     line-height: 150%;
+    display: flex;
+    flex-direction: column;
     padding-right: var(--popup-padding)
+}
+
+.loadmore,.main-title,.title {
+    font-family: var(--title-font);
+    text-transform: uppercase
 }
 
 .btn,.price {
@@ -1010,6 +1005,10 @@ body._mob-menu-active,body._popup-active {
 
 section {
     z-index: 2
+}
+
+.wrapper {
+    display: flex
 }
 
 .btn,.price,.price-old {
@@ -1051,6 +1050,7 @@ section {
 .btn {
     padding: 16px 15px;
     font-size: .875rem;
+    text-transform: uppercase;
     color: var(--primary-color-1);
     line-height: 122.222222%;
     background: var(--accent);
@@ -1141,6 +1141,7 @@ section {
 }
 
 .price-old {
+    text-decoration: none;
     padding: 0 2px;
     margin-right: 8px;
     font-size: .875rem
@@ -1172,6 +1173,13 @@ section {
     transition: border-color .3s ease
 }
 
+.article__content p,.product-card__title {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    overflow: hidden
+}
+
 .product-card:hover {
     border-color: var(--primary-color-2)
 }
@@ -1188,7 +1196,10 @@ section {
 
 .product-card__title {
     padding-top: 15px;
-    color: var(--primary-color-1)
+    color: var(--primary-color-1);
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    box-orient: vertical
 }
 
 .product-card__image {
@@ -1339,6 +1350,7 @@ section {
 .page-address a {
     color: var(--primary-color-1);
     font-size: .75rem;
+    text-transform: uppercase;
     line-height: 125%
 }
 
@@ -1353,7 +1365,6 @@ section {
 .loadmore {
     display: inline-block;
     color: var(--primary-color-1);
-    font-family: var(--title-font);
     line-height: 120.833333%;
     background: rgba(0,0,0,0);
     padding: 15px 30px
@@ -1399,7 +1410,6 @@ section {
 }
 
 .main-title {
-    font-family: var(--title-font);
     font-weight: 900;
     line-height: 119.354839%;
     font-size: 2.25rem
@@ -1410,7 +1420,6 @@ section {
 }
 
 .title {
-    font-family: var(--title-font);
     font-weight: 900;
     font-size: 1.75rem;
     line-height: 120.833333%
@@ -1461,12 +1470,14 @@ section {
 .section-title {
     font-weight: 900;
     font-size: 1rem;
-    line-height: 118.181818%
+    line-height: 118.181818%;
+    text-transform: uppercase
 }
 
 .primary-accent {
     background: rgba(0,0,0,0);
-    font-weight: 900
+    font-weight: 900;
+    text-transform: uppercase
 }
 
 .checkbox {
@@ -1816,6 +1827,7 @@ section {
     flex: 0 1 50%;
     font-weight: 900;
     font-size: 1rem;
+    text-transform: uppercase;
     padding: 23px;
     display: inline-block;
     transition: background .3s ease,color .3s ease
@@ -1895,7 +1907,8 @@ section {
     align-items: center;
     font-weight: 900;
     line-height: 122.222222%;
-    font-size: 1rem
+    font-size: 1rem;
+    text-transform: uppercase
 }
 
 .sign__element--header svg {
@@ -2010,6 +2023,7 @@ section {
 }
 
 .sign__btn {
+    text-transform: uppercase;
     font-weight: 900;
     color: var(--white);
     text-decoration: underline;
@@ -2686,11 +2700,7 @@ body._mob-menu-active .header__logo--img:nth-child(2) {
 
 .article__content p {
     margin: 10px 0;
-    display: -webkit-box;
-    text-overflow: ellipsis;
-    overflow: hidden;
     -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
     line-clamp: 6;
     box-orient: vertical
 }

@@ -18,8 +18,9 @@
 	}
 
 	transition: opacity .3s ease, visibility .3s ease;
-	&._hidden {
-		opacity: 0; visibility: hidden;
+	opacity: 0; visibility: hidden;
+	&._visible {
+		opacity: 1; visibility: visible;
 	}
 
 	// .cookie__title

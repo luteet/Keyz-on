@@ -202,7 +202,7 @@ popup.init()
 
 
 const cookie = document.querySelector('.cookie');
-if(!localStorage.getItem('keyz-on-cookie')) setTimeout(() => {cookie.classList.remove('_hidden')}, 500)
+if(!localStorage.getItem('keyz-on-cookie')) setTimeout(() => {cookie.classList.add('_visible')}, 500)
 
 
 // =-=-=-=-=-=-=-=-=-=- <click events> -=-=-=-=-=-=-=-=-=-=-
@@ -303,7 +303,7 @@ body.addEventListener('click', function (event) {
 	if(cookieBtn) {
 	
 		const cookie = document.querySelector('.cookie');
-		cookie.classList.add('_hidden');
+		cookie.classList.remove('_visible');
 
 		localStorage.setItem('keyz-on-cookie', true);
 	
@@ -397,6 +397,7 @@ function resize() {
 	html.style.setProperty("--height-screen", window.innerHeight + "px")
 	html.style.setProperty("--height-header", header.offsetHeight + "px")
 	html.style.setProperty('--width-header-nav', nav.offsetWidth + "px")
+	html.style.setProperty("--height-screen-2", window.innerHeight - (header.offsetHeight - 1) + "px");
 
 	windowSize = window.innerWidth
 

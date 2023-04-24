@@ -114,6 +114,7 @@
 	padding: 23px;
 	border: 3px solid var(--primary-color-1);
 	font-size: 0.75rem;
+	color: var(--primary-color-1);
 	
 	@include _768 {
 		font-size: 1.5rem;
@@ -138,6 +139,7 @@
 	padding: 16px 13px;
 	width: 100%;
 	background: var(--white);
+	color: var(--primary-color-1);
 	font-size: 0.75rem;
 	
 	@include _768 {
@@ -158,6 +160,21 @@
 	}
 	&:focus::placeholder {
 		opacity: 0;
+	}
+}
+
+.input-alt {
+	font-weight: 700;
+	font-size: 1rem;
+	text-transform: uppercase;
+	
+	@include _768 {
+		font-size: 1.5rem;
+		padding: 33px 27px;
+	}
+	
+	@include _992 {
+		font-size: 1.125rem;
 	}
 }
 

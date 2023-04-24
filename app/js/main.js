@@ -355,6 +355,23 @@ body.addEventListener('click', function (event) {
 	
 	// =-=-=-=-=-=-=-=-=-=-=-=- </cart-product-delete> -=-=-=-=-=-=-=-=-=-=-=-=
 
+
+
+	// =-=-=-=-=-=-=-=-=-=-=-=- <click> -=-=-=-=-=-=-=-=-=-=-=-=
+	
+	const footerFeedbackMessageClose = $(".footer__feedback--message-close")
+	if(footerFeedbackMessageClose) {
+	
+		const footerFeedbackMessage = footerFeedbackMessageClose.closest('.footer__feedback--message');
+		footerFeedbackMessage.classList.remove('_show')
+	
+	}
+	
+	// =-=-=-=-=-=-=-=-=-=-=-=- </click> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
 })
 
 // =-=-=-=-=-=-=-=-=-=- </click events> -=-=-=-=-=-=-=-=-=-=-

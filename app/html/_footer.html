@@ -96,9 +96,19 @@
 								Ознакомлен с политикой конфиденциальности и правилами обработки персональных данных
 							</span>
 						</label>
-						<button class="footer__feedback--submit btn _mode-3 _min">
+						<button class="footer__feedback--submit btn _mode-3 _min" type="submit">
 							Send
 						</button>
+						<div class="footer__feedback--message _show">
+							<button class="footer__feedback--message-close" type="button">
+								<span class="title _min">close</span>
+								<svg width="61" height="60" viewBox="0 0 61 60">
+									<use xlink:href="img/sprites.svg#close"></use>
+								</svg>
+							</button>
+							<h3 class="title _large">thank you!</h3>
+							<p class="title _min">your message has been sent</p>
+						</div>
 					</form>
 				</div>
 			</div>
@@ -140,6 +150,7 @@
 			</div>
 		</footer>
 	</div>
+
 	<div class="cookie container _alt _hidden">
 		<h2 class="cookie__title title">
 			cookie policy
@@ -677,6 +688,82 @@
 							</div>
 						</a>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cart-popup popup" id="cart-popup">
+		<div class="cart-popup__wrapper popup-wrapper">
+			<div class="cart-popup__bg popup-bg popup-close"></div>
+			<div class="cart-popup__body popup-body">
+				<div class="cart-popup__header">
+					<h2 class="cart-popup__title title _super-min">Added to cart</h2>
+					<div class="cart-popup__close">
+						<span class="cart-popup__close--text title _super-min">
+							continue shopping
+						</span>
+						<button type="button" class="cart-popup__close--btn popup-close" title="Close popup">
+							<svg width="61" height="60" viewBox="0 0 61 60">
+								<use xlink:href="img/sprites.svg#close"></use>
+							</svg>
+						</button>
+					</div>
+					
+				</div>
+				<div class="cart-popup__products-list">
+					<div class="cart-popup__product cart-popup-product">
+						<span class="cart-popup-product__category system-text">
+							Network / Vmware
+						</span>
+						<a href="#" class="cart-popup-product__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+							<h3 class="cart-popup-product__title title _super-min">
+								Vmware Workstation 17 Pro Lifetime License
+							</h3>
+						</a>
+						<a href="#" class="cart-popup-product__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+							<div class="cart-popup-product__image--body">
+								<picture>
+									<source srcset="img/product-cards/image-1.webp" type="image/webp">
+									<img src="img/product-cards/image-1.png" alt="" width="260" height="293" loading="lazy">
+								</picture>
+							</div>
+						</a>
+						<div class="cart-popup-product__footer">
+							<div class="cart-popup-product__price">
+								<div class="price-old">$15,00</div>
+								<div class="price _standard">$12,00 </div>
+							</div>
+							<div class="cart-popup-product__amount product__amount amount-block _min">
+								<div class="product__amount--body">
+									<button class="product__amount--arrow amount-btn _down" type="button" title="Remove product">
+										<svg width="24" height="15" viewBox="0 0 24 15">
+											<use xlink:href="img/sprites.svg#arrow-down"></use>
+										</svg>
+									</button>
+									<label><input type="number" name="amount" value="1" placeholder="Amount" required min="1" class="product__amount--input amount-input"></label>
+									<button class="product__amount--arrow amount-btn _up" type="button" title="Add product">
+										<svg width="24" height="15" viewBox="0 0 24 15">
+											<use xlink:href="img/sprites.svg#arrow-up"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cart-popup__footer">
+					<div class="cart-popup__footer--icon">
+						<svg width="30" height="25" viewBox="0 0 31 27">
+							<use xlink:href="img/sprites.svg#cart"></use>
+						</svg>
+					</div>
+					<div class="cart-popup__footer--total title _super-min">
+						<b>cart subtotal <br> (2 items)</b>
+						<b>$12,00 </b>
+					</div>
+					<a href="cart.html" class="cart-popup__footer--btn btn _mode-3">
+						go to cart
+					</a>
 				</div>
 			</div>
 		</div>

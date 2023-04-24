@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
 
 	<div class="wrapper">
@@ -63,7 +65,7 @@
 									<use xlink:href="img/sprites.svg#user"></use>
 								</svg>
 							</a>
-							<a href="#" class="header__account--cart">
+							<a href="#cart-popup" class="header__account--cart open-popup">
 								<span>3</span>
 								<svg width="31" height="25" viewBox="0 0 31 25">
 									<use xlink:href="img/sprites.svg#cart"></use>
@@ -119,157 +121,159 @@
 			document.querySelector('html').style.setProperty("--height-screen-2", window.innerHeight - (document.querySelector('.header').offsetHeight - 1) + "px");
 		</script>
 
-	<main class="main">
-		<div class="page-address container _large">
-			<a href="index.html">
-				Main
-			</a>
-			<a href="account.html">
-				Личный кабинет
-			</a>
-			<a href="#">
-				Payment Received
-			</a>
-		</div>
-		<section class="account container _large">
-			<h1 class="account__title main-title _alt">
-				Payment Received
-			</h1>
-			<aside class="account__aside">
-				<nav class="account__aside-nav" data-append-to-on-tablet="header-account-nav">
-	<h2>Account</h2>
-	<ul class="text">
-		<li>
-			<a href="cart.html">
-				Shopping cart
-			</a>
-		</li>
-		<li>
-			<a href="order-history.html">
-				Order history
-			</a>
-		</li>
-		<li>
-			<a href="account-details.html">
-				Account details
-			</a>
-		</li>
-		<li>
-			<a href="settings.html">
-				Settings
-			</a>
-		</li>
-	</ul>
-</nav>
-			</aside>
-			<main class="account__main">
-				<div class="payment-received block-accent">
-					<h2 class="payment-received__title title _alt">
-						thanks for shopping with us
-					</h2>
-					<div class="payment-received__text text">
-						<p>
-							For all your order details, check out the confirmation email we`re sending to <mark class="primary-accent text">user@gmail.com.</mark>
-						</p>
+		<main class="main">
+			<div class="page-address container _large">
+				<a href="index.html">
+					Main
+				</a>
+				<a href="account.html">
+					Личный кабинет
+				</a>
+				<a href="#">
+					Payment Received
+				</a>
+			</div>
+			<section class="account container _large">
+				<h1 class="account__title main-title _alt">
+					Payment Received
+				</h1>
+				<aside class="account__aside">
+					<nav class="account__aside-nav" data-append-to-on-tablet="header-account-nav">
+						<h2>Account</h2>
+						<ul class="text">
+							<li>
+								<a href="cart.html">
+									Shopping cart
+								</a>
+							</li>
+							<li>
+								<a href="order-history.html">
+									Order history
+								</a>
+							</li>
+							<li>
+								<a href="account-details.html">
+									Account details
+								</a>
+							</li>
+							<li>
+								<a href="settings.html">
+									Settings
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</aside>
+				<main class="account__main">
+					<div class="payment-received block-accent">
+						<h2 class="payment-received__title title _alt">
+							thanks for shopping with us
+						</h2>
+						<div class="payment-received__text text">
+							<p>
+								For all your order details, check out the confirmation email we`re sending to <mark class="primary-accent text">user@gmail.com.</mark>
+							</p>
+						</div>
+						<div class="payment-received__footer">
+							<b class="payment-received__order big-text _alt">Order № 3478741</b>
+							<a href="#" class="payment-received__details big-text _alt">
+								View details
+							</a>
+						</div>
 					</div>
-					<div class="payment-received__footer">
-						<b class="payment-received__order big-text _alt">Order № 3478741</b>
-						<a href="#" class="payment-received__details big-text _alt">
-							View details
-						</a>
-					</div>
+				</main>
+			</section>
+			<section class="all-for-collection-section container _alt">
+				<h2 class="visually-hidden">Collections</h2>
+				<div class="all-for-collection-section__wrapper">
+					<ul class="all-for-collection-section__list">
+						<li class="all-for-collection-section__item all-for__card">
+							<h3 class="all-for__card--title main-title _alt">
+								all for windows collection
+							</h3>
+						</li>
+						<li class="all-for-collection-section__item">
+							<div class="product-card _wide">
+								<span class="product-card__category">
+									Network / Vmware
+								</span>
+								<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+									<h3 class="product-card__title title _super-min">
+										Vmware Workstation 17 Pro Lifetime License
+									</h3>
+								</a>
+								<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+									<div class="product-card__image--body">
+										<picture>
+											<source srcset="img/product-cards/image-1.webp" type="image/webp">
+											<img src="img/product-cards/image-1.png" alt="" width="260" height="293" loading="lazy">
+										</picture>
+									</div>
+								</a>
+								<div class="product-card__price">
+									<div class="price _standard">12,00$</div>
+								</div>
+								<a href="#" class="product-card__btn btn _mode-2 _min">
+									add to cart
+								</a>
+							</div>
+						</li>
+						<li class="all-for-collection-section__item">
+							<div class="product-card _wide">
+								<span class="product-card__category">
+									Network / Vmware
+								</span>
+								<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+									<h3 class="product-card__title title _super-min">
+										Vmware Workstation 17 Pro Lifetime License
+									</h3>
+								</a>
+								<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+									<div class="product-card__image--body">
+										<picture>
+											<source srcset="img/product-cards/image-2.webp" type="image/webp">
+											<img src="img/product-cards/image-2.png" alt="" width="260" height="293" loading="lazy">
+										</picture>
+									</div>
+								</a>
+								<div class="product-card__price">
+									<div class="price _standard">12,00$</div>
+								</div>
+								<a href="#" class="product-card__btn btn _mode-2 _min">
+									add to cart
+								</a>
+							</div>
+						</li>
+						<li class="all-for-collection-section__item">
+							<div class="product-card _wide">
+								<span class="product-card__category">
+									Network / Vmware
+								</span>
+								<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+									<h3 class="product-card__title title _super-min">
+										Vmware Workstation 17 Pro Lifetime License
+									</h3>
+								</a>
+								<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+									<div class="product-card__image--body">
+										<picture>
+											<source srcset="img/product-cards/image-3.webp" type="image/webp">
+											<img src="img/product-cards/image-3.png" alt="" width="260" height="293" loading="lazy">
+										</picture>
+									</div>
+								</a>
+								<div class="product-card__price">
+									<div class="price _standard">12,00$</div>
+								</div>
+								<a href="#" class="product-card__btn btn _mode-2 _min">
+									add to cart
+								</a>
+							</div>
+						</li>
+					</ul>
 				</div>
-			</main>
-		</section>
-		<section class="all-for-collection-section container _alt">
-	<h2 class="visually-hidden">Collections</h2>
-	<div class="all-for-collection-section__wrapper">
-		<ul class="all-for-collection-section__list">
-			<li class="all-for-collection-section__item all-for__card">
-				<h3 class="all-for__card--title main-title _alt">
-					all for windows collection
-				</h3>
-			</li>
-			<li class="all-for-collection-section__item">
-	<div class="product-card _wide">
-		<span class="product-card__category">
-			Network / Vmware
-		</span>
-		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title title _super-min">
-				Vmware Workstation 17 Pro Lifetime License
-			</h3>
-		</a>
-		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<div class="product-card__image--body">
-				<picture>
-					<source srcset="img/product-cards/image-1.webp" type="image/webp">
-					<img src="img/product-cards/image-1.png" alt="" width="260" height="293" loading="lazy">
-				</picture>
-			</div>
-		</a>
-		<div class="product-card__price">
-			<div class="price _standard">12,00$</div>
-		</div>
-		<a href="#" class="product-card__btn btn _mode-2 _min">
-			add to cart
-		</a>
-	</div>
-</li><li class="all-for-collection-section__item">
-	<div class="product-card _wide">
-		<span class="product-card__category">
-			Network / Vmware
-		</span>
-		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title title _super-min">
-				Vmware Workstation 17 Pro Lifetime License
-			</h3>
-		</a>
-		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<div class="product-card__image--body">
-				<picture>
-					<source srcset="img/product-cards/image-2.webp" type="image/webp">
-					<img src="img/product-cards/image-2.png" alt="" width="260" height="293" loading="lazy">
-				</picture>
-			</div>
-		</a>
-		<div class="product-card__price">
-			<div class="price _standard">12,00$</div>
-		</div>
-		<a href="#" class="product-card__btn btn _mode-2 _min">
-			add to cart
-		</a>
-	</div>
-</li><li class="all-for-collection-section__item">
-	<div class="product-card _wide">
-		<span class="product-card__category">
-			Network / Vmware
-		</span>
-		<a href="#" class="product-card__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<h3 class="product-card__title title _super-min">
-				Vmware Workstation 17 Pro Lifetime License
-			</h3>
-		</a>
-		<a href="#" class="product-card__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
-			<div class="product-card__image--body">
-				<picture>
-					<source srcset="img/product-cards/image-3.webp" type="image/webp">
-					<img src="img/product-cards/image-3.png" alt="" width="260" height="293" loading="lazy">
-				</picture>
-			</div>
-		</a>
-		<div class="product-card__price">
-			<div class="price _standard">12,00$</div>
-		</div>
-		<a href="#" class="product-card__btn btn _mode-2 _min">
-			add to cart
-		</a>
-	</div>
-</li>
-		</ul>
-	</div>
-</section>
-	</main>
+			</section>
+		</main>
 
 		<footer class="footer container _large">
 			<div class="footer__intro">
@@ -369,9 +373,19 @@
 								Ознакомлен с политикой конфиденциальности и правилами обработки персональных данных
 							</span>
 						</label>
-						<button class="footer__feedback--submit btn _mode-3 _min">
+						<button class="footer__feedback--submit btn _mode-3 _min" type="submit">
 							Send
 						</button>
+						<div class="footer__feedback--message _show">
+							<button class="footer__feedback--message-close" type="button">
+								<span class="title _min">close</span>
+								<svg width="61" height="60" viewBox="0 0 61 60">
+									<use xlink:href="img/sprites.svg#close"></use>
+								</svg>
+							</button>
+							<h3 class="title _large">thank you!</h3>
+							<p class="title _min">your message has been sent</p>
+						</div>
 					</form>
 				</div>
 			</div>
@@ -396,7 +410,7 @@
 							</li>
 							<li>
 								<a href="personal-data.html">
-									Refund Policy 
+									Refund Policy
 								</a>
 							</li>
 							<li>
@@ -413,13 +427,14 @@
 			</div>
 		</footer>
 	</div>
+
 	<div class="cookie container _alt _hidden">
 		<h2 class="cookie__title title">
 			cookie policy
 		</h2>
 		<div class="cookie__text big-text _alt">
 			<p>
-				Our website uses cookies to improve your browsing experience. By using our site you agree to the use of cookies. 
+				Our website uses cookies to improve your browsing experience. By using our site you agree to the use of cookies.
 			</p>
 		</div>
 		<div class="cookie__block">
@@ -954,9 +969,86 @@
 			</div>
 		</div>
 	</div>
+	<div class="cart-popup popup" id="cart-popup">
+		<div class="cart-popup__wrapper popup-wrapper">
+			<div class="cart-popup__bg popup-bg popup-close"></div>
+			<div class="cart-popup__body popup-body">
+				<div class="cart-popup__header">
+					<h2 class="cart-popup__title title _super-min">Added to cart</h2>
+					<div class="cart-popup__close">
+						<span class="cart-popup__close--text title _super-min">
+							continue shopping
+						</span>
+						<button type="button" class="cart-popup__close--btn popup-close" title="Close popup">
+							<svg width="61" height="60" viewBox="0 0 61 60">
+								<use xlink:href="img/sprites.svg#close"></use>
+							</svg>
+						</button>
+					</div>
+
+				</div>
+				<div class="cart-popup__products-list">
+					<div class="cart-popup__product cart-popup-product">
+						<span class="cart-popup-product__category system-text">
+							Network / Vmware
+						</span>
+						<a href="#" class="cart-popup-product__link" aria-label="Vmware Workstation 17 Pro Lifetime License">
+							<h3 class="cart-popup-product__title title _super-min">
+								Vmware Workstation 17 Pro Lifetime License
+							</h3>
+						</a>
+						<a href="#" class="cart-popup-product__image" aria-label="Vmware Workstation 17 Pro Lifetime License">
+							<div class="cart-popup-product__image--body">
+								<picture>
+									<source srcset="img/product-cards/image-1.webp" type="image/webp">
+									<img src="img/product-cards/image-1.png" alt="" width="260" height="293" loading="lazy">
+								</picture>
+							</div>
+						</a>
+						<div class="cart-popup-product__footer">
+							<div class="cart-popup-product__price">
+								<div class="price-old">$15,00</div>
+								<div class="price _standard">$12,00 </div>
+							</div>
+							<div class="cart-popup-product__amount product__amount amount-block _min">
+								<div class="product__amount--body">
+									<button class="product__amount--arrow amount-btn _down" type="button" title="Remove product">
+										<svg width="24" height="15" viewBox="0 0 24 15">
+											<use xlink:href="img/sprites.svg#arrow-down"></use>
+										</svg>
+									</button>
+									<label><input type="number" name="amount" value="1" placeholder="Amount" required min="1" class="product__amount--input amount-input"></label>
+									<button class="product__amount--arrow amount-btn _up" type="button" title="Add product">
+										<svg width="24" height="15" viewBox="0 0 24 15">
+											<use xlink:href="img/sprites.svg#arrow-up"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cart-popup__footer">
+					<div class="cart-popup__footer--icon">
+						<svg width="30" height="25" viewBox="0 0 31 27">
+							<use xlink:href="img/sprites.svg#cart"></use>
+						</svg>
+					</div>
+					<div class="cart-popup__footer--total title _super-min">
+						<b>cart subtotal <br> (2 items)</b>
+						<b>$12,00 </b>
+					</div>
+					<a href="cart.html" class="cart-popup__footer--btn btn _mode-3">
+						go to cart
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
 
 </body>
+
 </html>

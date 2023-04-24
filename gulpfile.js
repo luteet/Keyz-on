@@ -5,6 +5,7 @@ const scss			= require('gulp-sass')(require('sass')),
 	  concat		= require('gulp-concat'),
 	  webp			= require('gulp-webp'),
 	  browserSync	= require('browser-sync').create(),
+	  beautify		= require('gulp-beautify'),
 	  uglify		= require('gulp-uglify-es').default,
 	  autoprefixer	= require('gulp-autoprefixer'),
 	  del			= require('del'),
@@ -89,6 +90,7 @@ function scripts() {
 function htmlCompilation() {
 	return src(['app/*.html'])
 	.pipe(include())
+	.pipe(beautify.html({ indent_size: 1, indent_char: "	" }))
 	.pipe(dest('dist'))
 	.pipe(browserSync.stream())
 }

@@ -298,6 +298,12 @@
 		}
 	}
 
+	& .price._standard {
+		@include _992 {
+			padding-top: 0; padding-bottom: 0;
+		}
+	}
+
 	&__min-block-title {
 		display: inline-block;
 		margin-bottom: 14px;
@@ -473,9 +479,53 @@
 			}
 		}
 
+		&._applied {
+			text-align: center;
+			@include _992 {
+				text-align: left;
+			}
+		}
+
+		&._applied &--body {
+			display: flex;
+			justify-content: center;
+			@include _992 {
+				display: flex;
+				justify-content: stretch;
+			}
+		}
+
+		&._error &--input {
+			border-color: red;
+		}
+
+		&._error &--error-message {
+			opacity: 1; visibility: visible;
+		}
+
+		&--applied {
+			display: inline-block;
+			padding: 7px 18px;
+			border-radius: 100px;
+			background: var(--accent);
+			color: var(--primary-color-1);
+		}
+
+		&--error-message {
+			position: absolute;
+			left: 0; bottom: -3px;
+			transform: translate(0,100%);
+			color: red;
+			user-select: none; pointer-events: none;
+			opacity: 0; visibility: hidden;
+			transition: opacity .3s ease, visibility .3s ease;
+		}
+
 		&--label {
 			display: flex;
 			min-height: 43px;
+
+			position: relative;
 			
 			@include _768 {
 				min-height: 77px;
@@ -503,6 +553,7 @@
 			}
 			text-transform: uppercase;
 			min-height: 100%;
+			transition: border-color .3s ease;
 			&::placeholder {
 				font-size: 1.25rem;
 			}
@@ -539,6 +590,12 @@
 		}
 	}
 
+	&__out {
+		&--text {
+			display: block;
+		}
+	}
+
 	&__price {
 		display: flex;
 		align-items: center;
@@ -551,6 +608,8 @@
 		}
 
 		& .price {
+
+			
 
 			&._alt {
 				

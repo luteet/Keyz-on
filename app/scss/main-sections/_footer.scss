@@ -202,6 +202,8 @@
 
 	&__feedback {
 
+		position: relative;
+
 		display: grid;
 		grid-template-columns: 100%;
 		gap: 16px;
@@ -289,6 +291,54 @@
 				&._min {
 					padding-top: 20px; padding-bottom: 18px;
 				}
+			}
+		}
+
+		&--message {
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			background: var(--light);
+
+			padding: 25px;
+			@include _768 {
+				padding: 25px 25px 25px 77px;
+			}
+			color: var(--primary-color-1);
+
+			transition: opacity .3s ease, visibility .3s ease;
+			opacity: 0; visibility: hidden;
+
+			&._show {
+				opacity: 1; visibility: visible;
+			}
+
+			display: flex;
+			flex-direction: column;
+
+			&-close {
+				display: inline-flex;
+				align-items: center;
+
+				align-self: self-end;
+
+				background: transparent;
+
+				color: var(--primary-color-1);
+
+				& svg {
+					width: 28px; height: 28px;
+					fill: var(--primary-color-1);
+					margin-left: 10px;
+				}
+			}
+
+			& h3 {
+				padding-top: 25px;
+			}
+
+			& p {
+				padding-top: 20px;
 			}
 		}
 	}

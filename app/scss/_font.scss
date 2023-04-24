@@ -177,16 +177,16 @@
 }
 
 .system-text {
-	font-size: 0.75rem;
+	font-size: 0.75rem; // 12px
 	line-height: 116.666667%;
 	font-weight: 400;
 
 	@include _768 {
-		font-size: 1.25rem;
+		font-size: 1.25rem; // 20px
 	}
 	
 	@include _992 {
-		font-size: 0.75rem;
+		font-size: 0.75rem; // 12px
 	}
 }
 

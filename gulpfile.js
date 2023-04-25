@@ -59,6 +59,7 @@ function images() {
 function scriptsLib() {
 	return src([
 		'node_modules/swiper/swiper-bundle.min.js', // Slider
+		'node_modules/overlayscrollbars/overlayscrollbars.esm.js'
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
@@ -132,6 +133,7 @@ function stylesLib() {
 	return src([
 		'node_modules/normalize.css/normalize.css',
 		'node_modules/swiper/swiper-bundle.min.css', // Slider
+		'node_modules/overlayscrollbars/styles/overlayscrollbars.min.css'
 	])
 	.pipe(concat('_libs.scss'))
 	.pipe(dest('app/scss'))

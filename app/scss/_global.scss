@@ -799,3 +799,19 @@ section {
 		}
 	}
 }
+
+.os-theme-dark, .os-theme-light {
+	--os-padding-perpendicular: 5px;
+    --os-size: 15px;
+}
+
+.os-theme-dark {
+	--os-handle-bg: var(--primary-color-2);
+    --os-handle-bg-hover: var(--primary-color-2-hover);
+    --os-handle-bg-active: var(--primary-color-2-active);
+}
+
+.os-scrollbar .os-scrollbar-handle {
+	border-radius: 0;
+	//width: 5px;
+}

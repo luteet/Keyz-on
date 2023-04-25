@@ -482,7 +482,7 @@
 							<input type="email" name="email" placeholder="Email" required class="footer__feedback--input input-alt">
 						</label>
 						<label class="footer__feedback--label">
-							<textarea name="message" placeholder="Message" class="footer__feedback--textarea textarea-alt"></textarea>
+							<textarea name="message" placeholder="Message" class="footer__feedback--textarea textarea-alt textarea-scrollbar"></textarea>
 						</label>
 						<label class="footer__feedback--checkbox checkbox">
 							<input type="checkbox" name="privacy-policy" required class="checkbox__input">
@@ -494,8 +494,8 @@
 						<button class="footer__feedback--submit btn _mode-3 _min" type="submit">
 							Send
 						</button>
-						<div class="footer__feedback--message _show">
-							<button class="footer__feedback--message-close" type="button">
+						<div class="footer__feedback--message form-message _show">
+							<button class="form-message__close" type="button">
 								<span class="title _min">close</span>
 								<svg width="61" height="60" viewBox="0 0 61 60">
 									<use xlink:href="img/sprites.svg#close"></use>
@@ -1164,8 +1164,8 @@
 		</div>
 	</div>
 
-	<script src="js/libs.min.js"></script>
-	<script src="js/main.js"></script>
+	<script type="module" src="js/libs.min.js"></script>
+	<script type="module" src="js/main.js"></script>
 
 </body>
 

@@ -1,3 +1,9 @@
+import { 
+	OverlayScrollbars, 
+	ScrollbarsHidingPlugin, 
+	SizeObserverPlugin, 
+	ClickScrollPlugin  
+} from '../js/libs.min.js';
 
 const 
 	body = document.querySelector('body'),
@@ -359,11 +365,11 @@ body.addEventListener('click', function (event) {
 
 	// =-=-=-=-=-=-=-=-=-=-=-=- <click> -=-=-=-=-=-=-=-=-=-=-=-=
 	
-	const footerFeedbackMessageClose = $(".footer__feedback--message-close")
-	if(footerFeedbackMessageClose) {
+	const feedbackMessageClose = $(".form-message__close")
+	if(feedbackMessageClose) {
 	
-		const footerFeedbackMessage = footerFeedbackMessageClose.closest('.footer__feedback--message');
-		footerFeedbackMessage.classList.remove('_show')
+		const feedbackMessage = feedbackMessageClose.closest('.form-message');
+		feedbackMessage.classList.remove('_show')
 	
 	}
 	
@@ -577,13 +583,37 @@ headerSearchInput.forEach(headerSearchInput => {
 })
 
 
-/* 
+
 // =-=-=-=-=-=-=-=-=-=-=-=- <animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
-AOS.init({
-	disable: "mobile",
-});
+//const osInstance = OverlayScrollbars(document.querySelector('body'));
+document.querySelectorAll('.textarea-scrollbar').forEach(textarea => {
+
+	/* //textarea.style.height = textarea.offsetHeight + 'px';
+	const borderWidth = getComputedStyle(textarea).borderWidth; */
+	
+	textarea.addEventListener('input', function () {
+		textarea.style.height = "auto";
+		textarea.style.height = textarea.scrollHeight + 'px';
+		if(textarea.closest('[data-overlayscrollbars="host"]')) {
+			textarea.closest('[data-overlayscrollbars="host"]').querySelector('.os-size-observer-listener').style.margin = -132 + 'px';
+			setTimeout(() => {
+				textarea.closest('[data-overlayscrollbars="host"]').querySelector('.os-size-observer-listener.ltr').style.removeProperty('margin');
+			},200)
+		}
+	})
+	//OverlayScrollbars(textarea, {});
+	let instance = OverlayScrollbars({ target: textarea }, {
+		updated(osInstance, onUpdatedArgs) {
+			console.log('update')
+		  }
+	});
+	
+	//textarea.oninput = function () {textarea.style.height = textarea.scrollHeight;}
+	
+})
+
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
-*/
+

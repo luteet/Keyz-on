@@ -1,26 +1,38 @@
 <section class="feedback _min container">
-	<h2 class="feedback__title section-title">
-		Если вы не знаете, какая именно лицензия вам нужна, напишите! Мы подберем оптимальный вариант
-	</h2>
-	<form action="#" class="feedback__form">
-		<label class="feedback__label">
-			<input type="text" name="name" placeholder="Name" required class="feedback__input input">
-		</label>
-		<label class="feedback__label">
-			<input type="email" name="email" placeholder="Email" required class="feedback__input input">
-		</label>
-		<label class="feedback__label">
-			<textarea name="message" placeholder="Message" class="feedback__textarea textarea"></textarea>
-		</label>
-		<label class="feedback__checkbox checkbox">
-			<input type="checkbox" name="privacy-policy" required class="checkbox__input">
-			<span class="checkbox__element"></span>
-			<span class="checkbox__text">
-				Ознакомлен с политикой конфиденциальности и правилами обработки персональных данных
-			</span>
-		</label>
-		<button class="feedback__btn btn _mode-3 _min" type="submit">
-			Отправить
-		</button>
-	</form>
+	<div class="feedback__wrapper">
+		<h2 class="feedback__title section-title">
+			Если вы не знаете, какая именно лицензия вам нужна, напишите! Мы подберем оптимальный вариант
+		</h2>
+		<form action="#" class="feedback__form">
+			<label class="feedback__label">
+				<input type="text" name="name" placeholder="Name" required class="feedback__input input">
+			</label>
+			<label class="feedback__label">
+				<input type="email" name="email" placeholder="Email" required class="feedback__input input">
+			</label>
+			<label class="feedback__label">
+				<textarea name="message" placeholder="Message" class="feedback__textarea textarea textarea-scrollbar"></textarea>
+			</label>
+			<label class="feedback__checkbox checkbox">
+				<input type="checkbox" name="privacy-policy" required class="checkbox__input">
+				<span class="checkbox__element"></span>
+				<span class="checkbox__text">
+					Ознакомлен с политикой конфиденциальности и правилами обработки персональных данных
+				</span>
+			</label>
+			<button class="feedback__btn btn _mode-3 _min" type="submit">
+				Отправить
+			</button>
+		</form>
+		<div class="feedback__message form-message _show">
+			<button class="form-message__close" type="button">
+				<span class="title _min">close</span>
+				<svg width="61" height="60" viewBox="0 0 61 60">
+					<use xlink:href="img/sprites.svg#close"></use>
+				</svg>
+			</button>
+			<h3 class="title _large">thank you!</h3>
+			<p class="title _min">your message has been sent</p>
+		</div>
+	</div>
 </section>
